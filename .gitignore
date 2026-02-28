@@ -1,0 +1,10 @@
+
+# claude
+*.local.md
+*.local.json
+
+# node
+node_modules/
+
+# debugadapter
+*.zip
