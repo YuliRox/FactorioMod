@@ -1,0 +1,162 @@
+Sehr gute Idee.
+Bevor wir weiter eskalieren, verdichten wir das System.
+
+Hier ist die **kompakte Essenz unseres bisherigen Designs**:
+
+---
+
+# 🧠 Grundvision
+
+Ein **storygetriebenes Hardcore-Survival-Scenario** als **Space Age Erweiterung**,
+aber im klassischen Factorio-Stil:
+
+> 🏭 Emergent Sandbox
+> 📖 Story durch Systeme
+> ♻️ Recycling als Kernmechanik
+> 🌍 Interplanetare Kreislaufwirtschaft
+
+---
+
+# 🌍 Setting
+
+Du bist der **zweite Engineer**.
+
+Der erste hat:
+
+* Den Startplaneten weitgehend ausgebeutet
+* Fabriken hinterlassen
+* Ruinen und Infrastrukturreste zurückgelassen
+
+Primärressourcen sind:
+
+* Stark reduziert
+* Weit entfernt
+* Sehr klein
+
+Expansion ist möglich — aber teuer.
+
+---
+
+# ♻️ Zentrales Gameplay-Prinzip
+
+## Ressourcen sind endlich.
+
+Keine unendlichen Erze.
+
+## Recycling ist Pflicht.
+
+Fortschritt entsteht durch:
+
+* Scrap
+* Ruinen
+* Ausschlachten
+* Reparieren
+* Umwandeln
+
+## Kreislaufwirtschaft ist das Ziel.
+
+Langfristig soll eine **Closed-Loop-Ökonomie** entstehen.
+
+---
+
+# 🪐 Planetensystem (Space Age Integration)
+
+Geplant sind spezialisierte Planeten:
+
+### 🌑 Nachlass (Start)
+
+* Wenig Erze
+* Viele Ruinen
+* Reparieren vs Zerlegen als Kernentscheidung
+
+### 🪐 Abraum
+
+* Viel Scrap
+* Recycling besonders effizient
+* Kaum Primärressourcen
+
+### 🌋 Tiefadern
+
+* Sehr tiefe, seltene Erze
+* Extrem energieintensiver Abbau
+* Spätspiel-Ressource
+
+Planeten haben:
+
+> Mechanische Identität
+> Keine kosmetische Rolle
+
+---
+
+# ⚙️ Kernmechaniken
+
+### 1️⃣ Recycling-Stufen
+
+* Mehr Effizienz durch Forschung
+* Energie als Konversionswährung
+* Nie 100% verlustfrei
+* Entropie als Systemgrenze
+
+### 2️⃣ Ruinen-System
+
+* Reparierbar
+* Abbaubar
+* Umbau möglich
+* Entscheidung erzeugt Story
+
+### 3️⃣ Ressourcen-Druck
+
+* Kein Mining Productivity Scaling
+* Keine unendlichen Vorkommen
+* Forschung und Expansion sind echte Investitionen
+
+---
+
+# 🧬 Design-Philosophie
+
+Kein:
+
+* Questmarker
+* Script-Zwang
+* Lineare Story
+
+Stattdessen:
+
+> Systeme erzeugen emergente Narrative
+
+---
+
+# 🎯 Mögliche Endgame-Vision
+
+* Vollständig geschlossener Produktionskreislauf
+* Space-Plattform autark betreibbar
+* Keine Primärressourcen mehr nötig
+* Interplanetare Materialbalance stabilisiert
+
+---
+
+# 🔥 Härtegrad (offene Entscheidung)
+
+Wir tendieren aktuell zu:
+
+**Option B**
+Primärressourcen reichen für einige Stunden,
+Recycling wird früh notwendig,
+aber kein sofortiger Brutal-Start.
+
+---
+
+# 🏗 Technischer Rahmen
+
+* Eigenes Scenario empfohlen
+* Custom Surfaces
+* Stark angepasste Map-Gen
+* Recycler als eigene Maschinenkategorie
+* Entropie-/Materialklassensystem möglich
+* Softlock-Vermeidung zwingend
+
+---
+
+Wenn ich das in einem Satz zusammenfassen müsste:
+
+> Wir drehen Factorios Wachstumsfantasie um und machen Ressourcenstabilität zum eigentlichen Skill.
