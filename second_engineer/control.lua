@@ -55,6 +55,7 @@ local function ensure_globals()
   storage.labs      = storage.labs      or {}  -- [unit_number] = {lab=LuaEntity, last={pack->count}}
   storage.lab_index = storage.lab_index or {}  -- ordered array of unit_numbers for round-robin
   storage.rr_pos    = storage.rr_pos    or 1
+  storage.pending_cutscene_skip = storage.pending_cutscene_skip or {}
 end
 
 local function snapshot_lab_input(lab)
@@ -183,13 +184,26 @@ script.on_event(defines.events.on_entity_died,         on_removed)
 script.on_event(defines.events.script_raised_destroy,  on_removed)
 script.on_event(defines.events.on_chunk_generated, worldgen.on_chunk_generated)
 script.on_event(defines.events.on_cutscene_started, function(event)
-  skip_intro_cutscene(game.get_player(event.player_index))
+  ensure_globals()
+  -- Design decision: cancelling immediately inside on_cutscene_started can
+  -- leave the vanilla "Press Tab to skip cutscene" hint stuck on screen. We
+  -- defer the cancel by one tick so the engine can initialize and clean up the
+  -- cutscene UI correctly.
+  storage.pending_cutscene_skip[event.player_index] = game.tick + 1
 end)
 
 -- Periodic round-robin scan
 script.on_event(defines.events.on_tick, function(event)
-  if (event.tick % SCAN_INTERVAL) ~= 0 then return end
   ensure_globals()
+
+  for player_index, skip_tick in pairs(storage.pending_cutscene_skip) do
+    if event.tick >= skip_tick then
+      skip_intro_cutscene(game.get_player(player_index))
+      storage.pending_cutscene_skip[player_index] = nil
+    end
+  end
+
+  if (event.tick % SCAN_INTERVAL) ~= 0 then return end
 
   local n = #storage.lab_index
   if n == 0 then return end

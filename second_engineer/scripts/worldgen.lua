@@ -1,4 +1,6 @@
 local Worldgen = {}
+local ruins = require("scripts.worldgeneration.ruins")
+local remnants = require("scripts.worldgeneration.remnants")
 
 local CHUNK_SIZE = 32
 local NAUVIS_NAME = "nauvis"
@@ -22,155 +24,6 @@ local STARTER_PATCHES = {
 local STARTER_CLEAR_AREA = {
   left_top = {x = -96, y = -96},
   right_bottom = {x = 96, y = 96},
-}
-
--- Design decision: early ruins must teach both "repair this" and "scrap this"
--- before the starter ore cushion is exhausted. The first cluster is guaranteed.
-local STARTER_RUIN_CLUSTER = {
-  origin = {x = 52, y = -18},
-  entities = {
-    -- Design decision: this cluster should read as a half-collapsed early
-    -- burner mining outpost, not as random debris. The player should be able
-    -- to infer the old material flow immediately.
-    {name = "burner-mining-drill",offset = {x = -5, y = -4},  force = "player", health = 0.31, direction = defines.direction.south},
-    {name = "transport-belt",     offset = {x = -5, y = -1},  force = "player", health = 0.24, direction = defines.direction.east},
-    {name = "transport-belt",     offset = {x = -4, y = -1},  force = "player", health = 0.21, direction = defines.direction.east},
-    {name = "transport-belt",     offset = {x = -3, y = -1},  force = "player", health = 0.16, direction = defines.direction.east},
-    {name = "transport-belt",     offset = {x = -1, y = -1},  force = "player", health = 0.19, direction = defines.direction.east},
-    {name = "transport-belt",     offset = {x = 1,  y = -1},  force = "player", health = 0.17, direction = defines.direction.east},
-    {name = "burner-inserter",    offset = {x = 0,  y = -2},  force = "player", health = 0.28, direction = defines.direction.north},
-    {name = "burner-inserter",    offset = {x = 2,  y = -2},  force = "player", health = 0.33, direction = defines.direction.north},
-    {name = "stone-furnace",      offset = {x = 0,  y = -3},  force = "player", health = 0.42},
-    {name = "stone-furnace",      offset = {x = 2,  y = -3},  force = "player", health = 0.38},
-    {name = "stone-furnace",      offset = {x = 5,  y = -2},  force = "player", health = 0.24},
-    {name = "assembling-machine-1",offset = {x = 5, y = 3},   force = "player", health = 0.29},
-    {name = "small-electric-pole",offset = {x = 1, y = 3},    force = "player", health = 0.35},
-    {name = "wooden-chest",       offset = {x = 6,  y = -1},  force = "neutral", health = 0.75, loot = {
-      {name = "iron-plate", count = 32},
-      {name = "copper-plate", count = 24},
-      {name = "iron-gear-wheel", count = 16},
-      {name = "transport-belt", count = 32},
-      {name = "burner-mining-drill", count = 1},
-      {name = "repair-pack", count = 12},
-    }},
-    {name = "wooden-chest",       offset = {x = -3, y = 3},   force = "neutral", health = 0.68, loot = {
-      {name = "stone-furnace", count = 2},
-      {name = "pipe", count = 20},
-      {name = "small-electric-pole", count = 6},
-      {name = "iron-stick", count = 20},
-      {name = "burner-inserter", count = 2},
-    }},
-  },
-}
-
-local STARTER_RUIN_CLEAR_AREA = {
-  left_top = {x = 43, y = -25},
-  right_bottom = {x = 64, y = -9},
-}
-
-local STARTER_RUIN_DECORATION_POINTS = {
-  {offset = {x = -6, y = -4}},
-  {offset = {x = -5, y = 6}},
-  {offset = {x = -2, y = -5}},
-  {offset = {x = 2,  y = 6}},
-  {offset = {x = 6,  y = -5}},
-  {offset = {x = 8,  y = 4}},
-}
-
-local REMNANT_TEMPLATES = {
-  {
-    entities = {
-      -- Decayed burner mining line: drill -> belt -> furnace.
-      {name = "burner-mining-drill-remnants", offset = {x = -4, y = -3}},
-      {name = "transport-belt-remnants", offset = {x = -4, y = 0}},
-      {name = "transport-belt-remnants", offset = {x = -3, y = 0}},
-      {name = "transport-belt-remnants", offset = {x = -2, y = 0}},
-      {name = "burner-inserter-remnants", offset = {x = -1, y = -1}},
-      {name = "stone-furnace-remnants", offset = {x = -1, y = -2}},
-      {name = "wooden-chest-remnants", offset = {x = 2, y = 1}},
-    },
-  },
-  {
-    entities = {
-      -- Broken twin-furnace smelting lane with half the feed path missing.
-      {name = "transport-belt-remnants", offset = {x = -3, y = 1}},
-      {name = "transport-belt-remnants", offset = {x = -2, y = 1}},
-      {name = "transport-belt-remnants", offset = {x = 0, y = 1}},
-      {name = "burner-inserter-remnants", offset = {x = -1, y = 0}},
-      {name = "burner-inserter-remnants", offset = {x = 1, y = 0}},
-      {name = "stone-furnace-remnants", offset = {x = -1, y = -1}},
-      {name = "stone-furnace-remnants", offset = {x = 1, y = -1}},
-      {name = "wooden-chest-remnants", offset = {x = 3, y = 0}},
-    },
-  },
-  {
-    entities = {
-      -- Abandoned power-fed transfer line.
-      {name = "small-electric-pole-remnants", offset = {x = -2, y = -1}},
-      {name = "small-electric-pole-remnants", offset = {x = 2, y = -1}},
-      {name = "transport-belt-remnants", offset = {x = -1, y = 0}},
-      {name = "transport-belt-remnants", offset = {x = 0, y = 0}},
-      {name = "transport-belt-remnants", offset = {x = 1, y = 0}},
-      {name = "inserter-remnants", offset = {x = 2, y = 1}},
-      {name = "wooden-chest-remnants", offset = {x = 3, y = 2}},
-    },
-  },
-  {
-    entities = {
-      -- Fragment of an early assembly lane: feed belt -> inserter -> assembler.
-      {name = "transport-belt-remnants", offset = {x = -3, y = 1}},
-      {name = "transport-belt-remnants", offset = {x = -2, y = 1}},
-      {name = "inserter-remnants", offset = {x = -1, y = 1}},
-      {name = "assembling-machine-1-remnants", offset = {x = 0, y = 0}},
-      {name = "small-electric-pole-remnants", offset = {x = -2, y = -1}},
-      {name = "wooden-chest-remnants", offset = {x = 2, y = 0}},
-    },
-  },
-  {
-    entities = {
-      -- Collapsed mixed-material lane with an output chest still attached.
-      {name = "transport-belt-remnants", offset = {x = -4, y = 0}},
-      {name = "transport-belt-remnants", offset = {x = -3, y = 0}},
-      {name = "transport-belt-remnants", offset = {x = -2, y = 0}},
-      {name = "inserter-remnants", offset = {x = -1, y = 0}},
-      {name = "wooden-chest-remnants", offset = {x = 0, y = 0}},
-      {name = "small-electric-pole-remnants", offset = {x = 2, y = -1}},
-    },
-  },
-  {
-    entities = {
-      -- Battlefield wreck: a tank column that clearly lost to a biter attack.
-      {name = "tank-remnants", offset = {x = -1, y = 0}},
-      {name = "gun-turret-remnants", offset = {x = 2, y = -1}},
-      {name = "wall-remnants", offset = {x = -3, y = 1}},
-      {name = "wall-remnants", offset = {x = -2, y = 1}},
-      {name = "wall-remnants", offset = {x = -1, y = 1}},
-      {name = "small-scorchmark-tintable", offset = {x = 0, y = 1}},
-      {name = "medium-scorchmark-tintable", offset = {x = 2, y = 0}},
-      {name = "wooden-chest-remnants", offset = {x = 3, y = 2}},
-    },
-  },
-  {
-    entities = {
-      -- Battlefield wreck: spidertron remains and scattered support gear.
-      {name = "spidertron-remnants", offset = {x = 0, y = 0}},
-      {name = "small-electric-pole-remnants", offset = {x = -3, y = -1}},
-      {name = "transport-belt-remnants", offset = {x = 2, y = 2}},
-      {name = "transport-belt-remnants", offset = {x = 3, y = 2}},
-      {name = "small-scorchmark-tintable", offset = {x = -1, y = 1}},
-      {name = "medium-scorchmark-tintable", offset = {x = 1, y = -1}},
-      {name = "wooden-chest-remnants", offset = {x = 3, y = -1}},
-    },
-  },
-}
-
-local GUARANTEED_REMNANTS = {
-  {origin = {x = -84, y = -12}, template_index = 1},
-  {origin = {x = 90, y = 26}, template_index = 2},
-  {origin = {x = -18, y = 88}, template_index = 4},
-  {origin = {x = 76, y = -78}, template_index = 3},
-  {origin = {x = -92, y = 64}, template_index = 5},
-  {origin = {x = 28, y = 108}, template_index = 6},
 }
 
 -- Design decision: not every remote ore field should be worth the rail, power,
@@ -385,9 +238,9 @@ local function prepare_ruin_terrain(surface)
   -- Design decision: the first guaranteed ruin cluster is supposed to teach the
   -- player to notice and evaluate repair opportunities. Hidden ruins fail that.
   local tiles = {}
-  local tile_name = detect_patch_tile_name(surface, STARTER_RUIN_CLUSTER.origin, 8)
-  for x = STARTER_RUIN_CLEAR_AREA.left_top.x, STARTER_RUIN_CLEAR_AREA.right_bottom.x - 1 do
-    for y = STARTER_RUIN_CLEAR_AREA.left_top.y, STARTER_RUIN_CLEAR_AREA.right_bottom.y - 1 do
+  local tile_name = detect_patch_tile_name(surface, ruins.starter_cluster.origin, 8)
+  for x = ruins.starter_clear_area.left_top.x, ruins.starter_clear_area.right_bottom.x - 1 do
+    for y = ruins.starter_clear_area.left_top.y, ruins.starter_clear_area.right_bottom.y - 1 do
       tiles[#tiles + 1] = {
         name = tile_name,
         position = {x = x, y = y},
@@ -396,7 +249,7 @@ local function prepare_ruin_terrain(surface)
   end
 
   surface.set_tiles(tiles)
-  clear_blocking_entities(surface, STARTER_RUIN_CLEAR_AREA)
+  clear_blocking_entities(surface, ruins.starter_clear_area)
 end
 
 local function damage_entity(entity, health_ratio)
@@ -446,10 +299,10 @@ local function detect_ruin_biome(surface)
 
   -- Design decision: the ruin footprint itself is terrain-corrected for
   -- usability, so biome detection must sample the untouched ring around it.
-  for x = STARTER_RUIN_CLEAR_AREA.left_top.x - 2, STARTER_RUIN_CLEAR_AREA.right_bottom.x + 1 do
-    for y = STARTER_RUIN_CLEAR_AREA.left_top.y - 2, STARTER_RUIN_CLEAR_AREA.right_bottom.y + 1 do
-      local in_clear_x = x >= STARTER_RUIN_CLEAR_AREA.left_top.x and x < STARTER_RUIN_CLEAR_AREA.right_bottom.x
-      local in_clear_y = y >= STARTER_RUIN_CLEAR_AREA.left_top.y and y < STARTER_RUIN_CLEAR_AREA.right_bottom.y
+  for x = ruins.starter_clear_area.left_top.x - 2, ruins.starter_clear_area.right_bottom.x + 1 do
+    for y = ruins.starter_clear_area.left_top.y - 2, ruins.starter_clear_area.right_bottom.y + 1 do
+      local in_clear_x = x >= ruins.starter_clear_area.left_top.x and x < ruins.starter_clear_area.right_bottom.x
+      local in_clear_y = y >= ruins.starter_clear_area.left_top.y and y < ruins.starter_clear_area.right_bottom.y
       if not (in_clear_x and in_clear_y) then
         local family = classify_tile_family(surface.get_tile(x, y).name)
         if family then
@@ -473,10 +326,10 @@ end
 local function place_ruin_decorations(surface)
   local biome = detect_ruin_biome(surface)
 
-  for _, spec in ipairs(STARTER_RUIN_DECORATION_POINTS) do
+  for _, spec in ipairs(ruins.starter_decoration_points) do
     local pos = {
-      x = STARTER_RUIN_CLUSTER.origin.x + spec.offset.x,
-      y = STARTER_RUIN_CLUSTER.origin.y + spec.offset.y,
+      x = ruins.starter_cluster.origin.x + spec.offset.x,
+      y = ruins.starter_cluster.origin.y + spec.offset.y,
     }
     local decoration_name = choose_ruin_decoration_name(biome)
 
@@ -516,9 +369,33 @@ local function place_ruin_entities(surface, origin, entities)
   end
 end
 
+local function get_template_area(origin, entities)
+  local min_x, min_y = math.huge, math.huge
+  local max_x, max_y = -math.huge, -math.huge
+
+  for _, spec in ipairs(entities) do
+    local x = origin.x + spec.offset.x
+    local y = origin.y + spec.offset.y
+    if x < min_x then min_x = x end
+    if y < min_y then min_y = y end
+    if x > max_x then max_x = x end
+    if y > max_y then max_y = y end
+  end
+
+  return {
+    left_top = {x = min_x - 1, y = min_y - 1},
+    right_bottom = {x = max_x + 2, y = max_y + 2},
+  }
+end
+
 local function place_template(surface, origin, template_index)
-  local template = REMNANT_TEMPLATES[template_index]
+  local template = remnants.templates[template_index]
   if not template then return end
+
+  -- Design decision: ambient remnants should be discoverable landmarks, not
+  -- hidden under forests. We clear blockers in the template footprint but do
+  -- not retile the ground, so the scene still reads as part of the biome.
+  clear_blocking_entities(surface, get_template_area(origin, template.entities))
   place_ruin_entities(surface, origin, template.entities)
 end
 
@@ -550,7 +427,7 @@ end
 
 local function verify_starter_ruin_cluster(surface)
   local starter_structures = surface.find_entities_filtered({
-    area = STARTER_RUIN_CLEAR_AREA,
+    area = ruins.starter_clear_area,
     force = get_player_force(),
   })
 
@@ -578,7 +455,7 @@ local function place_guaranteed_remnants(surface)
   -- Design decision: the player should reliably encounter non-starter remnants
   -- on early scouting trips. These fixed anchors make the world read as ruined
   -- even if the probabilistic spray happens to miss the nearby chunks.
-  for _, spec in ipairs(GUARANTEED_REMNANTS) do
+  for _, spec in ipairs(remnants.guaranteed) do
     place_template(surface, spec.origin, spec.template_index)
   end
 end
@@ -586,7 +463,7 @@ end
 place_ruin_cluster = function(surface)
   if storage.worldgen.starter_ruins_placed then return end
 
-  place_ruin_entities(surface, STARTER_RUIN_CLUSTER.origin, STARTER_RUIN_CLUSTER.entities)
+  place_ruin_entities(surface, ruins.starter_cluster.origin, ruins.starter_cluster.entities)
   place_ruin_decorations(surface)
 
   storage.worldgen.starter_ruins_placed = true
@@ -683,7 +560,7 @@ local function maybe_place_band_ruin(surface, area, chunk_pos)
   -- leftovers, not populated by one repeated chest vignette. These templates
   -- stay small enough to scatter often while still telling production stories.
   local anchor = {x = center_x, y = center_y}
-  local template_index = 1 + math.floor(deterministic_roll(chunk_pos.y, chunk_pos.x, 29) * #REMNANT_TEMPLATES)
+  local template_index = 1 + math.floor(deterministic_roll(chunk_pos.y, chunk_pos.x, 29) * #remnants.templates)
   place_template(surface, anchor, template_index)
 end
 
@@ -751,7 +628,7 @@ function Worldgen.on_chunk_generated(event)
     verify_starter_area(surface)
   end
 
-  if area_contains_pos(area, STARTER_RUIN_CLUSTER.origin) then
+  if area_contains_pos(area, ruins.starter_cluster.origin) then
     place_ruin_cluster(surface)
   else
     maybe_place_band_ruin(surface, area, event.position)

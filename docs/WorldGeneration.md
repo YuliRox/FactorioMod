@@ -144,6 +144,7 @@ The implemented ruin palette currently covers:
 - Several remnant templates are staged as visibly decayed production lines so experienced players can read the intended old workflow at a glance.
 - Some remnant scenes are staged as failed defenses or lost expeditions, including wrecked heavy vehicles and scorched battle aftermath, so the world implies that biters did not merely inherit the ruins peacefully.
 - Unlike the guaranteed starter ruin, these ambient scenes mostly use actual remnant or wreck entities rather than damaged repairable machines.
+- Ambient remnant footprints clear blocking trees, rocks, and cliffs before placement so forest-heavy starts do not hide the authored scenes.
 
 This is narrower than the full design goal. Mining outpost ruins, larger factory remnants, and richer mid-band and outer-band template sets are still future work.
 
