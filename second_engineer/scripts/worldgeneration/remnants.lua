@@ -142,12 +142,12 @@ Remnants.templates = {
   },
   {
     entities = {
-      {name = "pipe-remnants", offset = {x = -4, y = 0}},
-      {name = "pipe-remnants", offset = {x = -3, y = 0}},
-      {name = "pipe-remnants", offset = {x = -2, y = 0}},
-      {name = "pipe-remnants", offset = {x = -1, y = 0}},
-      {name = "pipe-remnants", offset = {x = 0, y = 0}},
-      {name = "pipe-remnants", offset = {x = 1, y = 0}},
+      {name = "pipe-remnants", offset = {x = -4, y = 0}, direction = defines.direction.east},
+      {name = "pipe-remnants", offset = {x = -3, y = 0}, direction = defines.direction.east},
+      {name = "pipe-remnants", offset = {x = -2, y = 0}, direction = defines.direction.east},
+      {name = "pipe-remnants", offset = {x = -1, y = 0}, direction = defines.direction.east},
+      {name = "pipe-remnants", offset = {x = 0, y = 0}, direction = defines.direction.east},
+      {name = "pipe-remnants", offset = {x = 1, y = 0}, direction = defines.direction.east},
       {name = "pump-remnants", offset = {x = 3, y = 0}},
       {name = "storage-tank-remnants", offset = {x = 5, y = 1}},
     },

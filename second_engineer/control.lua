@@ -1,4 +1,5 @@
 -- second_engineer: runtime script entry point
+local abandoned_ruins = require("scripts.abandoned_ruins")
 local worldgen = require("scripts.worldgen")
 
 local PACK_TO_SCRAP = {
@@ -138,6 +139,7 @@ end
 -- Events: init/load
 script.on_init(function()
   ensure_globals()
+  abandoned_ruins.register()
   worldgen.on_init()
   for _, surface in pairs(game.surfaces) do
     for _, lab in pairs(surface.find_entities_filtered{type="lab"}) do
@@ -146,8 +148,13 @@ script.on_init(function()
   end
 end)
 
+script.on_load(function()
+  abandoned_ruins.register()
+end)
+
 script.on_configuration_changed(function()
   ensure_globals()
+  abandoned_ruins.register()
   worldgen.on_configuration_changed()
   storage.labs      = {}
   storage.lab_index = {}

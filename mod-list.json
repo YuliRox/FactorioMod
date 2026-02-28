@@ -17,21 +17,24 @@
       "enabled": true
     },
     {
+      "name": "AbandonedRuins-base",
+      "enabled": true
+    },
+    {
+      "name": "AbandonedRuins_updated_fork",
+      "enabled": true
+    },
+    {
       "name": "debugadapter",
-      "enabled": true,
-      "version": "2.0.10"
+      "enabled": false
+    },
+    {
+      "name": "ruin-maker_updated_fork",
+      "enabled": false
     },
     {
       "name": "second_engineer",
       "enabled": true
-    },
-    {
-      "name": "coverage",
-      "enabled": false
-    },
-    {
-      "name": "profiler",
-      "enabled": false
     }
   ]
 }
