@@ -1,0 +1,268 @@
+Sehr gut.
+Wenn du „klassischer Factorio-Stil“ sagst, höre ich:
+
+> Kein Skript-Theater.
+> Kein Questmarker.
+> Keine linearen Kapitel.
+> Systeme erzeugen die Geschichte.
+
+Dann bauen wir kein Story-Game.
+
+Wir bauen eine **System-Sandbox mit narrativer Gravitation**.
+
+---
+
+# 🧠 Design-Prinzip: Emergenz statt Cutscenes
+
+Story entsteht durch:
+
+* Umwelt
+* Map-Gen
+* Technologie-Locks
+* Mechanische Konsequenzen
+* Log-Einträge als Artefakte
+
+Nicht durch:
+
+* Zwangsziele
+* Quest-Popups
+* Trigger-Ketten
+
+---
+
+# 🌍 Kern-Design-Säule: Entropie statt Expansion
+
+Vanilla:
+
+> Wachstum = Macht
+
+Unser Mod:
+
+> Stabilität = Meisterschaft
+
+Aber:
+Wir verbieten Expansion nicht.
+Wir machen sie teuer.
+
+---
+
+# ♻️ Das echte Herzstück: Materialökonomie 2.0
+
+Ich formuliere dein Spielsystem einmal sauber:
+
+## 1️⃣ Ressourcen sind endlich.
+
+Kein unendliches Erz.
+Nur:
+
+* kleine Restadern
+* Ruinen
+* Debris
+* Recycling
+
+## 2️⃣ Recycling ist nicht perfekt.
+
+Es gibt:
+
+* Energieverlust
+* Materialverlust
+* Komplexitätsverlust
+
+100% Closed Loop ist nur im Endgame möglich – extrem teuer.
+
+## 3️⃣ Energie wird zur Konvertierungswährung.
+
+Nicht nur Mining kostet Energie.
+Recycling wird:
+
+> thermodynamisches Problem.
+
+Das ist Space-Age-kompatibel.
+
+---
+
+# 🪐 Planeten als System-Druck
+
+Wir nutzen Space Age voll aus.
+
+## 🌑 Nachlass
+
+* Wenig Primärressourcen
+* Viele Ruinen
+* Startplanet
+
+## 🪐 Abraum
+
+* Viel Scrap
+* Recycling-Bonus
+* Kaum direkte Verwertung
+
+## 🌋 Tiefadern
+
+* Extrem seltene, tiefe Erze
+* Hoher Energiepreis
+* Umweltzerstörung bei Abbau
+
+Jeder Planet hat:
+
+* Materialidentität
+* Mechanische Rolle im Kreislauf
+
+---
+
+# 🧩 Emergent Story Mechaniken
+
+Keine Quests. Stattdessen:
+
+## 🏭 Reparierbare Alt-Fabriken
+
+Du findest:
+
+* alte Assembler mit Modulen
+* alte Chemplants
+* alte Logistiknetze
+
+Du entscheidest:
+
+* Reparieren?
+* Zerlegen?
+* Umbauen?
+
+Die Entscheidung IST die Story.
+
+---
+
+## 📡 Verlassene Plattformen
+
+Orbitale Trümmer:
+
+* Teilweise funktional
+* Enthalten alte Technologie
+
+Man kann:
+
+* Andocken
+* Ausschlachten
+* Reaktivieren
+
+---
+
+## 🧪 Forschung wird moralisch ambivalent
+
+Bestimmte Techs:
+
+* ermöglichen besseren Abbau
+* verschlechtern Recycling
+* erhöhen planetare Instabilität
+
+Keine Textbox sagt das.
+Das System zeigt es.
+
+---
+
+# ⚙️ Technische Architektur (sauber geplant)
+
+Wir brauchen 3 Kernsysteme:
+
+---
+
+## 1️⃣ Materialkategorisierungssystem
+
+Jedes Item bekommt intern:
+
+* Materialklasse
+* Komplexitätsstufe
+* Entropiewert
+
+Recycler berechnen:
+Output = f(Energie, Tech, Kategorie)
+
+Das können wir:
+
+* Data-Stage vorbereiten
+* Control-Stage für probabilistische Outputs nutzen
+
+---
+
+## 2️⃣ Globaler Ressourcen-Tracker
+
+Nicht als UI-Zwang.
+Sondern intern:
+
+Wir tracken:
+
+* Wie viel Primärmaterial existiert noch
+* Wie viel bereits umgewandelt wurde
+
+Optional:
+
+* Planetare Instabilität steigt
+
+---
+
+## 3️⃣ Ruinen-Generator
+
+Beim Chunk-Gen:
+
+* Struktur-Blöcke spawnen
+* Mit zufälligem Schaden
+* Mit zufälliger Loot-Struktur
+
+Nicht Blueprint-Spam.
+Sondern modulare Ruinen-Bibliothek.
+
+---
+
+# 🔥 Hardcore-Elemente (aber fair)
+
+* Kein Mining Productivity Bonus
+* Keine unendlichen Vorkommen
+* Science wird teurer
+* Repair kostet Ressourcen
+
+Aber:
+Es gibt immer eine minimale Reclaimer-Option.
+Kein Softlock.
+
+---
+
+# 🎯 Siegbedingung im Sandbox-Stil
+
+Kein "Mission Complete".
+
+Stattdessen:
+
+* Space Platform vollständig im Closed Loop
+* Keine Primärressourcen mehr nötig
+* Autarke Recycling-Ökonomie
+
+Oder klassisch:
+
+* Interstellare Transmission bauen
+* Nur möglich bei stabiler Materialökonomie
+
+---
+
+# 💎 Jetzt die entscheidende Systemfrage
+
+Wie radikal soll die Endlichkeit sein?
+
+Option A:
+Primärressourcen reichen vielleicht für 10–20 Stunden.
+
+Option B:
+Primärressourcen reichen nur für 3–5 Stunden.
+Recycling ist fast sofort Pflicht.
+
+Option C:
+Extrem brutal.
+Start nur mit Ruinen.
+
+---
+
+Ich sage dir ehrlich:
+Option B ist designtechnisch am saubersten.
+
+Aber ich will deine Vision hören.
+
+Wie sehr sollen Spieler leiden?

@@ -1,0 +1,281 @@
+Gut.
+
+Jetzt reden wir nicht mehr über eine Mod.
+Jetzt reden wir über ein **Space Age Sub-Framework mit Storylayer**.
+
+Und die Mischung aus
+**A) Hardcore Survival**
+**B) Storygetrieben**
+**D) Space Age Erweiterung**
+
+* eigene Planeten
+
+… ist ambitioniert. Aber absolut machbar, wenn wir es strukturiert aufziehen.
+
+---
+
+# 🧠 Strategische Grundentscheidung
+
+Wir bauen **keinen Overhaul**, der alles ersetzt.
+
+Wir bauen:
+
+> Ein Space Age kompatibles Story-Szenario mit Systemerweiterungen.
+
+Technisch bedeutet das:
+
+* Eigenes Scenario (nicht nur Data-Mod)
+* Custom Surfaces
+* Angepasste Map-Gen
+* Eigene Tech-Tree-Branches
+* Optionale Planet-Definitionen
+* Recycling als Core-System
+
+Das ist sauberer als Vanilla brutal zu patchen.
+
+---
+
+# 🌍 Strukturvorschlag: Das große System
+
+Ich skizziere dir ein mögliches Framework.
+
+---
+
+# 🌑 Planet 1 – "Nachlass"
+
+## Setting
+
+Der erste Engineer hat hier alles ausgebeutet.
+Zurück bleiben:
+
+* Leere Erzfelder
+* Halbzerstörte Fabriken
+* Pollution-verkrustete Zonen
+* Alte Minen mit 5–10k Restressourcen
+
+## Mechanik
+
+* Autoplace massiv reduziert
+* 80% der Fläche ist „Ruinen-Biom“
+* Start mit sehr wenig Rohmaterial
+* Ruinen sind primäre Ressource
+
+## Besonderheit
+
+Reparierte Gebäude haben:
+
+* Bonuswerte
+* Aber begrenzte Lebensdauer
+* Oder Wartungsbedarf
+
+---
+
+# 🪐 Planet 2 – "Abraum"
+
+Ein Müllplanet.
+
+Hier liegen:
+
+* Alte Container
+* Space-Debris
+* Fehlgeschlagene Plattformen
+
+Mechanik:
+
+* Viel Scrap
+* Kaum Primärerze
+* Recycling besonders effizient
+
+Dieser Planet wird:
+
+> Dein Material-Umwandlungszentrum
+
+---
+
+# 🌋 Planet 3 – "Restadern"
+
+Hier gibt es:
+
+* Sehr wenige, aber tiefe Erze
+* Abbau nur mit High-Tier-Tech
+
+Das wird:
+
+> Spätspiel-Ressourcenquelle
+
+Aber:
+
+* Hoher Energiebedarf
+* Eventuell planetare Instabilität
+
+---
+
+# ♻️ Recycling als Gameplay-Säule
+
+Wir machen Recycling nicht nur zu:
+
+> "Item → Random Stuff"
+
+Sondern zu:
+
+### Mechanik 1 – Materialkategorien
+
+Items gehören zu:
+
+* Metalle
+* Elektronik
+* Organik
+* Hochtechnologie
+
+Recycler Stufe bestimmt:
+
+* Welche Kategorie extrahiert wird
+* Wie gezielt die Rückgewinnung ist
+
+---
+
+### Mechanik 2 – Energie als Konversionspreis
+
+Später:
+
+Du kannst:
+
+* 100 Scrap + 50MW → 10 Iron Plates
+* 100 Scrap + 200MW → 10 Advanced Circuits
+
+Effizienz vs Energieverbrauch = strategische Entscheidung.
+
+---
+
+### Mechanik 3 – Entropie-System
+
+Sehr spannend:
+
+Jeder Recyclingprozess erzeugt:
+
+* "Materialverlust" als irreversiblen Faktor
+
+Das heißt:
+
+* 100% Kreislauf ist nie möglich
+* Wachstum ist asymptotisch
+
+Das verhindert Exploits.
+
+---
+
+# 📖 Story Integration
+
+Wir können Story über:
+
+* Ruinen mit Log-Einträgen
+* Trigger-Events beim Reparieren
+* Planetare Datensignale
+* Alte Blueprints
+
+Umsetzen.
+
+Technisch:
+
+* `script.on_event(defines.events.on_built_entity)`
+* GUI-Overlays
+* Custom Objectives
+
+---
+
+# 🛰 Space Age Integration – wichtig!
+
+Wir dürfen Plattformen nicht zerstören.
+
+Idee:
+
+Space Platforms sind:
+
+> Fast ressourcenfrei herstellbar
+> Aber Wartung braucht recycelte Hochtechnologie
+
+Das erzeugt:
+Interplanetaren Materialkreislauf.
+
+---
+
+# 🧨 Hardcore-Elemente (dosiert!)
+
+Optionen:
+
+* Keine unendlichen Erzfelder
+* Reparaturen kosten Ressourcen
+* Alte Maschinen können explodieren
+* Pollution beschleunigt Zerfall
+
+Aber:
+Softlocks vermeiden!
+
+Notfallmechanik:
+
+* "Core Reclaimer"
+* Gibt minimalen Rohstoff gegen extreme Energie
+
+---
+
+# ⚙️ Technische Machbarkeit
+
+Alles machbar.
+
+### Eigene Planeten:
+
+* Neue Surfaces via Data Stage
+* Autoplace neu definieren
+* Custom Biomes
+
+### Ruinen:
+
+* Map-Gen via noise-layer + entity-placement
+* Oder Chunk-Event-Spawning
+
+### Recycling:
+
+* Eigene Recipe-Category
+* Custom Assembling-Machines
+* Optional Script für probabilistische Ergebnisse
+
+### Story:
+
+* Custom GUI
+* Trigger-System
+* Remote Interfaces
+
+---
+
+# 🧬 Das Entscheidende:
+
+Wir brauchen ein Design-Prinzip.
+
+Ist das Spielziel:
+
+1. Interplanetaren Materialkreislauf stabilisieren?
+2. Den Planeten regenerieren?
+3. Den Fehler des ersten Engineers korrigieren?
+4. Oder bewusst einen anderen Weg gehen?
+
+---
+
+# 💡 Mein Vorschlag für das Kernziel
+
+> Errichte eine vollständig geschlossene Produktionskette,
+> die ohne neue Primärressourcen stabil läuft.
+
+Das wäre mechanisch wunderschön.
+Und philosophisch stark.
+
+---
+
+Jetzt kommt die wichtigste Frage:
+
+Willst du das als lineare Story mit klaren Kapiteln?
+
+Oder als emergentes Sandbox-System mit Story-Fragmenten?
+
+Sag mir das — und wir gehen in die konkrete Systemarchitektur.
+
+> im klassischen factorio stil natürlich die emergente sandbox, alles andere wäre kein factorio mehr!

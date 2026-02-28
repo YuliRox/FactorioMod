@@ -1,0 +1,299 @@
+AntiElitz hier.
+Ich sag’s direkt:
+
+**Das ist kein Mod.
+Das ist ein Spielmodus.**
+
+Und auf Space Age Basis?
+Das kann brutal gut werden — wenn wir es richtig designen.
+
+---
+
+# 🔎 Erste Bewertung – Fundament
+
+Deine Kernidee:
+
+> Ressourcen sind fast erschöpft.
+> Fortschritt entsteht durch Recycling, Ruinen und Kreislaufwirtschaft.
+
+Das ist mechanisch stark, weil es:
+
+* 🔄 Das Grundprinzip von Factorio (Expansion) umdreht
+* 🧠 Entscheidungsdruck erzeugt
+* 📦 Space Age perfekt ergänzt (begrenzte planetare Identitäten)
+* ♻️ Recycling erstmals zum Core-Gameplay macht
+
+Vanilla Space Age hat zwar Recycling-Mechaniken – aber nicht als Zwangssystem.
+
+Wir machen daraus:
+
+> **Progression durch Rückgewinnung statt Expansion.**
+
+Das ist neu. Das ist sauber.
+
+---
+
+# 🧠 Systemanalyse – Wo es knallt
+
+Jetzt die ehrliche Prüfung.
+
+---
+
+## 1️⃣ Limitierte Ressourcen
+
+Problem:
+
+Factorio basiert intern auf:
+
+* unendlichen Erzen
+* Expansion als Fortschritt
+* exponentiellem Wachstum
+
+Wenn wir Ressourcen stark limitieren:
+
+* Science kann soft-locken
+* Spieler können sich irreversibel festfahren
+* Multiplayer kann kaputtgehen (ein Spieler verschwendet alles)
+
+👉 Lösungsideen:
+
+* Recycling darf nie 0% sein
+* Minimaler geschlossener Loop muss immer existieren
+* Notfall-Mechanik (z.B. "Emergency Reclamation")
+
+---
+
+## 2️⃣ Scrap als globales Nebenprodukt
+
+Du willst:
+
+> Forschung produziert Scrap.
+
+Technisch:
+
+* Labs haben keine Output-Slots.
+* Forschung verbraucht Items, erzeugt aber nichts.
+
+Wir müssen:
+
+* Entweder Science-Packs ersetzen
+* Oder Lab-Rezepte umschreiben
+* Oder per `on_research_finished` Scrap spawnen
+
+UPS-technisch:
+→ Research-Event ist harmlos.
+
+Aber Balancing-technisch:
+→ Science wird plötzlich Resource-Farm.
+
+Das kann abused werden.
+
+---
+
+## 3️⃣ Ruinen-Mechanik
+
+Das ist dein Gold.
+
+Space Age ist Multi-Surface.
+Wir können:
+
+* Ruinen-Planeten generieren
+* Vorzerstörte Fabriken per `map-gen` setzen
+* Entities mit Custom-Health & Custom-Flags
+
+Mechaniken möglich:
+
+* Abreißen → Scrap
+* Reparieren → funktionale Gebäude
+* Umbauen → neue Maschinen
+
+Das ist mechanisch sehr stark.
+
+---
+
+## 4️⃣ "Kein Incentive für unendliches Wachstum"
+
+Das ist philosophisch spannend.
+
+Aber:
+
+Factorio-Spieler expandieren aus Reflex.
+
+Wenn wir Wachstum bestrafen:
+
+* müssen wir Alternativ-Motivation geben
+
+Beispiel:
+
+* Effizienz als Siegbedingung
+* Minimale Materialverbrauch-Score
+* Planetare Stabilität
+
+---
+
+# 🚀 Ausbau-Potenzial (Jetzt wird’s interessant)
+
+Hier drehen wir auf.
+
+---
+
+## 🌍 Planetenspezifische Identität (Space Age!)
+
+Stell dir vor:
+
+Planet A:
+
+* Fast keine Erze
+* Viele Ruinen
+
+Planet B:
+
+* Voller toxischer Abfälle
+* Recycling besonders effizient
+
+Planet C:
+
+* Kaum Scrap
+* Aber extrem seltene Rework-Maschinen
+
+Interplanetare Logistik wird:
+
+> Material-Rebalancing statt Expansion.
+
+---
+
+## ♻️ Recycling-Stufen – Tiefer gedacht
+
+Nicht nur Effizienz.
+
+Sondern:
+
+| Tier | Mechanik                |
+| ---- | ----------------------- |
+| T1   | Zufällige Rückgewinnung |
+| T2   | Selektive Trennung      |
+| T3   | Molekulare Zerlegung    |
+| T4   | Atomare Rekonstruktion  |
+
+Später:
+
+* Input → Wunsch-Output mit Energiepreis
+* Effizienz hängt von Pollution ab
+* Effizienz sinkt bei Massenproduktion
+
+---
+
+## 🧠 Forschung als ethische Entscheidung
+
+Was wenn:
+
+Bestimmte Forschungen:
+
+* permanente Ressourcen vernichten
+* Planet destabilisieren
+* Ruinen unbrauchbar machen
+
+Du willst Railguns?
+→ Verlierst 10% aller Metallreserven dauerhaft.
+
+---
+
+## 🏭 Gebäude-Rework-System
+
+Ruinen könnten:
+
+* Alte Assembler mit +50% Speed sein
+* Aber nur reparierbar, nicht craftbar
+
+Oder:
+
+* Alte Module enthalten
+* Können extrahiert werden
+* Aber zerstören das Gebäude
+
+---
+
+# ⚙️ Technische Umsetzung
+
+Wichtige Punkte:
+
+### Data Stage
+
+* Erze drastisch reduzieren (`autoplace_control`)
+* Custom Scrap-Item
+* Recycler-Prototype (assembling-machine subclass)
+* Ruinen als spezielle Entities
+
+### Control Stage
+
+* Surface-aware Scrap-Tracking
+* Ruinen-Events
+* Salvage-Mechaniken
+* Optional Score-System
+
+### Migration
+
+Wenn wir Ressourcen reduzieren:
+→ Bestehende Saves brechen.
+Das wird New-Game-Mod.
+
+---
+
+# 🧨 Potenzielle Konflikte mit Space Age
+
+1. Space Platforms brauchen konstante Materialzufuhr
+   → Wenn Material zu limitiert, Plattformen unspielbar.
+
+2. Space Science braucht hohe Item-Mengen
+   → Muss neu gebalanced werden.
+
+3. Einige Space-Age-Rezepte sind extrem teuer
+   → Müssen eventuell angepasst werden.
+
+---
+
+# 🎯 Das ist die eigentliche Kernfrage:
+
+Willst du:
+
+A) Hardcore-Survival-Mod
+B) Story-getriebenes Szenario
+C) Kompletten Overhaul
+D) Space Age Erweiterung
+E) Alle davon?
+
+---
+
+# 💎 Mein Fazit
+
+Das Konzept ist stark.
+
+Aber wir müssen entscheiden:
+
+Ist das:
+
+> "Recycling als Feature"
+
+oder
+
+> "Ressourcen-Endlichkeit als Fundament des Spiels"
+
+Wenn wir Letzteres machen, müssen wir:
+
+* Science neu denken
+* Victory Condition neu denken
+* Multiplayer-Regeln neu denken
+* Space Age Integration neu denken
+
+Und ich bin ehrlich:
+
+Wenn wir es richtig machen,
+kann das eine der interessantesten Space Age Mods werden.
+
+---
+
+Also:
+
+Wie radikal willst du gehen?
+
+> Um mal auf deine Kernfrage zurück zu kommen. Es soll eine Mischung aus A), B) und D) werden - Storygetriebenes Hardcore Survival als Space Age Erweiterung. Son bisschen die Idee vielleicht auch eigene Planeten mit einfließen zu lassen
