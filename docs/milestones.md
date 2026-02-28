@@ -86,7 +86,7 @@ Valid mod that loads in Factorio 2.0. No content.
 
 **Scope:**
 - Startup setting: `second-engineer-ruins-enabled`
-- `on_chunk_generated` handler on Nachlass surface
+- `on_chunk_generated` handler on Nauvis surface
 - Modular ruin template library (assembler, furnace, belt segment ruins)
 - Random health (30–80% of max) and loot tables per template
 
@@ -103,7 +103,7 @@ Valid mod that loads in Factorio 2.0. No content.
 **Guard:** All planet code wrapped in `if mods["space-age"] then`.
 
 **Scope:**
-- `se-nachlass`: depleted start planet, ruin-heavy biome, reduced ore
+- `Nauvis`: depleted start planet, ruin-heavy biome, reduced ore
 - `se-abraum`: waste/scrap planet, recycling efficiency bonus
 - `se-tiefadern`: deep-vein endgame planet, high-energy extraction
 - Space connections between planets

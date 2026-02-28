@@ -11,7 +11,6 @@ C:/Code/FactorioMod/
 ├── CLAUDE.md                    -- this file
 ├── docs/
 │   └── milestones.md            -- full development roadmap (M1–M10)
-│   └── WorldGeneration.md       -- world generation notes and design direction
 └── second_engineer/             -- the mod root (this is what Factorio loads)
     ├── info.json
     ├── changelog.txt
@@ -130,12 +129,6 @@ Full detail in `docs/milestones.md`. Summary:
 | M8        | T2–T4 Recycler entities                          | pending     |
 | M9        | Global resource tracker + remote interface       | pending     |
 | M10       | Story layer: log items in ruin loot              | pending     |
-
----
-
-## Design Notes
-
-- `docs/WorldGeneration.md` captures the current direction for scarcity-driven map generation, ruins, salvage placement, and anti-softlock rules.
 
 ---
 

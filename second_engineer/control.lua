@@ -1,4 +1,6 @@
 -- second_engineer: runtime script entry point
+local worldgen = require("scripts.worldgen")
+
 local PACK_TO_SCRAP = {
   ["automation-science-pack"] = "scrap-red",
   ["logistic-science-pack"]   = "scrap-green",
@@ -37,6 +39,16 @@ local SCAN_BUDGET   = 25  -- max labs processed per cycle
 
 local function is_lab(entity)
   return entity and entity.valid and entity.type == "lab"
+end
+
+local function skip_intro_cutscene(player)
+  if not (player and player.valid) then return end
+  if player.controller_type ~= defines.controllers.cutscene then return end
+
+  -- Design decision: this scenario starts with immediate resource pressure and
+  -- authored starter terrain, so the vanilla intro cutscene only delays the
+  -- player from interacting with the world we just prepared.
+  player.exit_cutscene()
 end
 
 local function ensure_globals()
@@ -125,6 +137,7 @@ end
 -- Events: init/load
 script.on_init(function()
   ensure_globals()
+  worldgen.on_init()
   for _, surface in pairs(game.surfaces) do
     for _, lab in pairs(surface.find_entities_filtered{type="lab"}) do
       register_lab(lab)
@@ -134,6 +147,7 @@ end)
 
 script.on_configuration_changed(function()
   ensure_globals()
+  worldgen.on_configuration_changed()
   storage.labs      = {}
   storage.lab_index = {}
   storage.rr_pos    = 1
@@ -167,6 +181,10 @@ script.on_event(defines.events.on_player_mined_entity, on_removed)
 script.on_event(defines.events.on_robot_mined_entity,  on_removed)
 script.on_event(defines.events.on_entity_died,         on_removed)
 script.on_event(defines.events.script_raised_destroy,  on_removed)
+script.on_event(defines.events.on_chunk_generated, worldgen.on_chunk_generated)
+script.on_event(defines.events.on_cutscene_started, function(event)
+  skip_intro_cutscene(game.get_player(event.player_index))
+end)
 
 -- Periodic round-robin scan
 script.on_event(defines.events.on_tick, function(event)
