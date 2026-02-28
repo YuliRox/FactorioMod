@@ -1,0 +1,2 @@
+-- second_engineer: data stage entry point
+-- Prototype definitions will be added in future milestones.

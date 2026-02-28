@@ -1,0 +1,12 @@
+{
+  "name": "second_engineer",
+  "version": "0.1.0",
+  "title": "Second Engineer",
+  "author": "Xemrox",
+  "description": "A hardcore survival scenario: arrive as the second engineer on a depleted planet. Progression through recycling, ruin salvage, and circular economics instead of infinite extraction.",
+  "factorio_version": "2.0",
+  "dependencies": [
+    "base >= 2.0.0",
+    "? space-age >= 2.0.0"
+  ]
+}

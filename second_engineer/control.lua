@@ -1,0 +1,2 @@
+-- second_engineer: runtime script entry point
+-- Event handlers and scripting will be added in future milestones.
