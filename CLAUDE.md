@@ -18,7 +18,7 @@ second_engineer/                       -- the mod itself
   thumbnail.png
   data.lua                             -- data stage entry point
   data-updates.lua                     -- patches existing prototypes; AbandonedRuins hook
-  data-final-fixes.lua                 -- hidden lab animation; dynamic recipe generation
+  data-final-fixes.lua                 -- furnace slot override; hidden lab animation; dynamic recipe generation
   settings.lua                         -- [MISSING] M4 resource scarcity settings
   control.lua                          -- thin event dispatcher
   locale/en/second_engineer.cfg
@@ -31,8 +31,11 @@ second_engineer/                       -- the mod itself
       hidden-research-lab.lua          -- internal lab entity
     item/
       scraps.lua                       -- scrap items (7 base + 5 space-age)
-    recipe/                            -- [MISSING] M2
+    recipe/
+      scrap-smelting.lua               -- probabilistic scrap→materials furnace recipes
     technology/                        -- [MISSING] M2
+    override/                          -- patches to vanilla/mod prototypes; required from data-final-fixes.lua
+      furnace-output-slots.lua         -- widens result_inventory_size on all furnaces to ≥2
   scripts/
     research_assembler.lua             -- assembler runtime logic
     abandoned_ruins.lua                -- AbandonedRuins mod integration

@@ -1,6 +1,7 @@
 -- second_engineer: data stage entry point
 
 require("prototypes.item.scraps")
+require("prototypes.recipe.scrap-smelting")
 
 -- Recipe category: only se-research-assembler can craft these recipes
 data:extend({{

@@ -2,6 +2,8 @@
 -- Runs last. Patches the hidden research lab animation and generates one hidden
 -- recipe per unique science-pack combination found in the technology tree.
 
+require("prototypes.override.furnace-output-slots")
+
 local PACK_TO_SCRAP = require("shared.pack_to_scrap")
 
 local SCRAP_PER_PACK = {
