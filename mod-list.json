@@ -26,7 +26,8 @@
     },
     {
       "name": "debugadapter",
-      "enabled": false
+      "enabled": true,
+      "version": "2.0.10"
     },
     {
       "name": "ruin-maker_updated_fork",
@@ -35,6 +36,14 @@
     {
       "name": "second_engineer",
       "enabled": true
+    },
+    {
+      "name": "coverage",
+      "enabled": false
+    },
+    {
+      "name": "profiler",
+      "enabled": false
     }
   ]
 }
