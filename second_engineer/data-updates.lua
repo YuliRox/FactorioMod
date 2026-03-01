@@ -9,7 +9,7 @@ for _, lab in pairs(data.raw["lab"]) do
 end
 
 if mods["AbandonedRuins_updated_fork"] then
-  local setting = data.raw["string-setting"]["current-ruin-set"]
+  local setting = data.raw["string-setting"] and data.raw["string-setting"]["current-ruin-set"]
   if setting then
     local exists = false
     for _, value in ipairs(setting.allowed_values or {}) do
