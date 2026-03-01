@@ -26,9 +26,23 @@ Stage only files directly related to the change. Always review `git status` befo
 - `mod-settings.dat` — binary; local Factorio settings
 - `.env`, credentials, or any secrets
 
+## Working directory
+
+The shell is always at the repository root (`C:/Code/FactorioMod`). Run git commands directly — never prefix them with `cd /c/Code/FactorioMod &&` or any other `cd`.
+
+## Auto-commit after substantial changes
+
+Commit automatically after each substantial change without waiting for the user to ask. A change is substantial if it:
+
+- Creates or deletes a file
+- Completes a self-contained piece of work (new feature, refactor, fix, docs update)
+
+Do not commit after every tiny edit. Batch related edits (e.g. file + its locale entry + CLAUDE.md update) into one commit. When in doubt, commit.
+
 ## What not to do
 
 - Never use `--no-verify` (bypass hooks)
 - Never force-push to `main`
 - Never amend a published commit — create a new one instead
 - Never use `git add -A` or `git add .`
+- Never combine git commands with `cd`
