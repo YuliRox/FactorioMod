@@ -23,6 +23,8 @@ second_engineer/                       -- the mod itself
   control.lua                          -- thin event dispatcher
   locale/en/second_engineer.cfg
   graphics/icons/scrap/                -- 12 scrap item icons (64×64 png)
+  shared/
+    pack_to_scrap.lua                  -- pack→scrap lookup, safe for data + runtime
   prototypes/
     entity/
       research-assembler.lua           -- assembler entity + item + recipe

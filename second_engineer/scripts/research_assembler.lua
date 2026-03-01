@@ -6,22 +6,7 @@ local M = {}
 
 -- ── Constants ────────────────────────────────────────────────────────────────
 
-local PACK_TO_SCRAP = {
-  ["automation-science-pack"] = "scrap-red",
-  ["logistic-science-pack"]   = "scrap-green",
-  ["military-science-pack"]   = "scrap-black",
-  ["chemical-science-pack"]   = "scrap-blue",
-  ["production-science-pack"] = "scrap-purple",
-  ["utility-science-pack"]    = "scrap-yellow",
-  ["space-science-pack"]      = "scrap-white",
-}
-if script.active_mods["space-age"] then
-  PACK_TO_SCRAP["metallurgic-science-pack"]    = "scrap-metallurgic"
-  PACK_TO_SCRAP["electromagnetic-science-pack"] = "scrap-electromagnetic"
-  PACK_TO_SCRAP["agricultural-science-pack"]   = "scrap-agricultural"
-  PACK_TO_SCRAP["cryogenic-science-pack"]      = "scrap-cryogenic"
-  PACK_TO_SCRAP["promethium-science-pack"]     = "scrap-promethium"
-end
+local PACK_TO_SCRAP = require("shared.pack_to_scrap")
 
 local SCAN_BUDGET   = 25
 local IDLE_RECIPE   = "se-research-idle"

@@ -2,24 +2,7 @@
 -- Runs last. Patches the hidden research lab animation and generates one hidden
 -- recipe per unique science-pack combination found in the technology tree.
 
--- ── Lookup tables (must match control.lua) ─────────────────────────────────
-
-local PACK_TO_SCRAP = {
-  ["automation-science-pack"] = "scrap-red",
-  ["logistic-science-pack"]   = "scrap-green",
-  ["military-science-pack"]   = "scrap-black",
-  ["chemical-science-pack"]   = "scrap-blue",
-  ["production-science-pack"] = "scrap-purple",
-  ["utility-science-pack"]    = "scrap-yellow",
-  ["space-science-pack"]      = "scrap-white",
-}
-if mods["space-age"] then
-  PACK_TO_SCRAP["metallurgic-science-pack"]    = "scrap-metallurgic"
-  PACK_TO_SCRAP["electromagnetic-science-pack"] = "scrap-electromagnetic"
-  PACK_TO_SCRAP["agricultural-science-pack"]   = "scrap-agricultural"
-  PACK_TO_SCRAP["cryogenic-science-pack"]      = "scrap-cryogenic"
-  PACK_TO_SCRAP["promethium-science-pack"]     = "scrap-promethium"
-end
+local PACK_TO_SCRAP = require("shared.pack_to_scrap")
 
 local SCRAP_PER_PACK = {
   ["automation-science-pack"]      = 1,
