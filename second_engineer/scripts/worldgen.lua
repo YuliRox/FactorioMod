@@ -1,6 +1,5 @@
 local Worldgen = {}
-local ruins = require("scripts.worldgeneration.ruins")
-local remnants = require("scripts.worldgeneration.remnants")
+local generated_mega_ruin = require("scripts.worldgeneration.generated.merged_rails_solar")
 
 local CHUNK_SIZE = 32
 local NAUVIS_NAME = "nauvis"
@@ -25,6 +24,11 @@ local STARTER_CLEAR_AREA = {
   left_top = {x = -96, y = -96},
   right_bottom = {x = 96, y = 96},
 }
+
+-- Design decision: the generated mega-ruin is currently a one-off inspection
+-- artifact. Place it near spawn so it can be reviewed in-game before we build
+-- the proper sectorized runtime format.
+local TEST_MEGA_RUIN_ORIGIN = {x = 96, y = -32}
 
 -- Design decision: not every remote ore field should be worth the rail, power,
 -- and outpost cost. These bands intentionally create many marginal deposits.
@@ -58,7 +62,8 @@ local place_ruin_cluster
 local function ensure_globals()
   storage.worldgen = storage.worldgen or {
     starter_area_prepared = false,
-    starter_ruins_placed = false,
+    test_mega_ruin_placed = false,
+    debug_spidertron_placed = false,
   }
 end
 
@@ -234,24 +239,6 @@ local function prepare_patch_terrain(surface, patch)
   clear_blocking_entities(surface, pad_area(patch.pos, patch.radius + 2))
 end
 
-local function prepare_ruin_terrain(surface)
-  -- Design decision: the first guaranteed ruin cluster is supposed to teach the
-  -- player to notice and evaluate repair opportunities. Hidden ruins fail that.
-  local tiles = {}
-  local tile_name = detect_patch_tile_name(surface, ruins.starter_cluster.origin, 8)
-  for x = ruins.starter_clear_area.left_top.x, ruins.starter_clear_area.right_bottom.x - 1 do
-    for y = ruins.starter_clear_area.left_top.y, ruins.starter_clear_area.right_bottom.y - 1 do
-      tiles[#tiles + 1] = {
-        name = tile_name,
-        position = {x = x, y = y},
-      }
-    end
-  end
-
-  surface.set_tiles(tiles)
-  clear_blocking_entities(surface, ruins.starter_clear_area)
-end
-
 local function damage_entity(entity, health_ratio)
   if not (entity and entity.valid and health_ratio) then return end
   -- Factorio 2.0 removed LuaEntityPrototype.max_health at runtime. Using the
@@ -267,79 +254,6 @@ local function fill_loot(entity, loot)
   if not inv then return end
   for _, stack in ipairs(loot) do
     inv.insert(stack)
-  end
-end
-
-local function choose_ruin_decoration_name(tile_name)
-  local family = classify_tile_family(tile_name)
-  if not family then
-    return nil
-  end
-
-  -- Design decision: ruin dressing should reinforce the local biome instead of
-  -- importing a fake forest into deserts. Grass gets trees; dry ground gets
-  -- scrubby desert plants; sand gets no extra dressing at all.
-  if family == "grass" then
-    return "tree-04"
-  end
-
-  if family == "dirt" then
-    return "dry-hairy-tree"
-  end
-
-  if family == "sand" then
-    return nil
-  end
-
-  return nil
-end
-
-local function detect_ruin_biome(surface)
-  local counts = {grass = 0, dirt = 0, sand = 0}
-
-  -- Design decision: the ruin footprint itself is terrain-corrected for
-  -- usability, so biome detection must sample the untouched ring around it.
-  for x = ruins.starter_clear_area.left_top.x - 2, ruins.starter_clear_area.right_bottom.x + 1 do
-    for y = ruins.starter_clear_area.left_top.y - 2, ruins.starter_clear_area.right_bottom.y + 1 do
-      local in_clear_x = x >= ruins.starter_clear_area.left_top.x and x < ruins.starter_clear_area.right_bottom.x
-      local in_clear_y = y >= ruins.starter_clear_area.left_top.y and y < ruins.starter_clear_area.right_bottom.y
-      if not (in_clear_x and in_clear_y) then
-        local family = classify_tile_family(surface.get_tile(x, y).name)
-        if family then
-          counts[family] = counts[family] + 1
-        end
-      end
-    end
-  end
-
-  if counts.sand >= counts.dirt and counts.sand >= counts.grass then
-    return "sand"
-  end
-
-  if counts.dirt >= counts.grass then
-    return "dirt"
-  end
-
-  return "grass"
-end
-
-local function place_ruin_decorations(surface)
-  local biome = detect_ruin_biome(surface)
-
-  for _, spec in ipairs(ruins.starter_decoration_points) do
-    local pos = {
-      x = ruins.starter_cluster.origin.x + spec.offset.x,
-      y = ruins.starter_cluster.origin.y + spec.offset.y,
-    }
-    local decoration_name = choose_ruin_decoration_name(biome)
-
-    if decoration_name then
-      surface.create_entity({
-        name = decoration_name,
-        position = pos,
-        raise_built = false,
-      })
-    end
   end
 end
 
@@ -372,34 +286,171 @@ local function place_ruin_entities(surface, origin, entities)
   end
 end
 
-local function get_template_area(origin, entities)
-  local min_x, min_y = math.huge, math.huge
-  local max_x, max_y = -math.huge, -math.huge
-
-  for _, spec in ipairs(entities) do
-    local x = origin.x + spec.offset.x
-    local y = origin.y + spec.offset.y
-    if x < min_x then min_x = x end
-    if y < min_y then min_y = y end
-    if x > max_x then max_x = x end
-    if y > max_y then max_y = y end
-  end
-
+local function shift_area(area, origin)
   return {
-    left_top = {x = min_x - 1, y = min_y - 1},
-    right_bottom = {x = max_x + 2, y = max_y + 2},
+    left_top = {
+      x = origin.x + area.left_top.x,
+      y = origin.y + area.left_top.y,
+    },
+    right_bottom = {
+      x = origin.x + area.right_bottom.x + 1,
+      y = origin.y + area.right_bottom.y + 1,
+    },
   }
 end
 
-local function place_template(surface, origin, template_index)
-  local template = remnants.templates[template_index]
-  if not template then return end
+local function place_generated_tile_bucket(surface, origin, tiles)
+  if not tiles or #tiles == 0 then return end
 
-  -- Design decision: ambient remnants should be discoverable landmarks, not
-  -- hidden under forests. We clear blockers in the template footprint but do
-  -- not retile the ground, so the scene still reads as part of the biome.
-  clear_blocking_entities(surface, get_template_area(origin, template.entities))
-  place_ruin_entities(surface, origin, template.entities)
+  local placed = {}
+  for _, spec in ipairs(tiles) do
+    placed[#placed + 1] = {
+      name = spec.name,
+      position = {
+        x = origin.x + spec.offset.x,
+        y = origin.y + spec.offset.y,
+      },
+    }
+  end
+
+  surface.set_tiles(placed)
+end
+
+local function clear_generated_ghosts(surface, area)
+  -- Design decision: this placement is an inspection scaffold, not a
+  -- blueprint. Any leftover ghosts in the footprint are just noise.
+  local ghosts = surface.find_entities_filtered({
+    area = area,
+    name = {"entity-ghost", "tile-ghost"},
+  })
+
+  for _, ghost in ipairs(ghosts) do
+    if ghost.valid then
+      ghost.destroy()
+    end
+  end
+end
+
+local function place_generated_remnants(surface, origin, entities)
+  if not entities or #entities == 0 then return end
+
+  for _, spec in ipairs(entities) do
+    local params = {
+      name = spec.name,
+      position = {
+        x = origin.x + spec.offset.x,
+        y = origin.y + spec.offset.y,
+      },
+      raise_built = false,
+    }
+
+    if spec.direction then
+      params.direction = spec.direction
+    end
+
+    surface.create_entity(params)
+  end
+end
+
+local function place_generated_damaged_entities(surface, origin, entities)
+  if not entities or #entities == 0 then return end
+
+  for _, spec in ipairs(entities) do
+    local params = {
+      name = spec.name,
+      position = {
+        x = origin.x + spec.offset.x,
+        y = origin.y + spec.offset.y,
+      },
+      force = "neutral",
+      raise_built = false,
+    }
+
+    if spec.direction then
+      params.direction = spec.direction
+    end
+
+    local entity = surface.create_entity(params)
+    if entity and entity.valid and spec.damage then
+      -- Design decision: "damaged live" means barely surviving, not immediately
+      -- destroyed on spawn. Applying raw damage can kill low-health entities
+      -- like solar panels outright, so clamp to 1 HP minimum instead.
+      local max_health = entity.max_health
+      if max_health and max_health > 1 then
+        entity.health = math.max(1, max_health - spec.damage)
+      end
+    end
+  end
+end
+
+local function place_test_generated_mega_ruin(surface)
+  if storage.worldgen.test_mega_ruin_placed then return end
+
+  local template = generated_mega_ruin.template
+  local area = shift_area(template.bounds, TEST_MEGA_RUIN_ORIGIN)
+
+  -- Design decision: this is purely for inspection, so we clear the footprint
+  -- aggressively and stamp the generated foundation buckets directly.
+  clear_blocking_entities(surface, area)
+  clear_generated_ghosts(surface, area)
+  place_generated_tile_bucket(surface, TEST_MEGA_RUIN_ORIGIN, template.tiles.foundation_kept)
+  place_generated_tile_bucket(surface, TEST_MEGA_RUIN_ORIGIN, template.tiles.foundation_cracked)
+  place_generated_remnants(surface, TEST_MEGA_RUIN_ORIGIN, template.entities.remnant)
+  place_generated_damaged_entities(surface, TEST_MEGA_RUIN_ORIGIN, template.entities.damaged_live)
+  clear_generated_ghosts(surface, area)
+
+  storage.worldgen.test_mega_ruin_placed = true
+end
+
+local function place_debug_spidertron(surface)
+  if storage.worldgen.debug_spidertron_placed then return end
+
+  local player_force = get_player_force()
+  if not player_force then return end
+
+  -- DEBUG ONLY: this spidertron exists to speed up inspection while building
+  -- the mod and must be removed prior to mod publishing.
+  local spidertron = surface.create_entity({
+    name = "spidertron",
+    position = {x = 6, y = 6},
+    force = player_force,
+    quality = "legendary",
+    raise_built = false,
+  })
+
+  if spidertron and spidertron.valid and spidertron.grid then
+    -- Design decision: the debug spidertron should be inspection-ready without
+    -- any manual setup, so it spawns fully equipped at top quality.
+    spidertron.grid.put({
+      name = "fusion-reactor-equipment",
+      position = {x = 0, y = 0},
+      quality = "legendary",
+    })
+    spidertron.grid.put({
+      name = "exoskeleton-equipment",
+      position = {x = 4, y = 0},
+      quality = "legendary",
+    })
+    spidertron.grid.put({
+      name = "exoskeleton-equipment",
+      position = {x = 6, y = 0},
+      quality = "legendary",
+    })
+    spidertron.grid.put({
+      name = "exoskeleton-equipment",
+      position = {x = 4, y = 2},
+      quality = "legendary",
+    })
+  end
+
+  if spidertron and spidertron.valid then
+    local trunk = spidertron.get_inventory(defines.inventory.spider_trunk)
+    if trunk then
+      trunk.insert({name = "infinity-chest", count = 1})
+    end
+  end
+
+  storage.worldgen.debug_spidertron_placed = true
 end
 
 local function verify_starter_patch(surface, patch)
@@ -428,48 +479,10 @@ local function verify_starter_patch(surface, patch)
   create_resource_patch(surface, patch)
 end
 
-local function verify_starter_ruin_cluster(surface)
-  local starter_structures = surface.find_entities_filtered({
-    area = ruins.starter_clear_area,
-    force = get_player_force(),
-  })
-
-  if #starter_structures >= 6 then
-    return
-  end
-
-  -- Design decision: the guaranteed starter ruin is part of the intended
-  -- tutorial path. If it is missing or too damaged by generation issues, reset
-  -- the footprint and restamp it.
-  prepare_ruin_terrain(surface)
-  storage.worldgen.starter_ruins_placed = false
-  place_ruin_cluster(surface)
-end
-
 local function verify_starter_area(surface)
   for _, patch in ipairs(STARTER_PATCHES) do
     verify_starter_patch(surface, patch)
   end
-
-  verify_starter_ruin_cluster(surface)
-end
-
-local function place_guaranteed_remnants(surface)
-  -- Design decision: the player should reliably encounter non-starter remnants
-  -- on early scouting trips. These fixed anchors make the world read as ruined
-  -- even if the probabilistic spray happens to miss the nearby chunks.
-  for _, spec in ipairs(remnants.guaranteed) do
-    place_template(surface, spec.origin, spec.template_index)
-  end
-end
-
-place_ruin_cluster = function(surface)
-  if storage.worldgen.starter_ruins_placed then return end
-
-  place_ruin_entities(surface, ruins.starter_cluster.origin, ruins.starter_cluster.entities)
-  place_ruin_decorations(surface)
-
-  storage.worldgen.starter_ruins_placed = true
 end
 
 local function clear_starter_resources(surface)
@@ -488,7 +501,7 @@ local function prepare_starter_area(surface)
 
   -- Design decision: we pre-generate several chunks around spawn so the custom
   -- bootstrap patches and ruins are present immediately on a new game.
-  surface.request_to_generate_chunks({0, 0}, 6)
+  surface.request_to_generate_chunks({0, 0}, 8)
   surface.force_generate_chunk_requests()
 
   clear_starter_resources(surface)
@@ -498,9 +511,8 @@ local function prepare_starter_area(surface)
     create_resource_patch(surface, patch)
   end
 
-  prepare_ruin_terrain(surface)
-  place_ruin_cluster(surface)
-  place_guaranteed_remnants(surface)
+  place_test_generated_mega_ruin(surface)
+  place_debug_spidertron(surface)
   verify_starter_area(surface)
   storage.worldgen.starter_area_prepared = true
 end
@@ -549,24 +561,6 @@ local function process_chunk_resources(surface, area)
   end
 end
 
-local function maybe_place_band_ruin(surface, area, chunk_pos)
-  local center_x = area.left_top.x + CHUNK_SIZE / 2
-  local center_y = area.left_top.y + CHUNK_SIZE / 2
-  local distance = math.sqrt(center_x * center_x + center_y * center_y) / CHUNK_SIZE
-
-  if distance < 3 or distance > 48 then return end
-
-  local roll = deterministic_roll(chunk_pos.x, chunk_pos.y, 17)
-  if roll > 0.42 then return end
-
-  -- Design decision: the map should feel sprayed with partial industrial
-  -- leftovers, not populated by one repeated chest vignette. These templates
-  -- stay small enough to scatter often while still telling production stories.
-  local anchor = {x = center_x, y = center_y}
-  local template_index = 1 + math.floor(deterministic_roll(chunk_pos.y, chunk_pos.x, 29) * #remnants.templates)
-  place_template(surface, anchor, template_index)
-end
-
 function Worldgen.apply_map_gen_settings()
   local surface = game.surfaces[NAUVIS_NAME]
   if not surface then return end
@@ -612,8 +606,10 @@ function Worldgen.on_configuration_changed()
 
   if not storage.worldgen.starter_area_prepared then
     prepare_starter_area(surface)
-  elseif not storage.worldgen.starter_ruins_placed then
-    place_ruin_cluster(surface)
+  elseif not storage.worldgen.test_mega_ruin_placed then
+    place_test_generated_mega_ruin(surface)
+  elseif not storage.worldgen.debug_spidertron_placed then
+    place_debug_spidertron(surface)
   end
 end
 
@@ -631,10 +627,8 @@ function Worldgen.on_chunk_generated(event)
     verify_starter_area(surface)
   end
 
-  if area_contains_pos(area, ruins.starter_cluster.origin) then
-    place_ruin_cluster(surface)
-  else
-    maybe_place_band_ruin(surface, area, event.position)
+  if area_intersects(area, shift_area(generated_mega_ruin.template.bounds, TEST_MEGA_RUIN_ORIGIN)) then
+    place_test_generated_mega_ruin(surface)
   end
 end
 

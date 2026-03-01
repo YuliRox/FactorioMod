@@ -1,8 +1,15 @@
 {
   "scripts": {
+    "blueprint:extract": "node tools/blueprint_extract.js",
+    "blueprint:normalize-merge": "node tools/blueprint_normalize_merge.js",
+    "blueprint:ruin-template": "node tools/blueprint_ruin_template.js",
+    "blueprint:wear-profile": "node tools/blueprint_wear_profile.js",
+    "blueprint:export-lua": "node tools/blueprint_export_lua.js",
+    "blueprint:regenerate": "bash tools/regenerate_mega_ruin.sh",
     "test": "factorio-test run",
     "test:watch": "factorio-test run -w",
-    "test:gui": "factorio-test run -g"
+    "test:gui": "factorio-test run -g",
+    "test:node": "node --test tools/tests/*.test.js"
   },
   "dependencies": {
     "factoriomod-debug": "^2.0.10"
