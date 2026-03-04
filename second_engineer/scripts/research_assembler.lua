@@ -148,6 +148,8 @@ local function recover_from_trash(asm, needed, results)
   end
 end
 
+local process_assembler  -- forward declaration; defined in Per-tick processing section below
+
 -- ── Registration ─────────────────────────────────────────────────────────────
 
 function M.register(asm)
@@ -192,6 +194,7 @@ function M.update_recipes(force)
   local needed, results = build_recipe_sets(recipe_name)
   for _, entry in pairs(storage.assemblers) do
     if entry.asm and entry.asm.valid and entry.asm.force == force then
+      process_assembler(entry)                            -- credit any crafts finished since last tick_scan
       rescue_in_progress(entry.asm, needed)               -- save mid-craft ingredients not in new recipe to trash
       flush_obsolete(entry.asm, entry.lab, needed)       -- protect items before filter changes
       entry.asm.set_recipe(recipe_name)                  -- update input/output filter
@@ -205,7 +208,7 @@ end
 
 -- ── Per-tick processing ───────────────────────────────────────────────────────
 
-local function process_assembler(entry)
+process_assembler = function(entry)
   local asm = entry.asm
   if not (asm and asm.valid) then return false end
 
