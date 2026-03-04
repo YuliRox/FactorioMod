@@ -15,7 +15,12 @@ Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
 
 Valid types: `feat`, `fix`, `refactor`, `chore`, `docs`, `test`.
 
-Pass the message with `-m "..."` directly — no heredoc or command substitution needed.
+Write the commit message to a temp file, then commit with `-F`:
+
+```bash
+printf 'type: short summary\n\n- bullet detail\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\n' > /tmp/commit_msg.txt
+git commit -F /tmp/commit_msg.txt
+```
 
 ## What to stage
 
