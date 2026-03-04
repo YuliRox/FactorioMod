@@ -348,6 +348,8 @@ local function place_ruin_entities(surface, origin, entities)
   if not player_force then return end
 
   for _, spec in ipairs(entities) do
+    if not prototypes.entity[spec.name] then goto continue end
+
     local params = {
       name = spec.name,
       position = {x = origin.x + spec.offset.x, y = origin.y + spec.offset.y},
@@ -366,6 +368,7 @@ local function place_ruin_entities(surface, origin, entities)
 
     damage_entity(entity, spec.health)
     fill_loot(entity, spec.loot)
+    ::continue::
   end
 end
 

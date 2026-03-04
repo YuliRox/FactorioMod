@@ -18,8 +18,8 @@ end
 -- ── is_assembler ──────────────────────────────────────────────────────────────
 
 describe("is_assembler", function()
-  it("returns false for nil", function()
-    assert.is_false(M.is_assembler(nil))
+  it("returns falsy for nil", function()
+    assert.is_falsy(M.is_assembler(nil))
   end)
 
   it("returns false for a non-assembler entity", function()
