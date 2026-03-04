@@ -9,3 +9,5 @@ node_modules/
 # factorio
 *.zip
 mod-settings.dat
+factorio-test-data-dir/
+.factorio-test/
