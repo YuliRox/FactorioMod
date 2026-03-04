@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "test": "factorio-test run -p ./second_engineer",
+    "test:watch": "factorio-test run -p ./second_engineer -w",
+    "test:gui": "factorio-test run -p ./second_engineer -g"
+  },
   "dependencies": {
     "factoriomod-debug": "^2.0.10"
   },
