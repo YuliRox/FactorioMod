@@ -82,7 +82,7 @@ for _, tech in pairs(data.raw.technology) do
   if tech.unit and tech.unit.ingredients then
     local packs = {}
     for _, ing in pairs(tech.unit.ingredients) do
-      local name = (type(ing) == "table") and (ing[1] or ing.name) or tostring(ing)
+      local name = (type(ing) == "table") and (ing[1] or (ing --[[@as {name:string}]]).name) or tostring(ing)
       if PACK_TO_SCRAP[name] then
         table.insert(packs, name)
       end
