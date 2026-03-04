@@ -24,13 +24,17 @@ describe("is_assembler", function()
 
   it("returns false for a non-assembler entity", function()
     local ent = surface().create_entity{name="iron-chest", position=POS, force="player"}
+    assert.is_not_nil(ent)
     assert.is_false(M.is_assembler(ent))
+    ---@cast ent -nil
     ent.destroy()
   end)
 
   it("returns true for se-research-assembler", function()
     local asm = surface().create_entity{name="se-research-assembler", position=POS, force="player"}
+    assert.is_not_nil(asm)
     assert.is_true(M.is_assembler(asm))
+    ---@cast asm -nil
     asm.destroy()
   end)
 end)
