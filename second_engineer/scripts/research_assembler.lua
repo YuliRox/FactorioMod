@@ -124,15 +124,9 @@ local function flush_obsolete(asm, lab, needed)
     end
   end
 
-  if lab and lab.valid then
-    local lab_input = lab.get_inventory(defines.inventory.lab_input)
-    if lab_input then
-      for _, stack in pairs(lab_input.get_contents()) do
-        local n = trash.insert{name=stack.name, count=stack.count}
-        if n > 0 then lab_input.remove{name=stack.name, count=n} end
-      end
-    end
-  end
+  -- Note: lab_input is intentionally NOT flushed. Packs already inserted there
+  -- have already generated scrap; draining them on recipe switch would be a
+  -- double-reward. The lab drains its own inventory naturally via research.
 end
 
 -- Step 2 (after set_recipe): pull items back from trash into input (ingredients)
@@ -204,6 +198,7 @@ function M.update_recipes(force)
       recover_from_trash(entry.asm, needed, results)     -- pull back items now filters accept them
       entry.asm.recipe_locked = true
       entry.asm.active = recipe_name ~= IDLE_RECIPE
+      entry.last_finished = entry.asm.products_finished  -- reset baseline so tick_scan doesn't count pre-switch crafts
     end
   end
 end
