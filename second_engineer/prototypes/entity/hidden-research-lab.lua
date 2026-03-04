@@ -32,6 +32,7 @@ data:extend({ {
   energy_source = { type = "void" },
   module_slots = 2,
   allowed_effects = { "productivity" },
+  effect_receiver = { uses_beacon_effects = false },
   energy_usage = "1W",
   researching_speed = 10000,
   inputs = ALL_SCIENCE_PACKS,
