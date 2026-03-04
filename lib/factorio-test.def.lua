@@ -31,7 +31,7 @@ function after_ticks(ticks, func) end
 ---@param ticks number
 function ticks_between_tests(ticks) end
 
----@vararg string
+---@param ... string
 function tags(...) end
 
 ---@class FactorioTestConfig
@@ -57,7 +57,7 @@ local TestCreatorBase = {}
 
 ---@generic T
 ---@param values T[][]
----@return fun(name: string, func: fun(vararg T): nil): nil
+---@return fun(name: string, func: fun(...: T): nil): nil
 ---@overload fun<T>(values: T[]): fun(name: string, func: fun(v: T): nil): nil
 function TestCreatorBase.each(values) end
 
@@ -90,7 +90,7 @@ local DescribeCreatorBase = {}
 
 ---@generic T
 ---@param values T[][]
----@return fun(name: string, func: fun(vararg T): nil): nil
+---@return fun(name: string, func: fun(...: T): nil): nil
 ---@overload fun<T>(values: T[]): fun(name: string, func: fun(v: T): nil): nil
 function DescribeCreatorBase.each(values) end
 
