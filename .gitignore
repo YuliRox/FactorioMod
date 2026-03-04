@@ -6,5 +6,6 @@
 # node
 node_modules/
 
-# debugadapter
+# factorio
 *.zip
+mod-settings.dat

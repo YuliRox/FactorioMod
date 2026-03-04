@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "factoriomod-debug": "^2.0.10"
+  },
+  "devDependencies": {
+    "factorio-test-cli": "^3.5.1"
   }
 }

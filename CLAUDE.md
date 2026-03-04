@@ -49,6 +49,25 @@ second_engineer/                       -- the mod itself
       remnants.lua                     -- ambient remnant templates
       abandoned_ruins_set.lua          -- ruin set for AbandonedRuins_updated_fork
 
+  scripts/
+    tests.lua                          -- test coordinator: require all test modules here
+  tests/
+    research_assembler.lua             -- tests for scripts/research_assembler.lua
+
+## Running Tests
+
+FactorioTest is installed locally as a dev dependency (not in `info.json`). Enable it in the Factorio mod list, then:
+
+```bash
+# one-shot run
+factorio-test run -p ./second_engineer
+
+# watch mode — reruns on file changes
+factorio-test run -p ./second_engineer -w
+```
+
+To add new test files: create `second_engineer/tests/<name>.lua` and add `require("tests.<name>")` to `scripts/tests.lua`.
+
 docs/
   identity.md                          -- mod name, version, author, dependencies
   hooks.md                             -- control.lua event hook registrations

@@ -50,6 +50,14 @@ These rules capture hard-won lessons from working with the Factorio 2.0 Lua API.
 - `surface.request_to_generate_chunks(pos, radius)` followed by `surface.force_generate_chunk_requests()` synchronously generates chunks — safe to use in `on_init`.
 - Chunk position and tile position are different coordinate spaces. A chunk at `{x, y}` covers tiles `x*32` to `(x+1)*32 - 1` on each axis.
 
+## FactorioTest
+
+- `describe` blocks execute at **load time** — never call `game.*`, `storage.*`, or create entities inside a `describe` body. Only use them inside `it()`, `before_each`, `after_each`, etc.
+- Always pair entity creation in `before_each` with `entity.destroy()` in `after_each` so tests don't leak into each other.
+- Reset relevant `storage` keys in `before_each`/`after_each`; FactorioTest does not reset `storage` between tests automatically.
+- For multi-tick behaviour use `async(timeoutTicks)` then `after_ticks(n, fn)` or `on_tick(fn)` inside the test body; call `done()` when finished.
+- Test files live in `second_engineer/tests/`. Register new files by adding a `require` line to `scripts/tests.lua` — do not edit `control.lua`.
+
 ## Mod compatibility
 
 - Always guard Space Age content with `if mods["space-age"] then … end` in data stage, or `if script.active_mods["space-age"] then … end` in runtime.

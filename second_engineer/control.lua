@@ -105,3 +105,12 @@ script.on_event(defines.events.on_tick, function(event)
   if (event.tick % SCAN_INTERVAL) ~= 0 then return end
   ResearchAssembler.tick_scan()
 end)
+
+-- ── Tests (dev only) ──────────────────────────────────────────────────────────
+
+if script.active_mods["factorio-test"] then
+  require("__factorio-test__/init")(
+    { "scripts.tests" },
+    { load_luassert = true, game_speed = 1000 }
+  )
+end
