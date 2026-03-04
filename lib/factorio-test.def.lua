@@ -1,4 +1,47 @@
+---@meta
 ---@diagnostic disable: missing-return
+
+-- luassert global (replaces built-in assert in test context)
+---@class Luassert
+---@overload fun(v: any, message?: string): any
+-- matchers (callable directly or via is_ prefix)
+---@field is_true      fun(v: any): nil
+---@field is_false     fun(v: any): nil
+---@field is_truthy    fun(v: any): nil
+---@field is_falsy     fun(v: any): nil
+---@field is_nil       fun(v: any): nil
+---@field is_boolean   fun(v: any): nil
+---@field is_number    fun(v: any): nil
+---@field is_string    fun(v: any): nil
+---@field is_table     fun(v: any): nil
+---@field is_function  fun(v: any): nil
+---@field is_userdata  fun(v: any): nil
+---@field is_thread    fun(v: any): nil
+-- negated variants (is + not modifier)
+---@field is_not_nil       fun(v: any): nil
+---@field is_not_true      fun(v: any): nil
+---@field is_not_false     fun(v: any): nil
+---@field is_not_truthy    fun(v: any): nil
+---@field is_not_falsy     fun(v: any): nil
+-- assertions
+---@field truthy    fun(v: any): nil
+---@field falsy     fun(v: any): nil
+---@field same      fun(expected: any, actual: any): nil
+---@field equal     fun(expected: any, actual: any): nil
+---@field equals    fun(expected: any, actual: any): nil
+---@field near      fun(expected: number, actual: number, tolerance: number): nil
+---@field matches   fun(pattern: string, actual: string): nil
+---@field match     fun(pattern: string, actual: string): nil
+---@field unique    fun(list: table): nil
+---@field error     fun(func: function, ...): nil
+---@field errors    fun(func: function, ...): nil
+---@field error_matches fun(func: function, pattern: string): nil
+---@field error_match   fun(func: function, pattern: string): nil
+-- message modifier (chainable)
+---@field message   fun(msg: string): Luassert
+
+---@type Luassert
+assert = nil
 
 ---@type TestCreator
 test = nil
