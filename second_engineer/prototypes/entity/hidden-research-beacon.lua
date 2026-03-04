@@ -17,7 +17,7 @@ data:extend({
     icon_size = 1,
     category = "se-research-speed",
     tier = 1,
-    effect = { speed = 0.2 },  -- placeholder; patched in data-final-fixes
+    effect = { speed = 0.1 },  -- placeholder; patched in data-final-fixes
     stack_size = 200,
   },
   {
