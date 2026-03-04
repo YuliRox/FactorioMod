@@ -11,3 +11,4 @@ data:extend({{
 
 require("prototypes.entity.research-assembler")
 require("prototypes.entity.hidden-research-lab")
+require("prototypes.entity.hidden-research-beacon")

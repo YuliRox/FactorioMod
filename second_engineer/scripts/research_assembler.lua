@@ -1,6 +1,8 @@
 -- scripts/research_assembler.lua
 -- Tracks se-research-assembler entities, manages their hidden internal lab,
 -- switches recipes when research changes, and feeds consumed packs to the lab.
+-- Also manages a hidden speed beacon per assembler that mirrors the force's
+-- accumulated laboratory-speed technology bonus.
 
 local M = {}
 
@@ -8,15 +10,19 @@ local M = {}
 
 local PACK_TO_SCRAP = require("shared.pack_to_scrap")
 
-local SCAN_BUDGET   = 25
-local IDLE_RECIPE   = "se-research-idle"
+local SCAN_BUDGET          = 25
+local IDLE_RECIPE          = "se-research-idle"
+local BEACON_NAME          = "se-research-speed-beacon"
+local SPEED_MODULE_NAME    = "se-research-speed-module"
+local BEACON_SYNC_INTERVAL = 600  -- tick_scan calls between full beacon syncs (~100 s)
 
 -- ── Storage ───────────────────────────────────────────────────────────────────
 
 function M.ensure_globals()
-  storage.assemblers = storage.assemblers or {}
-  storage.asm_index  = storage.asm_index  or {}
-  storage.asm_rr_pos = storage.asm_rr_pos or 1
+  storage.assemblers            = storage.assemblers            or {}
+  storage.asm_index             = storage.asm_index             or {}
+  storage.asm_rr_pos            = storage.asm_rr_pos            or 1
+  storage.beacon_sync_countdown = storage.beacon_sync_countdown or BEACON_SYNC_INTERVAL
 end
 
 -- ── Entity check ─────────────────────────────────────────────────────────────
@@ -61,6 +67,71 @@ local function create_hidden_lab(asm)
     return lab
   end
   return nil
+end
+
+-- ── Hidden speed beacon ───────────────────────────────────────────────────────
+
+local function create_hidden_beacon(asm)
+  local beacon = asm.surface.create_entity{
+    name     = BEACON_NAME,
+    position = asm.position,
+    force    = asm.force,
+  }
+  if beacon and beacon.valid then
+    beacon.destructible = false
+    return beacon
+  end
+  return nil
+end
+
+-- Sum all laboratory-speed modifiers from researched technologies, then express
+-- that total as a whole number of se-research-speed-modules (each worth the
+-- average per-level bonus set in data-final-fixes). Using the actual sum rather
+-- than a simple level count stays correct when tech levels carry unequal modifiers.
+local function get_research_speed_level(force)
+  local total = 0.0
+  for _, tech in pairs(force.technologies) do
+    if tech.researched then
+      for _, effect in pairs(tech.prototype.effects or {}) do
+        if effect.type == "laboratory-speed" then
+          total = total + (effect.modifier or 0)
+          break  -- count each tech's contribution once
+        end
+      end
+    end
+  end
+  local per_module = prototypes.item[SPEED_MODULE_NAME].module_effects.speed
+  if per_module <= 0 then return 0 end
+  return math.floor(total / per_module + 0.5)
+end
+
+local function sync_beacon_modules(entry)
+  local beacon = entry.beacon
+  if not (beacon and beacon.valid) then
+    if entry.asm and entry.asm.valid then
+      entry.beacon = create_hidden_beacon(entry.asm)
+      beacon = entry.beacon
+    end
+  end
+  if not (beacon and beacon.valid) then return end
+
+  local level = get_research_speed_level(entry.asm.force)
+  local inv   = beacon.get_module_inventory()
+  if not inv then return end
+
+  inv.clear()
+  if level > 0 then
+    inv.insert{ name = SPEED_MODULE_NAME, count = level }
+  end
+end
+
+function M.sync_beacons(force)
+  M.ensure_globals()
+  for _, entry in pairs(storage.assemblers) do
+    if entry.asm and entry.asm.valid and entry.asm.force == force then
+      sync_beacon_modules(entry)
+    end
+  end
 end
 
 -- ── Input flushing ────────────────────────────────────────────────────────────
@@ -158,21 +229,28 @@ function M.register(asm)
   if not u then return end
   if storage.assemblers[u] and storage.assemblers[u].asm and storage.assemblers[u].asm.valid then return end
 
-  local hidden_lab  = create_hidden_lab(asm)
-  local recipe_name = get_research_recipe_name(asm.force)
+  local hidden_lab    = create_hidden_lab(asm)
+  local hidden_beacon = create_hidden_beacon(asm)
+  local recipe_name   = get_research_recipe_name(asm.force)
   asm.set_recipe(recipe_name)
   asm.recipe_locked = true
   asm.active = recipe_name ~= IDLE_RECIPE
 
-  storage.assemblers[u] = {asm=asm, lab=hidden_lab, last_finished=asm.products_finished}
+  storage.assemblers[u] = {asm=asm, lab=hidden_lab, beacon=hidden_beacon, last_finished=asm.products_finished}
   table.insert(storage.asm_index, u)
+  sync_beacon_modules(storage.assemblers[u])
 end
 
 function M.remove(unit_number)
   M.ensure_globals()
   local entry = storage.assemblers[unit_number]
-  if entry and entry.lab and entry.lab.valid then
-    entry.lab.destroy()
+  if entry then
+    if entry.lab and entry.lab.valid then
+      entry.lab.destroy()
+    end
+    if entry.beacon and entry.beacon.valid then
+      entry.beacon.destroy()
+    end
   end
   storage.assemblers[unit_number] = nil
   for i = #storage.asm_index, 1, -1 do
@@ -214,6 +292,11 @@ process_assembler = function(entry)
 
   if not (entry.lab and entry.lab.valid) then
     entry.lab = create_hidden_lab(asm)
+  end
+
+  if not (entry.beacon and entry.beacon.valid) then
+    entry.beacon = create_hidden_beacon(asm)
+    if entry.beacon then sync_beacon_modules(entry) end
   end
 
   local now_finished  = asm.products_finished
@@ -267,6 +350,22 @@ function M.tick_scan()
     if n == 0 then break end
     if storage.asm_rr_pos == start then break end
   end
+
+  -- Periodic beacon sync: catches edge cases not covered by on_research_finished
+  storage.beacon_sync_countdown = storage.beacon_sync_countdown - 1
+  if storage.beacon_sync_countdown <= 0 then
+    storage.beacon_sync_countdown = BEACON_SYNC_INTERVAL
+    local synced_forces = {}
+    for _, entry in pairs(storage.assemblers) do
+      if entry.asm and entry.asm.valid then
+        local fname = entry.asm.force.name
+        if not synced_forces[fname] then
+          synced_forces[fname] = true
+          M.sync_beacons(entry.asm.force)
+        end
+      end
+    end
+  end
 end
 
 -- ── Surface scan (init / config change) ──────────────────────────────────────
@@ -283,6 +382,14 @@ function M.destroy_all_hidden_labs()
   for _, surface in pairs(game.surfaces) do
     for _, lab in pairs(surface.find_entities_filtered{name="se-hidden-research-lab"}) do
       lab.destroy()
+    end
+  end
+end
+
+function M.destroy_all_hidden_beacons()
+  for _, surface in pairs(game.surfaces) do
+    for _, beacon in pairs(surface.find_entities_filtered{name=BEACON_NAME}) do
+      beacon.destroy()
     end
   end
 end

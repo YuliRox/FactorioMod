@@ -26,7 +26,7 @@ data:extend({{
   ingredient_count = 12,
   trash_inventory_size = 12,
   module_slots = 2,
-  allowed_effects = {"speed", "consumption", "pollution"},
+  allowed_effects = {"speed", "consumption", "pollution", "productivity"},
   icons_positioning = {
     {inventory_index = defines.inventory.crafter_input,   shift = {0,  0.3}, max_icons_per_row = 6, separation_multiplier = 1/1.1},
     {inventory_index = defines.inventory.crafter_output,  shift = {0,  0.5}, max_icons_per_row = 6},

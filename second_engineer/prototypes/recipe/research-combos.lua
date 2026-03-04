@@ -66,11 +66,12 @@ data:extend({{
   category        = "se-research-crafting",
   icon            = "__base__/graphics/icons/lab.png",
   icon_size       = 64,
-  hidden          = true,
-  enabled         = true,
-  ingredients     = {},
-  results         = {},
-  energy_required = 60,
+  hidden              = true,
+  enabled             = true,
+  allow_productivity  = true,
+  ingredients         = {},
+  results             = {},
+  energy_required     = 60,
 }})
 
 -- ── Dynamic recipe generation ────────────────────────────────────────────────
@@ -108,17 +109,18 @@ for _, packs in pairs(combos) do
   end
 
   data:extend({{
-    type            = "recipe",
-    name            = combo_recipe_name(packs),
-    localised_name  = combo_localised_name(packs),
-    category        = "se-research-crafting",
-    icon            = "__base__/graphics/icons/lab.png",
-    icon_size       = 64,
-    hidden          = true,
-    enabled         = true,
+    type                = "recipe",
+    name                = combo_recipe_name(packs),
+    localised_name      = combo_localised_name(packs),
+    category            = "se-research-crafting",
+    icon                = "__base__/graphics/icons/lab.png",
+    icon_size           = 64,
+    hidden              = true,
+    enabled             = true,
+    allow_productivity  = true,
     always_show_made_in = false,
-    ingredients     = ingredients,
-    results         = results,
-    energy_required = 15,  -- one lab cycle
+    ingredients         = ingredients,
+    results             = results,
+    energy_required     = 15,  -- one lab cycle
   }})
 end

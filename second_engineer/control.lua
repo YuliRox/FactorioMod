@@ -37,6 +37,7 @@ end)
 
 script.on_configuration_changed(function()
   ResearchAssembler.destroy_all_hidden_labs()
+  ResearchAssembler.destroy_all_hidden_beacons()
   ResearchAssembler.ensure_globals()
   abandoned_ruins.register()
   worldgen.on_configuration_changed()
@@ -87,8 +88,16 @@ local function on_research_changed(event)
   if force then ResearchAssembler.update_recipes(force) end
 end
 
+local function on_research_finished(event)
+  local force = event.research and event.research.force
+  if force then
+    ResearchAssembler.update_recipes(force)
+    ResearchAssembler.sync_beacons(force)
+  end
+end
+
 script.on_event(defines.events.on_research_started,   on_research_changed)
-script.on_event(defines.events.on_research_finished,  on_research_changed)
+script.on_event(defines.events.on_research_finished,  on_research_finished)
 script.on_event(defines.events.on_research_cancelled, on_research_changed)
 
 -- ── Periodic scan ─────────────────────────────────────────────────────────────
