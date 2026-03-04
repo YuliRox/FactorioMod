@@ -1,3 +1,5 @@
+---@diagnostic disable: missing-return
+
 ---@type TestCreator
 test = nil
 ---@type TestCreator
