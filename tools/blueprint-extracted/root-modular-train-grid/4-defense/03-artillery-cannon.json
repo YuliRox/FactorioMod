@@ -1,0 +1,33 @@
+{
+  "index": 3,
+  "label": "Artillery cannon",
+  "description": "Can be placed within defense perimeter to push away nests",
+  "entity_count": 3,
+  "tile_count": 0,
+  "entities": [
+    {
+      "name": "artillery-turret",
+      "position": {
+        "x": -845.5,
+        "y": -438.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "inserter",
+      "position": {
+        "x": -845.5,
+        "y": -436.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "requester-chest",
+      "position": {
+        "x": -845.5,
+        "y": -435.5
+      }
+    }
+  ],
+  "tiles": []
+}

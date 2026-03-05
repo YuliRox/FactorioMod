@@ -5,6 +5,7 @@
       "file": "/mnt/c/Code/FactorioMod/tools/blueprint-extracted/root-modular-train-grid/0-grid-rails/03-rails-barbone-grid.json",
       "label": "Rails barbone grid",
       "index": 3,
+      "grid": null,
       "bounds": {
         "left_top": {
           "x": -14,
@@ -20,6 +21,7 @@
       "file": "/mnt/c/Code/FactorioMod/tools/blueprint-extracted/root-modular-train-grid/0-grid-rails/11-solar-grid.json",
       "label": "Solar Grid",
       "index": 11,
+      "grid": null,
       "bounds": {
         "left_top": {
           "x": -1,
@@ -48,6 +50,410 @@
   },
   "entity_count": 1497,
   "tile_count": 9904,
+  "connector_metadata": {
+    "policy": {
+      "strip_width": 3,
+      "keep_sides": [
+        "north",
+        "west"
+      ],
+      "drop_sides": [
+        "south",
+        "east"
+      ],
+      "connector_entity_names": [
+        "straight-rail",
+        "curved-rail-a",
+        "curved-rail-b",
+        "rail-signal",
+        "rail-chain-signal",
+        "big-electric-pole",
+        "substation",
+        "roboport"
+      ]
+    },
+    "strip_width": 3,
+    "keep_sides": [
+      "north",
+      "west"
+    ],
+    "drop_sides": [
+      "south",
+      "east"
+    ],
+    "strips": {
+      "north": {
+        "entities": [
+          {
+            "key": "curved-rail-a|12|1|12",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 12,
+              "y": 1
+            },
+            "direction": 12
+          },
+          {
+            "key": "curved-rail-a|16|1|6",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 16,
+              "y": 1
+            },
+            "direction": 6
+          },
+          {
+            "key": "curved-rail-a|112|1|12",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 112,
+              "y": 1
+            },
+            "direction": 12
+          },
+          {
+            "key": "curved-rail-a|116|1|6",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 116,
+              "y": 1
+            },
+            "direction": 6
+          },
+          {
+            "key": "curved-rail-b|7|3|12",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 7,
+              "y": 3
+            },
+            "direction": 12
+          },
+          {
+            "key": "rail-chain-signal|14.5|2.5|12",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 14.5,
+              "y": 2.5
+            },
+            "direction": 12
+          },
+          {
+            "key": "curved-rail-b|21|3|6",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 21,
+              "y": 3
+            },
+            "direction": 6
+          },
+          {
+            "key": "curved-rail-b|107|3|12",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 107,
+              "y": 3
+            },
+            "direction": 12
+          },
+          {
+            "key": "rail-chain-signal|114.5|2.5|12",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 114.5,
+              "y": 2.5
+            },
+            "direction": 12
+          },
+          {
+            "key": "curved-rail-b|121|3|6",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 121,
+              "y": 3
+            },
+            "direction": 6
+          }
+        ]
+      },
+      "east": {
+        "entities": [
+          {
+            "key": "curved-rail-b|125|7|",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 125,
+              "y": 7
+            }
+          },
+          {
+            "key": "curved-rail-a|127|12|",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 127,
+              "y": 12
+            }
+          },
+          {
+            "key": "rail-chain-signal|125.5|14.5|",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 125.5,
+              "y": 14.5
+            }
+          },
+          {
+            "key": "curved-rail-a|127|16|10",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 127,
+              "y": 16
+            },
+            "direction": 10
+          },
+          {
+            "key": "curved-rail-b|125|21|10",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 125,
+              "y": 21
+            },
+            "direction": 10
+          },
+          {
+            "key": "curved-rail-b|125|107|",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 125,
+              "y": 107
+            }
+          },
+          {
+            "key": "curved-rail-a|127|112|",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 127,
+              "y": 112
+            }
+          },
+          {
+            "key": "rail-chain-signal|125.5|114.5|",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 125.5,
+              "y": 114.5
+            }
+          },
+          {
+            "key": "curved-rail-a|127|116|10",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 127,
+              "y": 116
+            },
+            "direction": 10
+          },
+          {
+            "key": "curved-rail-b|125|121|10",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 125,
+              "y": 121
+            },
+            "direction": 10
+          }
+        ]
+      },
+      "south": {
+        "entities": [
+          {
+            "key": "curved-rail-b|7|125|14",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 7,
+              "y": 125
+            },
+            "direction": 14
+          },
+          {
+            "key": "rail-chain-signal|13.5|125.5|4",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 13.5,
+              "y": 125.5
+            },
+            "direction": 4
+          },
+          {
+            "key": "curved-rail-b|21|125|4",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 21,
+              "y": 125
+            },
+            "direction": 4
+          },
+          {
+            "key": "curved-rail-b|107|125|14",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 107,
+              "y": 125
+            },
+            "direction": 14
+          },
+          {
+            "key": "rail-chain-signal|113.5|125.5|4",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 113.5,
+              "y": 125.5
+            },
+            "direction": 4
+          },
+          {
+            "key": "curved-rail-b|121|125|4",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 121,
+              "y": 125
+            },
+            "direction": 4
+          },
+          {
+            "key": "curved-rail-a|12|127|14",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 12,
+              "y": 127
+            },
+            "direction": 14
+          },
+          {
+            "key": "curved-rail-a|16|127|4",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 16,
+              "y": 127
+            },
+            "direction": 4
+          },
+          {
+            "key": "curved-rail-a|112|127|14",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 112,
+              "y": 127
+            },
+            "direction": 14
+          },
+          {
+            "key": "curved-rail-a|116|127|4",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 116,
+              "y": 127
+            },
+            "direction": 4
+          }
+        ]
+      },
+      "west": {
+        "entities": [
+          {
+            "key": "curved-rail-b|3|7|2",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 3,
+              "y": 7
+            },
+            "direction": 2
+          },
+          {
+            "key": "curved-rail-a|1|12|2",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 1,
+              "y": 12
+            },
+            "direction": 2
+          },
+          {
+            "key": "rail-chain-signal|2.5|13.5|8",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 2.5,
+              "y": 13.5
+            },
+            "direction": 8
+          },
+          {
+            "key": "curved-rail-a|1|16|8",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 1,
+              "y": 16
+            },
+            "direction": 8
+          },
+          {
+            "key": "curved-rail-b|3|21|8",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 3,
+              "y": 21
+            },
+            "direction": 8
+          },
+          {
+            "key": "curved-rail-b|3|107|2",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 3,
+              "y": 107
+            },
+            "direction": 2
+          },
+          {
+            "key": "curved-rail-a|1|112|2",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 1,
+              "y": 112
+            },
+            "direction": 2
+          },
+          {
+            "key": "rail-chain-signal|2.5|113.5|8",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 2.5,
+              "y": 113.5
+            },
+            "direction": 8
+          },
+          {
+            "key": "curved-rail-a|1|116|8",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 1,
+              "y": 116
+            },
+            "direction": 8
+          },
+          {
+            "key": "curved-rail-b|3|121|8",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 3,
+              "y": 121
+            },
+            "direction": 8
+          }
+        ]
+      }
+    }
+  },
   "entities": [
     {
       "source": "Rails barbone grid",

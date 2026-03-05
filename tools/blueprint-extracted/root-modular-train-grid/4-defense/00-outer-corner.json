@@ -1,0 +1,10306 @@
+{
+  "index": 0,
+  "label": "Outer corner",
+  "description": null,
+  "entity_count": 473,
+  "tile_count": 992,
+  "entities": [
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 78.5,
+        "y": 39.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 80.5,
+        "y": 39.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 82.5,
+        "y": 39.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 84.5,
+        "y": 39.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 86.5,
+        "y": 39.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 88.5,
+        "y": 39.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 90.5,
+        "y": 39.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 92.5,
+        "y": 39.5
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 94.5,
+        "y": 39.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 96.5,
+        "y": 39.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 98.5,
+        "y": 39.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 75.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 77.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 79.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 81.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 83.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 85.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 87.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 89.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 91.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 93.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 95.5,
+        "y": 41.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 97.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 99.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 72.5,
+        "y": 43.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 74.5,
+        "y": 43.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 76.5,
+        "y": 43.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 78.5,
+        "y": 43.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 80.5,
+        "y": 43.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 82.5,
+        "y": 43.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 84.5,
+        "y": 43.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 86.5,
+        "y": 43.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 88.5,
+        "y": 43.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 90.5,
+        "y": 43.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 92.5,
+        "y": 43.5
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 94.5,
+        "y": 43.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 96.5,
+        "y": 43.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 98.5,
+        "y": 43.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 71.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 73.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 75.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 77.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 79.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 81.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 83.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 85.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 87.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 89.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 91.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 93.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 95.5,
+        "y": 45.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 97.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 99.5,
+        "y": 45.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 68.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 70.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 72.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 74.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 76.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 79.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 81.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 80.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 82.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 83.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 85.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 84.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 86.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 87.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 89.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 88.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 91.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 90.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 92.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 93.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 95.5,
+        "y": 47.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 94.5,
+        "y": 47.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 96.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 97.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 98.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 99.5,
+        "y": 47.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 67.5,
+        "y": 49.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 69.5,
+        "y": 49.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 71.5,
+        "y": 49.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 73.5,
+        "y": 49.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 75.5,
+        "y": 49.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 77.5,
+        "y": 49.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 78.5,
+        "y": 49.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 78.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 79.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 79.5,
+        "y": 49.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 81.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 80.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 83.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 82.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 85.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 84.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 86.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 87.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 89.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 88.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 91.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 90.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 93.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 92.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 94.5,
+        "y": 48.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 95.5,
+        "y": 48.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 97.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 96.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 98.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 99.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 64.5,
+        "y": 51.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 66.5,
+        "y": 51.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 68.5,
+        "y": 51.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 70.5,
+        "y": 51.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 72.5,
+        "y": 51.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 75.5,
+        "y": 51.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 77.5,
+        "y": 51.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 76.5,
+        "y": 50.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 77.5,
+        "y": 50.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 76.5,
+        "y": 51.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 78.5,
+        "y": 50.5
+      }
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 82,
+        "y": 51
+      }
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 87,
+        "y": 51
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 88.5,
+        "y": 51.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "requester-chest",
+      "position": {
+        "x": 89.5,
+        "y": 51.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 90.5,
+        "y": 51.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 92,
+        "y": 51
+      }
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 98,
+        "y": 51
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 50
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 63.5,
+        "y": 53.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 65.5,
+        "y": 53.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 67.5,
+        "y": 53.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 69.5,
+        "y": 53.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 71.5,
+        "y": 53.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 73.5,
+        "y": 53.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 75.5,
+        "y": 52.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 75.5,
+        "y": 53.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 74.5,
+        "y": 52.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 74.5,
+        "y": 53.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 76.5,
+        "y": 52.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 81.5,
+        "y": 52.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "requester-chest",
+      "position": {
+        "x": 81.5,
+        "y": 53.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 80.5,
+        "y": 53.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "requester-chest",
+      "position": {
+        "x": 97.5,
+        "y": 53.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 97.5,
+        "y": 52.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 98.5,
+        "y": 53.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 60.5,
+        "y": 55.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 62.5,
+        "y": 55.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 64.5,
+        "y": 55.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 66.5,
+        "y": 55.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 68.5,
+        "y": 55.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 71.5,
+        "y": 55.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 73.5,
+        "y": 55.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 73.5,
+        "y": 54.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 72.5,
+        "y": 54.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 72.5,
+        "y": 55.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 74.5,
+        "y": 54.5
+      }
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 79,
+        "y": 54
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 82.5,
+        "y": 54.5
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 84,
+        "y": 54
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 88,
+        "y": 54
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 92,
+        "y": 54
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 59.5,
+        "y": 57.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 61.5,
+        "y": 57.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 63.5,
+        "y": 57.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 65.5,
+        "y": 57.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 67.5,
+        "y": 57.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 69.5,
+        "y": 57.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 71.5,
+        "y": 56.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 70.5,
+        "y": 56.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 71.5,
+        "y": 57.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 70.5,
+        "y": 57.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 72.5,
+        "y": 56.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 76.5,
+        "y": 57.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 77,
+        "y": 56
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 80,
+        "y": 57
+      }
+    },
+    {
+      "name": "pipe",
+      "position": {
+        "x": 81.5,
+        "y": 57.5
+      }
+    },
+    {
+      "name": "flamethrower-turret",
+      "position": {
+        "x": 83,
+        "y": 56.5
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 84.5,
+        "y": 57.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 89.5,
+        "y": 57.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "flamethrower-turret",
+      "position": {
+        "x": 91,
+        "y": 56.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 57.5,
+        "y": 58.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 59.5,
+        "y": 59.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 62.5,
+        "y": 59.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 64.5,
+        "y": 59.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 67.5,
+        "y": 59.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 68.5,
+        "y": 58.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 69.5,
+        "y": 59.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 69.5,
+        "y": 58.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 68.5,
+        "y": 59.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 70.5,
+        "y": 58.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 75.5,
+        "y": 58.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 74,
+        "y": 59
+      }
+    },
+    {
+      "name": "requester-chest",
+      "position": {
+        "x": 76.5,
+        "y": 58.5
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 81.5,
+        "y": 58.5
+      }
+    },
+    {
+      "name": "substation",
+      "position": {
+        "x": 91,
+        "y": 59
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 55.5,
+        "y": 61.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 57.5,
+        "y": 60.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 59.5,
+        "y": 61.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 61.5,
+        "y": 60.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 63.5,
+        "y": 61.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 65.5,
+        "y": 61.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 66.5,
+        "y": 60.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 67.5,
+        "y": 60.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 67.5,
+        "y": 61.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 66.5,
+        "y": 61.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 68.5,
+        "y": 60.5
+      }
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 72,
+        "y": 61
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 80,
+        "y": 60
+      }
+    },
+    {
+      "name": "substation",
+      "position": {
+        "x": 82,
+        "y": 60
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 53.5,
+        "y": 62.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 55.5,
+        "y": 63.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 57.5,
+        "y": 62.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 59.5,
+        "y": 63.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 61.5,
+        "y": 62.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 63.5,
+        "y": 63.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 64.5,
+        "y": 63.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 65.5,
+        "y": 63.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 64.5,
+        "y": 62.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 65.5,
+        "y": 62.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 66.5,
+        "y": 62.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 70.5,
+        "y": 63.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "requester-chest",
+      "position": {
+        "x": 71.5,
+        "y": 63.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 71.5,
+        "y": 62.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 75,
+        "y": 62
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 78,
+        "y": 62
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 51.5,
+        "y": 65.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 53.5,
+        "y": 64.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 55.5,
+        "y": 65.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 57.5,
+        "y": 64.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 59.5,
+        "y": 65.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 61.5,
+        "y": 65.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 63.5,
+        "y": 64.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 62.5,
+        "y": 64.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 62.5,
+        "y": 65.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 63.5,
+        "y": 65.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 64.5,
+        "y": 64.5
+      }
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 69,
+        "y": 64
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 75.5,
+        "y": 64.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 49.5,
+        "y": 66.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 51.5,
+        "y": 67.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 53.5,
+        "y": 66.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 55.5,
+        "y": 67.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 57.5,
+        "y": 66.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 59.5,
+        "y": 67.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 60.5,
+        "y": 67.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 60.5,
+        "y": 66.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 61.5,
+        "y": 67.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 61.5,
+        "y": 66.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 62.5,
+        "y": 66.5
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 70,
+        "y": 67
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 73,
+        "y": 67
+      }
+    },
+    {
+      "name": "flamethrower-turret",
+      "position": {
+        "x": 75,
+        "y": 67.5
+      }
+    },
+    {
+      "name": "substation",
+      "position": {
+        "x": 77,
+        "y": 67
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 81.5,
+        "y": 67.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 69.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 49.5,
+        "y": 68.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 51.5,
+        "y": 69.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 53.5,
+        "y": 68.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 55.5,
+        "y": 69.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 57.5,
+        "y": 69.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 59.5,
+        "y": 68.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 59.5,
+        "y": 69.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 58.5,
+        "y": 68.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 58.5,
+        "y": 69.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 60.5,
+        "y": 68.5
+      }
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 64,
+        "y": 69
+      }
+    },
+    {
+      "name": "pipe",
+      "position": {
+        "x": 73.5,
+        "y": 68.5
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 76.5,
+        "y": 68.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 80.5,
+        "y": 68.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "pipe",
+      "position": {
+        "x": 81.5,
+        "y": 68.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 71.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 49.5,
+        "y": 70.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 51.5,
+        "y": 71.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 53.5,
+        "y": 70.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 55.5,
+        "y": 71.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 56.5,
+        "y": 70.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 56.5,
+        "y": 71.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 57.5,
+        "y": 71.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 57.5,
+        "y": 70.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 58.5,
+        "y": 70.5
+      }
+    },
+    {
+      "name": "requester-chest",
+      "position": {
+        "x": 63.5,
+        "y": 71.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 63.5,
+        "y": 70.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 62.5,
+        "y": 71.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 67,
+        "y": 70
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 70,
+        "y": 70
+      }
+    },
+    {
+      "name": "pipe",
+      "position": {
+        "x": 71.5,
+        "y": 71.5
+      }
+    },
+    {
+      "name": "flamethrower-turret",
+      "position": {
+        "x": 72.5,
+        "y": 70
+      },
+      "direction": 12
+    },
+    {
+      "name": "pipe",
+      "position": {
+        "x": 72.5,
+        "y": 71.5
+      }
+    },
+    {
+      "name": "pipe",
+      "position": {
+        "x": 73.5,
+        "y": 71.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 43.5,
+        "y": 73.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 45.5,
+        "y": 72.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 73.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 49.5,
+        "y": 72.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 51.5,
+        "y": 73.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 53.5,
+        "y": 73.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 54.5,
+        "y": 72.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 55.5,
+        "y": 73.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 55.5,
+        "y": 72.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 54.5,
+        "y": 73.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 56.5,
+        "y": 72.5
+      }
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 61,
+        "y": 72
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 67,
+        "y": 73
+      }
+    },
+    {
+      "name": "pipe",
+      "position": {
+        "x": 68.5,
+        "y": 73.5
+      }
+    },
+    {
+      "name": "flamethrower-turret",
+      "position": {
+        "x": 70,
+        "y": 72.5
+      }
+    },
+    {
+      "name": "pipe",
+      "position": {
+        "x": 71.5,
+        "y": 73.5
+      }
+    },
+    {
+      "name": "pipe",
+      "position": {
+        "x": 71.5,
+        "y": 72.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 43.5,
+        "y": 75.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 45.5,
+        "y": 74.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 75.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 49.5,
+        "y": 74.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 51.5,
+        "y": 75.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 52.5,
+        "y": 74.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 53.5,
+        "y": 75.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 53.5,
+        "y": 74.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 52.5,
+        "y": 75.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 54.5,
+        "y": 74.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 58.5,
+        "y": 75.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 59,
+        "y": 74
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 62,
+        "y": 75
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 64.5,
+        "y": 75.5
+      }
+    },
+    {
+      "name": "flamethrower-turret",
+      "position": {
+        "x": 67.5,
+        "y": 75
+      },
+      "direction": 12
+    },
+    {
+      "name": "assembling-machine-3",
+      "position": {
+        "x": 71.5,
+        "y": 75.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 75,
+        "y": 75
+      }
+    },
+    {
+      "name": "radar",
+      "position": {
+        "x": 78.5,
+        "y": 74.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 41.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 43.5,
+        "y": 77.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 45.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 77.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 49.5,
+        "y": 77.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 50.5,
+        "y": 77.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 51.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 51.5,
+        "y": 77.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 50.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 52.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 57.5,
+        "y": 76.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 56,
+        "y": 77
+      }
+    },
+    {
+      "name": "requester-chest",
+      "position": {
+        "x": 58.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "substation",
+      "position": {
+        "x": 67,
+        "y": 77
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 68.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 70.5,
+        "y": 77.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 72.5,
+        "y": 77.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 78.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 39.5,
+        "y": 79.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 41.5,
+        "y": 78.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 43.5,
+        "y": 79.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 45.5,
+        "y": 78.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 79.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 78.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 79.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 49.5,
+        "y": 79.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 49.5,
+        "y": 78.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 50.5,
+        "y": 78.5
+      }
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 54,
+        "y": 79
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 62,
+        "y": 78
+      }
+    },
+    {
+      "name": "buffer-chest",
+      "position": {
+        "x": 71.5,
+        "y": 78.5
+      }
+    },
+    {
+      "name": "requester-chest",
+      "position": {
+        "x": 70.5,
+        "y": 78.5
+      }
+    },
+    {
+      "name": "active-provider-chest",
+      "position": {
+        "x": 72.5,
+        "y": 78.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 76.5,
+        "y": 78.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 78,
+        "y": 78
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 78
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 39.5,
+        "y": 81.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 41.5,
+        "y": 80.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 43.5,
+        "y": 81.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 45.5,
+        "y": 80.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 81.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 80.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 80.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 81.5
+      }
+    },
+    {
+      "name": "requester-chest",
+      "position": {
+        "x": 53.5,
+        "y": 81.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 52.5,
+        "y": 81.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 53.5,
+        "y": 80.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 57,
+        "y": 80
+      }
+    },
+    {
+      "name": "pipe",
+      "position": {
+        "x": 57.5,
+        "y": 81.5
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 58.5,
+        "y": 81.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 60,
+        "y": 80
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 67.5,
+        "y": 81.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 68.5,
+        "y": 80.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "pipe",
+      "position": {
+        "x": 68.5,
+        "y": 81.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 39.5,
+        "y": 83.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 41.5,
+        "y": 82.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 43.5,
+        "y": 83.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 45.5,
+        "y": 82.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 83.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 82.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 83.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 82.5
+      }
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 51,
+        "y": 82
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 54.5,
+        "y": 82.5
+      }
+    },
+    {
+      "name": "flamethrower-turret",
+      "position": {
+        "x": 56.5,
+        "y": 83
+      },
+      "direction": 12
+    },
+    {
+      "name": "substation",
+      "position": {
+        "x": 60,
+        "y": 82
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 39.5,
+        "y": 85.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 41.5,
+        "y": 84.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 43.5,
+        "y": 85.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 45.5,
+        "y": 84.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 85.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 84.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 85.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 84.5
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 54,
+        "y": 84
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 57.5,
+        "y": 84.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 39.5,
+        "y": 87.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 41.5,
+        "y": 86.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 43.5,
+        "y": 87.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 45.5,
+        "y": 86.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 87.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 86.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 86.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 87.5
+      }
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 51,
+        "y": 87
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 39.5,
+        "y": 89.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 41.5,
+        "y": 88.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 43.5,
+        "y": 89.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 45.5,
+        "y": 88.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 89.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 88.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 89.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 88.5
+      }
+    },
+    {
+      "name": "requester-chest",
+      "position": {
+        "x": 51.5,
+        "y": 89.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 51.5,
+        "y": 88.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 54,
+        "y": 88
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 57.5,
+        "y": 89.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 39.5,
+        "y": 91.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 41.5,
+        "y": 90.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 43.5,
+        "y": 91.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 45.5,
+        "y": 90.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 91.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 90.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 91.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 90.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 51.5,
+        "y": 90.5
+      }
+    },
+    {
+      "name": "flamethrower-turret",
+      "position": {
+        "x": 56.5,
+        "y": 91
+      },
+      "direction": 12
+    },
+    {
+      "name": "substation",
+      "position": {
+        "x": 59,
+        "y": 91
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 39.5,
+        "y": 93.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 41.5,
+        "y": 92.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 43.5,
+        "y": 93.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 45.5,
+        "y": 92.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 92.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 93.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 93.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 92.5
+      }
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 51,
+        "y": 92
+      }
+    },
+    {
+      "name": "laser-turret",
+      "position": {
+        "x": 54,
+        "y": 92
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 39.5,
+        "y": 95.5
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 41.5,
+        "y": 94.5
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 43.5,
+        "y": 95.5
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 45.5,
+        "y": 94.5
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 47.5,
+        "y": 94.5
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 47.5,
+        "y": 95.5
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 48.5,
+        "y": 95.5
+      }
+    },
+    {
+      "name": "gate",
+      "position": {
+        "x": 48.5,
+        "y": 94.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 39.5,
+        "y": 97.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 41.5,
+        "y": 96.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 43.5,
+        "y": 97.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 45.5,
+        "y": 96.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 97.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 96.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 96.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 97.5
+      }
+    },
+    {
+      "name": "requester-chest",
+      "position": {
+        "x": 53.5,
+        "y": 97.5
+      }
+    },
+    {
+      "name": "fast-inserter",
+      "position": {
+        "x": 52.5,
+        "y": 97.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 39.5,
+        "y": 99.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 41.5,
+        "y": 98.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 43.5,
+        "y": 99.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 45.5,
+        "y": 98.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 99.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 47.5,
+        "y": 98.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 99.5
+      }
+    },
+    {
+      "name": "stone-wall",
+      "position": {
+        "x": 48.5,
+        "y": 98.5
+      }
+    },
+    {
+      "name": "gun-turret",
+      "position": {
+        "x": 51,
+        "y": 98
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 53.5,
+        "y": 98.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 50,
+        "y": 100
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 78,
+        "y": 100
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 100
+      }
+    }
+  ],
+  "tiles": [
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 82,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 83,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 84,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 85,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 86,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 87,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 88,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 89,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 90,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 91,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 92,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 93,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 94,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 95,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 96,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 97,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 82,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 83,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 84,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 85,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 86,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 87,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 88,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 89,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 90,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 91,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 92,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 93,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 94,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 95,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 96,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 97,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 82,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 83,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 84,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 85,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 86,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 87,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 88,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 89,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 90,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 91,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 92,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 93,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 94,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 95,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 96,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 97,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 82,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 83,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 84,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 85,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 86,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 87,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 88,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 89,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 90,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 91,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 92,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 93,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 94,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 95,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 96,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 97,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 52
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 82,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 83,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 84,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 85,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 86,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 87,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 88,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 89,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 90,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 91,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 92,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 93,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 94,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 95,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 96,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 97,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 53
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 82,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 83,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 84,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 85,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 86,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 87,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 88,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 89,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 90,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 91,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 92,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 93,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 94,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 95,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 96,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 97,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 54
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 82,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 83,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 84,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 85,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 86,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 87,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 88,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 89,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 90,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 91,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 92,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 93,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 94,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 95,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 96,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 97,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 55
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 82,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 83,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 84,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 85,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 86,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 87,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 88,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 89,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 90,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 91,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 92,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 93,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 94,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 95,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 96,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 97,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 56
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 82,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 83,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 84,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 85,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 86,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 87,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 88,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 89,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 90,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 91,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 92,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 93,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 94,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 95,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 96,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 97,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 57
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 82,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 83,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 84,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 85,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 86,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 87,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 88,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 89,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 90,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 91,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 92,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 93,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 94,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 95,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 96,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 97,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 58
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 82,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 83,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 84,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 85,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 86,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 87,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 88,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 89,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 90,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 91,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 92,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 93,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 94,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 95,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 96,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 97,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 59
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 82,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 83,
+        "y": 60
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 82,
+        "y": 61
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 62
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 63
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 64
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 65
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 66
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 67
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 68
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 69
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 70
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 71
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 72
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 81,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 80,
+        "y": 80
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 62,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 63,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 64,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 65,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 66,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 67,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 68,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 69,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 70,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 71,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 72,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 81
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 82
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 82
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 82
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 82
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 82
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 82
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 82
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 82
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 82
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 82
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 82
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 82
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 61,
+        "y": 82
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 83
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 83
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 83
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 83
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 83
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 83
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 83
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 83
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 83
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 83
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 83
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 60,
+        "y": 83
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 84
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 84
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 84
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 84
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 84
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 84
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 84
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 84
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 84
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 84
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 84
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 85
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 85
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 85
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 85
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 85
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 85
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 85
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 85
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 85
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 85
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 85
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 86
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 86
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 86
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 86
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 86
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 86
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 86
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 86
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 86
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 86
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 86
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 87
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 87
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 87
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 87
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 87
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 87
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 87
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 87
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 87
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 87
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 87
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 88
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 88
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 88
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 88
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 88
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 88
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 88
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 88
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 88
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 88
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 88
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 89
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 89
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 89
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 89
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 89
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 89
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 89
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 89
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 89
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 89
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 89
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 90
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 90
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 90
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 90
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 90
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 90
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 90
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 90
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 90
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 90
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 90
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 91
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 91
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 91
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 91
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 91
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 91
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 91
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 91
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 91
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 91
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 91
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 92
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 92
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 92
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 92
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 92
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 92
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 92
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 92
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 92
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 92
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 92
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 93
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 93
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 93
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 93
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 93
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 93
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 93
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 93
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 93
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 93
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 93
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 94
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 94
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 94
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 94
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 94
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 94
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 94
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 94
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 94
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 94
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 94
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 95
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 95
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 95
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 95
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 95
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 95
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 95
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 95
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 95
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 95
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 95
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 96
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 96
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 96
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 96
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 96
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 96
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 96
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 96
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 96
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 96
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 96
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 97
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 97
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 97
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 97
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 97
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 97
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 97
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 97
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 97
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 97
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 97
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 52,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 53,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 54,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 55,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 56,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 57,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 58,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 59,
+        "y": 99
+      }
+    }
+  ]
+}

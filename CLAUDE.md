@@ -1,5 +1,3 @@
-the year is 2026.
-
 # second_engineer — Factorio Mod
 
 ## Project Overview
@@ -8,75 +6,146 @@ Hardcore survival mod for Factorio 2.0. The player arrives as the *second* engin
 
 ## Repository Layout
 
-The mod folder is `second_engineer/` during development. When distributed as a `.zip` the folder inside **must** be named `second_engineer_0.1.0/` (name + underscore + version).
-
-Data stage load order: `settings.lua` → `settings-updates.lua` → `settings-final-fixes.lua` → `data.lua` → `data-updates.lua` → `data-final-fixes.lua`.
-
 ```
-CLAUDE.md
-second_engineer/                       -- the mod itself
-  info.json                            -- required: name, version, author, dependencies
-  changelog.txt
-  thumbnail.png
-  data.lua                             -- data stage entry point
-  data-updates.lua                     -- patches existing prototypes; AbandonedRuins hook
-  data-final-fixes.lua                 -- thin dispatcher: requires all override/ and generated recipe/ files
-  settings.lua                         -- [MISSING] M4 resource scarcity settings
-  control.lua                          -- thin event dispatcher
-  locale/en/second_engineer.cfg
-  graphics/icons/scrap/                -- 12 scrap item icons (64×64 png)
-  shared/
-    pack_to_scrap.lua                  -- pack→scrap lookup, safe for data + runtime
-  prototypes/
-    entity/
-      research-assembler.lua           -- assembler entity + item + recipe
-      hidden-research-lab.lua          -- internal lab entity
-    item/
-      scraps.lua                       -- scrap items (7 base + 5 space-age)
-    recipe/
-      scrap-smelting.lua               -- probabilistic scrap→materials furnace recipes
-      research-combos.lua              -- idle recipe + dynamic se-research-* recipes (requires full tech tree)
-    technology/                        -- [MISSING] M2
-    override/                          -- patches to vanilla/mod prototypes; required from data-final-fixes.lua
-      furnace-output-slots.lua         -- widens result_inventory_size on all furnaces to ≥2
-      hidden-lab-animation.lua         -- debug: green-tinted animation on se-hidden-research-lab
-  scripts/
-    research_assembler.lua             -- assembler runtime logic
-    abandoned_ruins.lua                -- AbandonedRuins mod integration
-    worldgen.lua                       -- Nauvis worldgen
-    worldgeneration/
-      ruins.lua                        -- starter ruin cluster data
-      remnants.lua                     -- ambient remnant templates
-      abandoned_ruins_set.lua          -- ruin set for AbandonedRuins_updated_fork
-
-  scripts/
-    tests.lua                          -- test coordinator: require all test modules here
-  tests/
-    research_assembler.lua             -- tests for scripts/research_assembler.lua
-
-## Running Tests
-
-FactorioTest is installed locally as a dev dependency (not in `info.json`). Enable it in the Factorio mod list, then:
-
-```bash
-# one-shot run
-factorio-test run -p ./second_engineer
-
-# watch mode — reruns on file changes
-factorio-test run -p ./second_engineer -w
+C:/Code/FactorioMod/
+├── CLAUDE.md                    -- this file
+├── docs/
+│   └── milestones.md            -- full development roadmap (M1–M10)
+│   └── WorldGeneration.md       -- world generation notes and design direction
+└── second_engineer/             -- the mod root (this is what Factorio loads)
+    ├── info.json
+    ├── changelog.txt
+    ├── data.lua                 -- data stage entry point
+    ├── control.lua              -- runtime script entry point
+    └── locale/
+        └── en/
+            └── second_engineer.cfg
 ```
 
-To add new test files: create `second_engineer/tests/<name>.lua` and add `require("tests.<name>")` to `scripts/tests.lua`.
+## Mod Identity
 
-docs/
-  identity.md                          -- mod name, version, author, dependencies
-  hooks.md                             -- control.lua event hook registrations
-  planned.md                           -- milestone status + full detail
-  features/
-    scrap-items.md
-    research-assembler.md
-    worldgen.md
-  brainstorming/                       -- unstructured design notes, not authoritative
-  Agenten/                             -- unstructured NPC/character research notes, not authoritative
-```
+| Field             | Value                  |
+|-------------------|------------------------|
+| `name`            | `second_engineer`      |
+| `version`         | `0.1.0`                |
+| `factorio_version`| `2.0`                  |
+| `author`          | Xemrox                 |
+| Hard dependency   | `base >= 2.0.0`        |
+| Soft dependency   | `space-age >= 2.0.0`   |
 
+Space Age content is always guarded with `if mods["space-age"] then`.
+
+---
+
+## What Is Currently Implemented
+
+### data.lua — Science Pack Scrap Items
+
+Seven coloured scrap items, one per science pack tier. Each reuses the corresponding pack's icon.
+
+| Item name      | Source pack                  | Stack size |
+|----------------|------------------------------|------------|
+| `scrap-red`    | automation-science-pack      | 200        |
+| `scrap-green`  | logistic-science-pack        | 200        |
+| `scrap-black`  | military-science-pack        | 200        |
+| `scrap-blue`   | chemical-science-pack        | 200        |
+| `scrap-purple` | production-science-pack      | 200        |
+| `scrap-yellow` | utility-science-pack         | 200        |
+| `scrap-white`  | space-science-pack           | 200        |
+
+All items use subgroup `intermediate-product`, order `z[scrap]-<name>`.
+
+**`lab-scrap-output` container entity** — an invisible, indestructible, collision-free container (48 slots) spawned at each lab's position. Used as the output buffer for scrap produced by that lab. Flags: `placeable-off-grid`, `not-on-map`, `not-blueprintable`, `not-deconstructable`, `hidden`. `selectable_in_game = true` for debug purposes.
+
+### control.lua — Lab Scrap System
+
+Labs consume science packs. This system detects how many packs were consumed each scan cycle and produces coloured scrap into the lab's output container.
+
+**Constants:**
+
+| Name            | Value | Purpose                              |
+|-----------------|-------|--------------------------------------|
+| `SCAN_INTERVAL` | 10    | Ticks between scan cycles            |
+| `SCAN_BUDGET`   | 25    | Max labs processed per scan cycle    |
+
+**Scrap yield per pack consumed (`SCRAP_PER_PACK`):**
+
+| Pack                     | Scrap per consumed pack |
+|--------------------------|-------------------------|
+| automation / logistic    | 1                       |
+| military / chemical      | 2                       |
+| production / utility     | 3                       |
+| space                    | 4                       |
+
+**Global state (`global.*`):**
+
+| Key          | Type                      | Description                                      |
+|--------------|---------------------------|--------------------------------------------------|
+| `labs`       | `{[unit_number] = entry}` | Map from lab unit_number to tracking entry       |
+| `lab_index`  | `number[]`                | Ordered array of unit_numbers for round-robin    |
+| `rr_pos`     | `number`                  | Current position in `lab_index`                  |
+
+Each entry: `{ lab = LuaEntity, out = LuaEntity, last = {pack_name -> count} }`
+
+**Key functions:**
+
+- `ensure_globals()` — initialises global tables if missing (called at every entry point)
+- `register_lab(lab)` — adds a lab to tracking; spawns its `lab-scrap-output` entity
+- `remove_lab_by_unit(unit_number)` — removes lab from tracking; spills output buffer contents; destroys output entity
+- `snapshot_lab_input(lab)` — returns `{pack_name -> current_count}` for all tracked pack types
+- `process_lab(entry)` — diffs current vs last inventory, computes scrap, inserts into output buffer (spills on overflow); returns `false` if lab is gone
+- `safe_insert_or_spill(surface, pos, force, out_entity, name, count)` — inserts into output entity, spills remainder on ground
+
+**Event hooks:**
+
+| Event                       | Handler       | Purpose                        |
+|-----------------------------|---------------|--------------------------------|
+| `on_init`                   | —             | Scan all surfaces for labs     |
+| `on_configuration_changed`  | —             | Full rescan after mod update   |
+| `on_built_entity`           | `on_built`    | Register newly placed labs     |
+| `on_robot_built_entity`     | `on_built`    | Register robot-placed labs     |
+| `script_raised_built`       | `on_built`    | Register script-placed labs    |
+| `script_raised_revive`      | `on_built`    | Register revived labs          |
+| `on_player_mined_entity`    | `on_removed`  | Deregister mined labs          |
+| `on_robot_mined_entity`     | `on_removed`  | Deregister robot-mined labs    |
+| `on_entity_died`            | `on_removed`  | Deregister destroyed labs      |
+| `script_raised_destroy`     | `on_removed`  | Deregister script-destroyed    |
+| `on_tick`                   | round-robin   | Scan up to 25 labs every 10t   |
+
+---
+
+## Planned Milestones
+
+Full detail in `docs/milestones.md`. Summary:
+
+| Milestone | Description                                      | Status      |
+|-----------|--------------------------------------------------|-------------|
+| M1        | Empty skeleton, mod loads                        | ✅ Done     |
+| M2        | Core items, recipe categories, tech tree stubs   | pending     |
+| M3        | T1 Recycler entity (burner, coal-fueled)         | pending     |
+| M4        | Resource scarcity startup setting + ore scaling  | pending     |
+| M5        | Scrap drop on entity death                       | pending     |
+| M6        | Ruins generator on chunk generation              | pending     |
+| M7        | Planet prototypes (Space Age guard)              | pending     |
+| M8        | T2–T4 Recycler entities                          | pending     |
+| M9        | Global resource tracker + remote interface       | pending     |
+| M10       | Story layer: log items in ruin loot              | pending     |
+
+---
+
+## Design Notes
+
+- `docs/WorldGeneration.md` captures the current direction for scarcity-driven map generation, ruins, salvage placement, and anti-softlock rules.
+
+---
+
+## Factorio 2.0 API Notes
+
+- Use `storage.*` for persistent runtime state (serialised with the save). `storage` was renamed to `storage` in Factorio 2.0.
+- `data:extend({...})` in data stage; never in control stage.
+- `surface.spill_item_stack(pos, stack, enable_looted, force, allow_belts)` — fifth arg `false` prevents items landing on belts.
+- `entity.get_inventory(defines.inventory.lab_input)` — lab input slot.
+- `entity.get_inventory(defines.inventory.chest)` — generic container slot.
+- `collision_mask = {}` makes an entity non-collidable with everything.
+- Entity flags `"not-on-map"`, `"not-blueprintable"`, `"not-deconstructable"` keep internal entities invisible to the player. `hidden` is a standalone boolean field on the prototype in 2.0, not a flag.
+- `out.destructible = false` prevents damage but entity can still be `.destroy()`ed by script.

@@ -20,6 +20,18 @@ function runNodeScript(relativeScriptPath, args) {
   }
 }
 
+function runCommand(command, args) {
+  const result = spawnSync(command, args || [], {
+    cwd: REPO_ROOT,
+    stdio: ["ignore", "pipe", "pipe"],
+    encoding: "utf8",
+  });
+
+  if (result.status !== 0) {
+    throw new Error(result.stderr || result.stdout || `Command failed: ${command}`);
+  }
+}
+
 function readJson(relativePath) {
   return JSON.parse(fs.readFileSync(path.join(REPO_ROOT, relativePath), "utf8"));
 }
@@ -50,6 +62,9 @@ test("blueprint_extract exports one directory per book and one file per blueprin
                 blueprint: {
                   item: "blueprint",
                   label: "Test Grid",
+                  "snap-to-grid": {x: 100, y: 100},
+                  "absolute-snapping": true,
+                  "position-relative-to-grid": {x: 0, y: 0},
                   entities: [
                     {entity_number: 1, name: "solar-panel", position: {x: 1.5, y: 2.5}},
                     {entity_number: 2, name: "rail-signal", position: {x: 4.5, y: 6.5}, direction: 4},
@@ -95,6 +110,11 @@ test("blueprint_extract exports one directory per book and one file per blueprin
   assert.equal(extracted.label, "Test Grid");
   assert.equal(extracted.entity_count, 2);
   assert.equal(extracted.tile_count, 1);
+  assert.deepEqual(extracted.grid, {
+    snap_to_grid: {x: 100, y: 100},
+    absolute_snapping: true,
+    position_relative_to_grid: {x: 0, y: 0},
+  });
   assert.deepEqual(extracted.entities[1], {
     name: "rail-signal",
     position: {x: 4.5, y: 6.5},
@@ -102,42 +122,75 @@ test("blueprint_extract exports one directory per book and one file per blueprin
   });
 });
 
-test("normalize/ruin/wear/export pipeline keeps live solar panels in the final Lua module", function () {
-  runNodeScript("tools/blueprint_normalize_merge.js");
-  runNodeScript("tools/blueprint_ruin_template.js");
-  runNodeScript("tools/blueprint_wear_profile.js");
-  runNodeScript("tools/blueprint_export_lua.js");
+test("blueprint_encode produces a valid import string for the authored construction hub", function () {
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "se-blueprint-encode-"));
+  const outputPath = path.join(tempDir, "construction-hub.txt");
 
-  const normalized = readJson("tools/blueprint-normalized/root-modular-train-grid/0-grid-rails/merged-rails-barbone-grid-solar-grid.json");
-  assert.deepEqual(normalized.anchor, {x: -14, y: -14});
-  assert.deepEqual(normalized.bounds, {
-    left_top: {x: 0, y: 0},
-    right_bottom: {x: 127, y: 127},
+  runNodeScript("tools/blueprint_encode.js", [
+    "--input",
+    "tools/blueprint-authored/core-construction-hub-working-64x64.json",
+    "--output",
+    outputPath,
+  ]);
+
+  const blueprintString = fs.readFileSync(outputPath, "utf8").trim();
+  assert.match(blueprintString, /^0/);
+
+  const inflated = zlib.inflateSync(Buffer.from(blueprintString.slice(1), "base64")).toString("utf8");
+  const payload = JSON.parse(inflated);
+  assert.equal(payload.blueprint.label, "Core Construction Hub Working 64x64");
+  assert.equal(payload.blueprint.entities.length, 54);
+
+  const tempInputPath = path.join(tempDir, "input.txt");
+  const extractedDir = path.join(tempDir, "extracted");
+  fs.writeFileSync(tempInputPath, `${blueprintString}\n`, "utf8");
+  runNodeScript("tools/blueprint_extract.js", ["--input", tempInputPath, "--output-dir", extractedDir]);
+
+  const rootEntry = fs.readdirSync(extractedDir).find((entry) => entry.startsWith("root-"));
+  const rootDir = path.join(extractedDir, rootEntry);
+  const extractedFile = fs.readdirSync(rootDir).find((entry) => entry.endsWith(".json"));
+  const extracted = JSON.parse(fs.readFileSync(path.join(rootDir, extractedFile), "utf8"));
+
+  assert.equal(extracted.entity_count, 54);
+  assert.equal(extracted.tile_count, 0);
+  assert.deepEqual(extracted.entities[0], {
+    name: "roboport",
+    position: {x: 20, y: 24},
   });
+});
 
-  const ruinTemplate = readJson("tools/ruin-templates/root-modular-train-grid/0-grid-rails/merged-rails-barbone-grid-solar-grid.ruin-template.json");
-  assert.ok(
-    ruinTemplate.stats.collapsed_cluster_entities.rail_network_collapsed <
-      ruinTemplate.stats.collapsed_cluster_entities.rail_network_raw,
-    "rail skeleton should be smaller than the raw rail cluster"
+test("authored central district pipeline produces a compiled package with stable bounds and sectors", function () {
+  runCommand("bash", ["tools/build_central_district_from_blueprint.sh"]);
+
+  const normalized = readJson("tools/blueprint-normalized/authored/central-district.json");
+  const worn = readJson("tools/ruin-templates-worn/authored/central-district.worn.json");
+  const manifestLua = fs.readFileSync(
+    path.join(
+      REPO_ROOT,
+      "second_engineer",
+      "scripts",
+      "worldgeneration",
+      "generated",
+      "core_district",
+      "manifest.lua"
+    ),
+    "utf8"
   );
 
-  const worn = readJson("tools/ruin-templates-worn/root-modular-train-grid/0-grid-rails/merged-rails-barbone-grid-solar-grid.worn.json");
-  const liveSolar = worn.entities.damaged_live.filter(function (entity) {
-    return entity.target_name === "solar-panel";
-  }).length;
-  const remnantSolar = worn.entities.remnant.filter(function (entity) {
-    return entity.target_name === "solar-panel-remnants";
-  }).length;
-
-  assert.ok(liveSolar > 0, "wear pass should preserve some solar panels as live entities");
-  assert.ok(remnantSolar > 0, "wear pass should still leave some solar panel remnants");
-
-  const luaPath = path.join(REPO_ROOT, "second_engineer", "scripts", "worldgeneration", "generated", "merged_rails_solar.lua");
-  const lua = fs.readFileSync(luaPath, "utf8");
-
-  assert.match(lua, /damaged_live = \{/);
-  assert.match(lua, /name = "solar-panel"/);
-  assert.match(lua, /name = "solar-panel-remnants"/);
-  assert.match(lua, /return GeneratedRuin/);
+  assert.deepEqual(normalized.anchor, {x: 0, y: 0});
+  assert.deepEqual(normalized.bounds, {
+    left_top: {x: -282.5, y: -182.5},
+    right_bottom: {x: 282.5, y: 282.5},
+  });
+  assert.equal(worn.entities.remnant.filter((entity) => entity.target_name === "straight-rail-remnants").length, 807);
+  assert.equal(worn.entities.damaged_live.filter((entity) => entity.target_name === "stone-wall").length, 3622);
+  assert.equal(worn.entities.damaged_live.filter((entity) => entity.target_name === "assembling-machine-3").length, 65);
+  assert.equal(worn.entities.damaged_live.filter((entity) => entity.target_name === "electric-furnace").length, 32);
+  assert.equal(worn.tiles.foundation_kept.length, 68739);
+  assert.equal(worn.tiles.foundation_cracked.length, 23754);
+  assert.match(manifestLua, /sector_size = 32/);
+  assert.match(manifestLua, /x = -8,/);
+  assert.match(manifestLua, /y = -6,/);
+  assert.match(manifestLua, /x = 8,/);
+  assert.match(manifestLua, /y = 8,/);
 });

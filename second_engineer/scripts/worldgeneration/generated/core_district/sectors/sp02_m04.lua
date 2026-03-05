@@ -1,0 +1,1477 @@
+local Sector = {
+  sector = {
+    x = 2,
+    y = -4,
+    key = "sp02_m04",
+  },
+  entities = {
+    remnant = {
+      {
+        name = "rail-chain-signal-remnants",
+        offset = {
+          x = 82.5,
+          y = -103.5,
+        },
+        direction = 12,
+      },
+      {
+        name = "rail-chain-signal-remnants",
+        offset = {
+          x = 88.5,
+          y = -100.5,
+        },
+        direction = 8,
+      },
+      {
+        name = "rail-signal-remnants",
+        offset = {
+          x = 82.5,
+          y = -96.5,
+        },
+        direction = 4,
+      },
+      {
+        name = nil,
+        offset = {
+          x = 95,
+          y = -116,
+        },
+        direction = 10,
+      },
+      {
+        name = nil,
+        offset = {
+          x = 93,
+          y = -111,
+        },
+        direction = 10,
+      },
+      {
+        name = nil,
+        offset = {
+          x = 93,
+          y = -111,
+        },
+        direction = 12,
+      },
+      {
+        name = nil,
+        offset = {
+          x = 89,
+          y = -107,
+        },
+        direction = 4,
+      },
+      {
+        name = nil,
+        offset = {
+          x = 89,
+          y = -107,
+        },
+        direction = 2,
+      },
+      {
+        name = nil,
+        offset = {
+          x = 84,
+          y = -105,
+        },
+        direction = 4,
+      },
+      {
+        name = nil,
+        offset = {
+          x = 87,
+          y = -102,
+        },
+        direction = 2,
+      },
+      {
+        name = nil,
+        offset = {
+          x = 87,
+          y = -98,
+        },
+        direction = 8,
+      },
+      {
+        name = "straight-rail-remnants",
+        offset = {
+          x = 67,
+          y = -105,
+        },
+        direction = 4,
+      },
+      {
+        name = "straight-rail-remnants",
+        offset = {
+          x = 75,
+          y = -105,
+        },
+        direction = 4,
+      },
+      {
+        name = "straight-rail-remnants",
+        offset = {
+          x = 95,
+          y = -125,
+        },
+      },
+      {
+        name = "big-electric-pole-remnants",
+        offset = {
+          x = 78,
+          y = -100,
+        },
+      },
+    },
+    damaged_live = {
+      {
+        name = "big-electric-pole",
+        offset = {
+          x = 78,
+          y = -122,
+        },
+        damage = 216,
+      },
+    },
+  },
+  tiles = {
+    foundation_kept = {
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 92,
+          y = -113,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 91,
+          y = -111,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 91,
+          y = -112,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 92,
+          y = -111,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 92,
+          y = -112,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 89,
+          y = -109,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 88,
+          y = -109,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 91,
+          y = -110,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 93,
+          y = -109,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 92,
+          y = -110,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 67,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 69,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 71,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 70,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 73,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 72,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 74,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 77,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 76,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 79,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 78,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 81,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 80,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 83,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 82,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 85,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 87,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 87,
+          y = -108,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 86,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 89,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 89,
+          y = -108,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 88,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 88,
+          y = -108,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 91,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 91,
+          y = -108,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 67,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 67,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 69,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 69,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 71,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 71,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 70,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 70,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 73,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 73,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 72,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 72,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 74,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 74,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 77,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 77,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 76,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 76,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 79,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 79,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 78,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 78,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 81,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 81,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 80,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 80,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 83,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 83,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 82,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 82,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 85,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 85,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 87,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 87,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 86,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 86,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 89,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 89,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 88,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 88,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 67,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 69,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 71,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 70,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 73,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 72,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 74,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 77,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 76,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 79,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 78,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 81,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 80,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 83,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 82,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 85,
+          y = -103,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 85,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 87,
+          y = -103,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 87,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 86,
+          y = -103,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 86,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 88,
+          y = -103,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 88,
+          y = -104,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 77,
+          y = -101,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 77,
+          y = -102,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 78,
+          y = -101,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 78,
+          y = -102,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 85,
+          y = -101,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 85,
+          y = -102,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 87,
+          y = -101,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 87,
+          y = -102,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 86,
+          y = -101,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 86,
+          y = -102,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 88,
+          y = -101,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 88,
+          y = -102,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 77,
+          y = -99,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 77,
+          y = -100,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 76,
+          y = -99,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 79,
+          y = -99,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 78,
+          y = -99,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 78,
+          y = -100,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 85,
+          y = -99,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 85,
+          y = -100,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 87,
+          y = -99,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 87,
+          y = -100,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 86,
+          y = -99,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 86,
+          y = -100,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 88,
+          y = -99,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 88,
+          y = -100,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 65,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 67,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 68,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 71,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 70,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 73,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 72,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 75,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 74,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 76,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 78,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 80,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 83,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 82,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 85,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 85,
+          y = -98,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 87,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 87,
+          y = -98,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 86,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 86,
+          y = -98,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 88,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 88,
+          y = -98,
+        },
+      },
+    },
+    foundation_cracked = {
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 94,
+          y = -115,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 93,
+          y = -113,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 93,
+          y = -114,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 94,
+          y = -113,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 94,
+          y = -114,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 93,
+          y = -111,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 93,
+          y = -112,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 94,
+          y = -111,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 94,
+          y = -112,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 89,
+          y = -110,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 90,
+          y = -109,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 93,
+          y = -110,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 92,
+          y = -109,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 94,
+          y = -110,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 65,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 64,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 75,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 84,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 90,
+          y = -107,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 90,
+          y = -108,
+        },
+      },
+      {
+        name = "hazard-concrete-right",
+        offset = {
+          x = 92,
+          y = -108,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 65,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 64,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 64,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 75,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 75,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 84,
+          y = -105,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 84,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 90,
+          y = -106,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 65,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 64,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 75,
+          y = -104,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 84,
+          y = -104,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 76,
+          y = -101,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 76,
+          y = -102,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 79,
+          y = -101,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 79,
+          y = -102,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 76,
+          y = -100,
+        },
+      },
+      {
+        name = "concrete",
+        offset = {
+          x = 79,
+          y = -100,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 64,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 69,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 79,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 81,
+          y = -97,
+        },
+      },
+      {
+        name = "hazard-concrete-left",
+        offset = {
+          x = 84,
+          y = -97,
+        },
+      },
+    },
+  },
+}
+
+return Sector

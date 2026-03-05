@@ -1,0 +1,2069 @@
+{
+  "index": 2,
+  "label": "3 stations (high)",
+  "description": null,
+  "entity_count": 268,
+  "tile_count": 0,
+  "entities": [
+    {
+      "name": "train-stop",
+      "position": {
+        "x": 21,
+        "y": 15
+      },
+      "direction": 12
+    },
+    {
+      "name": "rail-signal",
+      "position": {
+        "x": 56.5,
+        "y": 15.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 18,
+        "y": 17
+      },
+      "direction": 12
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 21,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 23,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 25,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 27,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 29,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 31,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 33,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 35,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 37,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 39,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 41,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 43,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 45,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 47,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 49,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 51,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 53,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 55,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 57,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 59,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 61,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 63,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 65,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 67,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 69,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 71,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 73,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 75,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 77,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 79,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 81,
+        "y": 17
+      },
+      "direction": 4
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 84,
+        "y": 17
+      },
+      "direction": 6
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 13,
+        "y": 19
+      },
+      "direction": 12
+    },
+    {
+      "name": "medium-electric-pole",
+      "position": {
+        "x": 27.5,
+        "y": 19.5
+      }
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 89,
+        "y": 19
+      },
+      "direction": 6
+    },
+    {
+      "name": "rail-signal",
+      "position": {
+        "x": 92.5,
+        "y": 20.5
+      },
+      "direction": 6
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 22
+      }
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 9,
+        "y": 23
+      },
+      "direction": 2
+    },
+    {
+      "name": "rail-chain-signal",
+      "position": {
+        "x": 8.5,
+        "y": 22.5
+      },
+      "direction": 1
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 22,
+        "y": 22
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 78,
+        "y": 22
+      }
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 93,
+        "y": 23
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 22
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 25,
+        "y": 25
+      }
+    },
+    {
+      "name": "medium-electric-pole",
+      "position": {
+        "x": 27.5,
+        "y": 25.5
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 75,
+        "y": 25
+      }
+    },
+    {
+      "name": "train-stop",
+      "position": {
+        "x": 21,
+        "y": 27
+      },
+      "direction": 12
+    },
+    {
+      "name": "rail-signal",
+      "position": {
+        "x": 56.5,
+        "y": 27.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 7,
+        "y": 28
+      },
+      "direction": 2
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 18,
+        "y": 29
+      },
+      "direction": 12
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 21,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 23,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 25,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 27,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 29,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 31,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 33,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 35,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 37,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 39,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 41,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 43,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 45,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 47,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 49,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 51,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 53,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 55,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 57,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 59,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 61,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 63,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 65,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 67,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 69,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 71,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 73,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 75,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 77,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 79,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 81,
+        "y": 29
+      },
+      "direction": 4
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 84,
+        "y": 29
+      },
+      "direction": 6
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 95,
+        "y": 28
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 31
+      }
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 13,
+        "y": 31
+      },
+      "direction": 12
+    },
+    {
+      "name": "medium-electric-pole",
+      "position": {
+        "x": 27.5,
+        "y": 31.5
+      }
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 89,
+        "y": 31
+      },
+      "direction": 6
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 31
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 33
+      }
+    },
+    {
+      "name": "rail-signal",
+      "position": {
+        "x": 92.5,
+        "y": 32.5
+      },
+      "direction": 6
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 33
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 35
+      }
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 9,
+        "y": 35
+      },
+      "direction": 2
+    },
+    {
+      "name": "rail-chain-signal",
+      "position": {
+        "x": 8.5,
+        "y": 34.5
+      },
+      "direction": 1
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 93,
+        "y": 35
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 35
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 37
+      }
+    },
+    {
+      "name": "train-stop",
+      "position": {
+        "x": 21,
+        "y": 37
+      },
+      "direction": 12
+    },
+    {
+      "name": "medium-electric-pole",
+      "position": {
+        "x": 27.5,
+        "y": 37.5
+      }
+    },
+    {
+      "name": "rail-signal",
+      "position": {
+        "x": 56.5,
+        "y": 37.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 37
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 39
+      }
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 18,
+        "y": 39
+      },
+      "direction": 12
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 21,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 23,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 25,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 27,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 29,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 31,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 33,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 35,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 37,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 39,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 41,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 43,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 45,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 47,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 49,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 51,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 53,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 55,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 57,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 59,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 61,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 63,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 65,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 67,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 69,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 71,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 73,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 75,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 77,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 79,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 81,
+        "y": 39
+      },
+      "direction": 4
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 84,
+        "y": 39
+      },
+      "direction": 6
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 39
+      }
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 7,
+        "y": 40
+      },
+      "direction": 2
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 41
+      }
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 13,
+        "y": 41
+      },
+      "direction": 12
+    },
+    {
+      "name": "medium-electric-pole",
+      "position": {
+        "x": 27.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 89,
+        "y": 41
+      },
+      "direction": 6
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 41
+      }
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 95,
+        "y": 40
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 43
+      }
+    },
+    {
+      "name": "rail-signal",
+      "position": {
+        "x": 92.5,
+        "y": 42.5
+      },
+      "direction": 6
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 43
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 45
+      }
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 9,
+        "y": 45
+      },
+      "direction": 2
+    },
+    {
+      "name": "rail-chain-signal",
+      "position": {
+        "x": 8.5,
+        "y": 44.5
+      },
+      "direction": 1
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 93,
+        "y": 45
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 45
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 47
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 47
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 49
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 49
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 50
+      }
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 7,
+        "y": 50
+      },
+      "direction": 2
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 51
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 51
+      }
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 95,
+        "y": 50
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 50
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 53
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 53
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 55
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 55
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 57
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 57
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 59
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 59
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 61
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 61
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 63
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 63
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 65
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 65
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 67
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 67
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 69
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 69
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 7,
+        "y": 71
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 71
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 73
+      }
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 7,
+        "y": 74
+      },
+      "direction": 10
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 25,
+        "y": 75
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 75,
+        "y": 75
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 75
+      }
+    },
+    {
+      "name": "rail-chain-signal",
+      "position": {
+        "x": 3.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 5,
+        "y": 77
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 77
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 78
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 5,
+        "y": 79
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 22,
+        "y": 78
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 78,
+        "y": 78
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 79
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 78
+      }
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 5,
+        "y": 80
+      },
+      "direction": 2
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 5,
+        "y": 81
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 95,
+        "y": 81
+      }
+    },
+    {
+      "name": "rail-chain-signal",
+      "position": {
+        "x": 3.5,
+        "y": 82.5
+      }
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 5,
+        "y": 84
+      },
+      "direction": 8
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 95,
+        "y": 84
+      },
+      "direction": 10
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": -2,
+        "y": 87
+      },
+      "direction": 12
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 2,
+        "y": 87
+      },
+      "direction": 6
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": -7,
+        "y": 89
+      },
+      "direction": 12
+    },
+    {
+      "name": "rail-chain-signal",
+      "position": {
+        "x": 0.5,
+        "y": 88.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 7,
+        "y": 89
+      },
+      "direction": 6
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 7,
+        "y": 89
+      },
+      "direction": 8
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 93,
+        "y": 89
+      },
+      "direction": 10
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": -11,
+        "y": 93
+      },
+      "direction": 2
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 11,
+        "y": 93
+      }
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 11,
+        "y": 93
+      },
+      "direction": 14
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 89,
+        "y": 93
+      },
+      "direction": 4
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 16,
+        "y": 95
+      },
+      "direction": 14
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 19,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 21,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 23,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 25,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 27,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 29,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 31,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 33,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 35,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 37,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 39,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 41,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 43,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 45,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 47,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 49,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 51,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 53,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 55,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 57,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 59,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 61,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 63,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 65,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 67,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 69,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 71,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 73,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 75,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 77,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 79,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 81,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 84,
+        "y": 95
+      },
+      "direction": 4
+    },
+    {
+      "name": "rail-signal",
+      "position": {
+        "x": 17.5,
+        "y": 96.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": -13,
+        "y": 98
+      },
+      "direction": 2
+    },
+    {
+      "name": "rail-chain-signal",
+      "position": {
+        "x": -11.5,
+        "y": 99.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 13,
+        "y": 98
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 100
+      }
+    },
+    {
+      "name": "rail-chain-signal",
+      "position": {
+        "x": 11.5,
+        "y": 100.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 22,
+        "y": 100
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 50,
+        "y": 100
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 78,
+        "y": 100
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 100
+      }
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": -13,
+        "y": 102
+      },
+      "direction": 8
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 13,
+        "y": 102
+      },
+      "direction": 10
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": -11,
+        "y": 107
+      },
+      "direction": 8
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 11,
+        "y": 107
+      },
+      "direction": 10
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": -7,
+        "y": 111
+      },
+      "direction": 14
+    },
+    {
+      "name": "rail-chain-signal",
+      "position": {
+        "x": -0.5,
+        "y": 111.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 7,
+        "y": 111
+      },
+      "direction": 4
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": -2,
+        "y": 113
+      },
+      "direction": 14
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 2,
+        "y": 113
+      },
+      "direction": 4
+    }
+  ],
+  "tiles": []
+}

@@ -163,11 +163,17 @@ function sanitizeFilePart(value) {
 function extractBlueprint(blueprint, meta) {
   const entities = Array.isArray(blueprint.entities) ? blueprint.entities : [];
   const tiles = Array.isArray(blueprint.tiles) ? blueprint.tiles : [];
+  const grid = {
+    snap_to_grid: blueprint["snap-to-grid"] || blueprint.snap_to_grid || null,
+    absolute_snapping: blueprint["absolute-snapping"] ?? blueprint.absolute_snapping ?? null,
+    position_relative_to_grid: blueprint["position-relative-to-grid"] || blueprint.position_relative_to_grid || null,
+  };
 
   return {
     index: meta.index ?? null,
     label: blueprint.label || null,
     description: blueprint.description || null,
+    grid: grid,
     entity_count: entities.length,
     tile_count: tiles.length,
     entities: entities.map(function (entity) {

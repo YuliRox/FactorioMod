@@ -22,27 +22,67 @@ const OUTPUT = path.join(
 
 const PROFILE = {
   name: "abandoned-power-rail-grid-v1",
+  // Design decision: rails are already skeletonized during ruin-template
+  // conversion, so wear should only thin them moderately (not as hard as
+  // other infrastructure), otherwise the network becomes unreadable.
   remnantMissingRate: {
-    rail_track: 0.87,
-    rail_signal: 0.87,
-    power_generation: 0.87,
+    // Keep many more rail remnants so district corridors still read as an
+    // industrial rail network rather than mostly empty terrain.
+    rail_track: 0.12,
+    rail_signal: 0.15,
+    power_generation: 0.60,
   },
   remnantToLiveRate: {
     power_generation: 0.03,
   },
   liveMissingRate: {
-    power_distribution: 0.87,
-    power_storage: 0.87,
-    logistics: 0.87,
+    power_distribution: 0.62,
+    power_storage: 0.62,
+    logistics: 0.50,
+    production: 0.58,
+    defense: 0.42,
+    fortification: 0.28,
+    control: 0.55,
+    fluid: 0.55,
+    rail_logistics: 0.48,
   },
   liveToRemnantRate: {
-    power_distribution: 0.10,
-    power_storage: 0.10,
-    logistics: 0.10,
+    power_distribution: 0.30,
+    power_storage: 0.30,
+    logistics: 0.25,
+    production: 0.24,
+    defense: 0.20,
+    fortification: 0.18,
+    control: 0.22,
+    fluid: 0.22,
+    rail_logistics: 0.20,
   },
   foundationMissingRate: 0.08,
   foundationCrackedRate: 0.24,
 };
+
+function parseArgs(argv) {
+  const args = {
+    input: INPUT,
+    output: OUTPUT,
+    profileName: null,
+  };
+
+  for (let i = 2; i < argv.length; i += 1) {
+    const arg = argv[i];
+    if (arg === "--input") {
+      args.input = path.resolve(argv[++i]);
+    } else if (arg === "--output") {
+      args.output = path.resolve(argv[++i]);
+    } else if (arg === "--profile-name") {
+      args.profileName = argv[++i];
+    } else {
+      fail(`Unknown argument: ${arg}`);
+    }
+  }
+
+  return args;
+}
 
 function fail(message) {
   console.error(message);
@@ -113,12 +153,13 @@ function summarize(obj) {
 }
 
 function main() {
-  const template = readJson(INPUT);
+  const args = parseArgs(process.argv);
+  const template = readJson(args.input);
 
   const worn = {
     template_name: template.template_name,
-    source_file: INPUT,
-    wear_profile: PROFILE.name,
+    source_file: args.input,
+    wear_profile: args.profileName || PROFILE.name,
     anchor: template.anchor,
     bounds: template.bounds,
     wear_notes: [
@@ -248,9 +289,9 @@ function main() {
     output_tiles: summarize(worn.tiles),
   };
 
-  fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });
-  fs.writeFileSync(OUTPUT, `${JSON.stringify(worn, null, 2)}\n`, "utf8");
-  console.log(`Wrote worn ruin template to ${OUTPUT}`);
+  fs.mkdirSync(path.dirname(args.output), { recursive: true });
+  fs.writeFileSync(args.output, `${JSON.stringify(worn, null, 2)}\n`, "utf8");
+  console.log(`Wrote worn ruin template to ${args.output}`);
 }
 
 main();

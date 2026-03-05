@@ -37,7 +37,37 @@ const ENTITY_RULES = {
 
 const TILE_RULES = {
   landfill: { strategy: "foundation", category: "terrain_support" },
+  concrete: { strategy: "foundation", category: "terrain_support" },
+  "hazard-concrete-left": { strategy: "foundation", category: "terrain_support" },
+  "hazard-concrete-right": { strategy: "foundation", category: "terrain_support" },
+  "refined-concrete": { strategy: "foundation", category: "terrain_support" },
+  "refined-hazard-concrete-left": { strategy: "foundation", category: "terrain_support" },
+  "refined-hazard-concrete-right": { strategy: "foundation", category: "terrain_support" },
+  "stone-path": { strategy: "foundation", category: "terrain_support" },
 };
+
+function parseArgs(argv) {
+  const args = {
+    input: INPUT,
+    output: OUTPUT,
+    templateName: "se-merged-rails-solar-grid",
+  };
+
+  for (let i = 2; i < argv.length; i += 1) {
+    const arg = argv[i];
+    if (arg === "--input") {
+      args.input = path.resolve(argv[++i]);
+    } else if (arg === "--output") {
+      args.output = path.resolve(argv[++i]);
+    } else if (arg === "--template-name") {
+      args.templateName = argv[++i];
+    } else {
+      fail(`Unknown argument: ${arg}`);
+    }
+  }
+
+  return args;
+}
 
 function fail(message) {
   console.error(message);
@@ -55,6 +85,15 @@ function readJson(filePath) {
 function keyForDirectionEntity(entity) {
   return [
     entity.target_name || entity.source_name,
+    entity.position.x,
+    entity.position.y,
+    entity.direction ?? "",
+  ].join("|");
+}
+
+function keyForSourceEntity(entity) {
+  return [
+    entity.name,
     entity.position.x,
     entity.position.y,
     entity.direction ?? "",
@@ -103,6 +142,111 @@ function groupBy(items, keyFn) {
   }
 
   return groups;
+}
+
+function resolveEntityRule(name) {
+  if (ENTITY_RULES[name]) {
+    return ENTITY_RULES[name];
+  }
+
+  if (
+    name === "medium-electric-pole" ||
+    name === "small-electric-pole"
+  ) {
+    return { strategy: "preserve_as_damaged", target_name: name, category: "power_distribution" };
+  }
+
+  if (
+    name === "steel-chest" ||
+    name === "iron-chest" ||
+    name === "storage-chest" ||
+    name === "passive-provider-chest" ||
+    name === "active-provider-chest" ||
+    name === "buffer-chest" ||
+    name === "requester-chest"
+  ) {
+    return { strategy: "preserve_as_damaged", target_name: name, category: "logistics" };
+  }
+
+  if (
+    name === "transport-belt" ||
+    name === "fast-transport-belt" ||
+    name === "express-transport-belt" ||
+    name === "underground-belt" ||
+    name === "fast-underground-belt" ||
+    name === "express-underground-belt" ||
+    name === "splitter" ||
+    name === "fast-splitter" ||
+    name === "express-splitter"
+  ) {
+    return { strategy: "preserve_as_damaged", target_name: name, category: "logistics" };
+  }
+
+  if (
+    name === "inserter" ||
+    name === "fast-inserter" ||
+    name === "bulk-inserter" ||
+    name === "long-handed-inserter"
+  ) {
+    return { strategy: "preserve_as_damaged", target_name: name, category: "logistics" };
+  }
+
+  if (
+    name === "assembling-machine-2" ||
+    name === "assembling-machine-3" ||
+    name === "electric-furnace" ||
+    name === "chemical-plant" ||
+    name === "oil-refinery"
+  ) {
+    return { strategy: "preserve_as_damaged", target_name: name, category: "production" };
+  }
+
+  if (
+    name === "gun-turret" ||
+    name === "laser-turret" ||
+    name === "flamethrower-turret"
+  ) {
+    return { strategy: "preserve_as_damaged", target_name: name, category: "defense" };
+  }
+
+  if (name === "stone-wall" || name === "gate") {
+    return { strategy: "preserve_as_damaged", target_name: name, category: "fortification" };
+  }
+
+  if (
+    name === "beacon" ||
+    name === "radar" ||
+    name === "arithmetic-combinator" ||
+    name === "constant-combinator" ||
+    name === "selector-combinator" ||
+    name === "small-lamp" ||
+    name === "display-panel"
+  ) {
+    return { strategy: "preserve_as_damaged", target_name: name, category: "control" };
+  }
+
+  if (
+    name === "pipe" ||
+    name === "pipe-to-ground" ||
+    name === "pump" ||
+    name === "storage-tank"
+  ) {
+    return { strategy: "preserve_as_damaged", target_name: name, category: "fluid" };
+  }
+
+  if (
+    name === "train-stop" ||
+    name === "cargo-wagon" ||
+    name === "locomotive"
+  ) {
+    return { strategy: "preserve_as_damaged", target_name: name, category: "rail_logistics" };
+  }
+
+  if (name === "stone-furnace") {
+    return { strategy: "preserve_as_damaged", target_name: name, category: "production" };
+  }
+
+  return { strategy: "skip", category: "unmapped", target_name: null };
 }
 
 function cloneEntity(entity) {
@@ -166,8 +310,71 @@ function collapseRailNetwork(clusterCandidates) {
   return dedupe(collapsed, keyForDirectionEntity);
 }
 
+function buildConnectorIndex(normalized) {
+  const metadata = normalized.connector_metadata;
+  const index = {
+    keepSides: new Set(),
+    dropSides: new Set(),
+    sideToKeys: {},
+  };
+
+  if (!metadata || !metadata.strips) {
+    return index;
+  }
+
+  for (const side of metadata.keep_sides || []) {
+    index.keepSides.add(side);
+  }
+  for (const side of metadata.drop_sides || []) {
+    index.dropSides.add(side);
+  }
+
+  for (const [side, strip] of Object.entries(metadata.strips)) {
+    index.sideToKeys[side] = new Set((strip.entities || []).map(function (entity) {
+      return entity.key;
+    }));
+  }
+
+  return index;
+}
+
+function shouldPruneForConnectorSeam(entity, connectorIndex) {
+  if (!connectorIndex || Object.keys(connectorIndex.sideToKeys).length === 0) {
+    return false;
+  }
+
+  const key = keyForSourceEntity(entity);
+  const touchedSides = [];
+
+  for (const [side, keys] of Object.entries(connectorIndex.sideToKeys)) {
+    if (keys.has(key)) {
+      touchedSides.push(side);
+    }
+  }
+
+  if (touchedSides.length === 0) {
+    return false;
+  }
+
+  for (const side of touchedSides) {
+    if (connectorIndex.keepSides.has(side)) {
+      return false;
+    }
+  }
+
+  for (const side of touchedSides) {
+    if (connectorIndex.dropSides.has(side)) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 function main() {
-  const normalized = readJson(INPUT);
+  const args = parseArgs(process.argv);
+  const normalized = readJson(args.input);
+  const connectorIndex = buildConnectorIndex(normalized);
   const groupedEntities = {
     convert_to_remnant: [],
     cluster_to_remnants: [],
@@ -181,7 +388,21 @@ function main() {
   };
 
   for (const entity of normalized.entities || []) {
-    const rule = ENTITY_RULES[entity.name] || { strategy: "skip", category: "unmapped", target_name: null };
+    if (shouldPruneForConnectorSeam(entity, connectorIndex)) {
+      groupedEntities.skip.push({
+        source_name: entity.name,
+        target_name: null,
+        category: "seam_pruned",
+        cluster: null,
+        source_blueprint: entity.source || null,
+        position: entity.position,
+        direction: entity.direction,
+        type: entity.type,
+      });
+      continue;
+    }
+
+    const rule = resolveEntityRule(entity.name);
 
     groupedEntities[rule.strategy].push({
       source_name: entity.name,
@@ -213,13 +434,15 @@ function main() {
   // authoring, so it keeps strategy buckets instead of forcing every source
   // entity into a final Factorio prototype before the mapping is validated.
   const output = {
-    template_name: "se-merged-rails-solar-grid",
-    source_file: INPUT,
+    template_name: args.templateName,
+    source_file: args.input,
     source_label: normalized.label,
     anchor: normalized.anchor,
     bounds: normalized.bounds,
+    connector_metadata: normalized.connector_metadata || null,
     mapping_notes: [
       "rail pieces are first marked as cluster candidates, then collapsed into a sparse rail remnant skeleton",
+      "connector seam pruning drops ownership-conflicting edge entities before mapping",
       "signal and solar entities are mapped directly to remnant targets",
       "power poles, substations, accumulators, and roboports are kept as damaged live entities for now",
       "landfill is treated as foundation support, not as a literal ruined floor decision yet",
@@ -248,9 +471,9 @@ function main() {
     },
   };
 
-  fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });
-  fs.writeFileSync(OUTPUT, `${JSON.stringify(output, null, 2)}\n`, "utf8");
-  console.log(`Wrote ruin template to ${OUTPUT}`);
+  fs.mkdirSync(path.dirname(args.output), { recursive: true });
+  fs.writeFileSync(args.output, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+  console.log(`Wrote ruin template to ${args.output}`);
 }
 
 main();

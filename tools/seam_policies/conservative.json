@@ -1,0 +1,12 @@
+{
+  "strip_width": 2,
+  "keep_sides": ["north", "west"],
+  "drop_sides": ["south", "east"],
+  "connector_entity_names": [
+    "straight-rail",
+    "curved-rail-a",
+    "curved-rail-b",
+    "rail-signal",
+    "rail-chain-signal"
+  ]
+}

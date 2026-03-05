@@ -1,0 +1,1671 @@
+{
+  "index": 6,
+  "label": "Cargo loading",
+  "description": "L signal is for the maximum train limit (default is 2) and the W signal is the number of wagons (defaullt is 4).\nThe second power pole green wire provides the amount of available items in the chests.\nDon't forget to activate the green signal combinator when everything is built !",
+  "entity_count": 216,
+  "tile_count": 0,
+  "entities": [
+    {
+      "name": "rail-chain-signal",
+      "position": {
+        "x": 19.5,
+        "y": -0.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "train-stop",
+      "position": {
+        "x": 21,
+        "y": -1
+      },
+      "direction": 12
+    },
+    {
+      "name": "rail-signal",
+      "position": {
+        "x": 56.5,
+        "y": -0.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 21,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 23,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "locomotive",
+      "position": {
+        "x": 24,
+        "y": 1
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 25,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 27,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 29,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "cargo-wagon",
+      "position": {
+        "x": 31,
+        "y": 1
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 31,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 33,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 35,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 37,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "cargo-wagon",
+      "position": {
+        "x": 38,
+        "y": 1
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 39,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 41,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 43,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "cargo-wagon",
+      "position": {
+        "x": 45,
+        "y": 1
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 45,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 47,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 49,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 51,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "cargo-wagon",
+      "position": {
+        "x": 52,
+        "y": 1
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 53,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 55,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 57,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 59,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "locomotive",
+      "position": {
+        "x": 60.574,
+        "y": 1
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 61,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 63,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 65,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "cargo-wagon",
+      "position": {
+        "x": 67.57,
+        "y": 1
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 67,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 69,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 71,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 73,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "cargo-wagon",
+      "position": {
+        "x": 74.574,
+        "y": 1
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 75,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 77,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 79,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "cargo-wagon",
+      "position": {
+        "x": 81.57,
+        "y": 1.047
+      }
+    },
+    {
+      "name": "straight-rail",
+      "position": {
+        "x": 81,
+        "y": 1
+      },
+      "direction": 4
+    },
+    {
+      "name": "curved-rail-a",
+      "position": {
+        "x": 84,
+        "y": 1
+      },
+      "direction": 6
+    },
+    {
+      "name": "constant-combinator",
+      "position": {
+        "x": 19.5,
+        "y": 3.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "constant-combinator",
+      "position": {
+        "x": 20.5,
+        "y": 3.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 20.5,
+        "y": 2.5
+      }
+    },
+    {
+      "name": "medium-electric-pole",
+      "position": {
+        "x": 21.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "arithmetic-combinator",
+      "position": {
+        "x": 23.5,
+        "y": 3
+      },
+      "direction": 8
+    },
+    {
+      "name": "inserter",
+      "position": {
+        "x": 22.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "requester-chest",
+      "position": {
+        "x": 22.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "arithmetic-combinator",
+      "position": {
+        "x": 25.5,
+        "y": 3
+      }
+    },
+    {
+      "name": "selector-combinator",
+      "position": {
+        "x": 24.5,
+        "y": 3
+      },
+      "direction": 8
+    },
+    {
+      "name": "medium-electric-pole",
+      "position": {
+        "x": 27.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 27.5,
+        "y": 2.5
+      }
+    },
+    {
+      "name": "arithmetic-combinator",
+      "position": {
+        "x": 26.5,
+        "y": 3
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 28.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 29.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 29.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 28.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 30.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 31.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 30.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 31.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 33.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 32.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 32.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 33.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 35.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "medium-electric-pole",
+      "position": {
+        "x": 34.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 35.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 36.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 37.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 36.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 37.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 38.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 39.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 39.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 38.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 40.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "medium-electric-pole",
+      "position": {
+        "x": 41.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 41.5,
+        "y": 2.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 40.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 42.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 43.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 42.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 43.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 44.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 45.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 44.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 45.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 46.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 47.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 46.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 47.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 49.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "medium-electric-pole",
+      "position": {
+        "x": 48.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 49.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 50.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 50.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 51.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 51.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 52.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 53.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 52.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 53.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 55.5,
+        "y": 2.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 54.5,
+        "y": 2.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "medium-electric-pole",
+      "position": {
+        "x": 55.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "steel-chest",
+      "position": {
+        "x": 54.5,
+        "y": 3.5
+      }
+    },
+    {
+      "name": "cargo-wagon",
+      "position": {
+        "x": 88.164,
+        "y": 2.832
+      }
+    },
+    {
+      "name": "curved-rail-b",
+      "position": {
+        "x": 89,
+        "y": 3
+      },
+      "direction": 6
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 29.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 28.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 29,
+        "y": 5.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 30.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 31.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 31,
+        "y": 5.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 32.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 33.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 33,
+        "y": 5.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 35.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 37.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 36.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 36,
+        "y": 5.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 39.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 38.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 38,
+        "y": 5.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 40.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 40,
+        "y": 5.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 42.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 43.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 43,
+        "y": 5.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 44.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 45.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 45,
+        "y": 5.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 46.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 47.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 47,
+        "y": 5.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 49.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 50.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 51.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 50,
+        "y": 5.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 53.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 52.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 52,
+        "y": 5.5
+      }
+    },
+    {
+      "name": "bulk-inserter",
+      "position": {
+        "x": 54.5,
+        "y": 4.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 55.5,
+        "y": 5.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 54,
+        "y": 5.5
+      }
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 56.5,
+        "y": 5.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 28.5,
+        "y": 7.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 28.5,
+        "y": 6.5
+      }
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 29.5,
+        "y": 7
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 31,
+        "y": 7.5
+      }
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 30.5,
+        "y": 6.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 33.5,
+        "y": 7.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 33.5,
+        "y": 6.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 32,
+        "y": 6.5
+      }
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": 34.5,
+        "y": 6.5
+      },
+      "direction": 12,
+      "type": "output"
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 35.5,
+        "y": 6.5
+      }
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 35.5,
+        "y": 7.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 36.5,
+        "y": 7
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 37.5,
+        "y": 6.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 39,
+        "y": 6.5
+      }
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 38,
+        "y": 7.5
+      }
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": 40.5,
+        "y": 6.5
+      },
+      "direction": 12,
+      "type": "input"
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 40.5,
+        "y": 7.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": 41.5,
+        "y": 6.5
+      },
+      "direction": 12,
+      "type": "output"
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": 41.5,
+        "y": 7.5
+      },
+      "direction": 12,
+      "type": "output"
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 42.5,
+        "y": 6.5
+      }
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 43.5,
+        "y": 7
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 42.5,
+        "y": 7.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 44.5,
+        "y": 6.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 45,
+        "y": 7.5
+      }
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": 47.5,
+        "y": 7.5
+      },
+      "direction": 12,
+      "type": "input"
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": 47.5,
+        "y": 6.5
+      },
+      "direction": 12,
+      "type": "input"
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 46,
+        "y": 6.5
+      }
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": 48.5,
+        "y": 7.5
+      },
+      "direction": 12,
+      "type": "output"
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 49.5,
+        "y": 7.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 49.5,
+        "y": 6.5
+      }
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": 48.5,
+        "y": 6.5
+      },
+      "direction": 12,
+      "type": "output"
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 50.5,
+        "y": 7
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 51.5,
+        "y": 6.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 53,
+        "y": 6.5
+      }
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": 52,
+        "y": 7.5
+      }
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 55.5,
+        "y": 7.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 55.5,
+        "y": 6.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": 56.5,
+        "y": 7.5
+      },
+      "direction": 12,
+      "type": "input"
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": 56.5,
+        "y": 6.5
+      },
+      "direction": 12,
+      "type": "input"
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 28.5,
+        "y": 8.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 29.5,
+        "y": 8.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 31.5,
+        "y": 8.5
+      }
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 30.5,
+        "y": 8.5
+      }
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 32.5,
+        "y": 8.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 33.5,
+        "y": 8.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 35.5,
+        "y": 8.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 36.5,
+        "y": 8.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 37.5,
+        "y": 8.5
+      }
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 39.5,
+        "y": 8.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 38.5,
+        "y": 8.5
+      }
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 40.5,
+        "y": 8.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 43.5,
+        "y": 8.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 42.5,
+        "y": 8.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 45.5,
+        "y": 8.5
+      }
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 44.5,
+        "y": 8.5
+      }
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 47.5,
+        "y": 8.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 46.5,
+        "y": 8.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": 48.5,
+        "y": 8.5
+      },
+      "direction": 12,
+      "type": "output"
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 49.5,
+        "y": 8.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 50.5,
+        "y": 8.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 51.5,
+        "y": 8.5
+      }
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 52.5,
+        "y": 8.5
+      }
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 53.5,
+        "y": 8.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 54.5,
+        "y": 8.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": 55.5,
+        "y": 8.5
+      },
+      "direction": 12
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": 56.5,
+        "y": 8.5
+      },
+      "direction": 12,
+      "type": "input"
+    }
+  ],
+  "tiles": []
+}

@@ -1,5 +1,12 @@
 Ziel: Blueprints als Vorlagen für Ruinen
 
+Aktueller Stand der Strategie:
+
+- Core District ist für diese Phase done
+- er kommt aus einem authored Blueprint
+- er wird durch die Pipeline in ein Runtime-Paket kompiliert
+- derselbe Workflow gilt jetzt für alle weiteren Districts
+
 ## Aktueller Stand
 
 Schritt 1 und 2 sind jetzt als Offline-Importer im Repo umgesetzt:
@@ -25,32 +32,21 @@ Der Importer macht aktuell genau Schritt 1 und 2:
 - pro JSON-Datei nur `entities[]` und `tiles[]` extrahieren
 - bei Entities nur `name`, `position`, `direction`, `type`
 
-Für den aktuellen Testlauf ist Schritt 3 zusätzlich für genau zwei Blueprints umgesetzt:
+Für den aktuellen produktiven Stand gibt es zusätzlich einen Single-Blueprint-Normalizer:
 
-- `tools/blueprint-extracted/root-modular-train-grid/0-grid-rails/03-rails-barbone-grid.json`
-- `tools/blueprint-extracted/root-modular-train-grid/0-grid-rails/11-solar-grid.json`
+- Eingabe: authored Blueprint JSON
+- Ausgabe: normalisierte Einzelstruktur
 
-Kommando:
+Der produktive Fall ist aktuell:
 
-- `npm run blueprint:normalize-merge`
+- `tools/central-district-blueprint.txt`
+- `tools/blueprint-normalized/authored/central-district.json`
 
-Ausgabe:
-
-- `tools/blueprint-normalized/root-modular-train-grid/0-grid-rails/merged-rails-barbone-grid-solar-grid.json`
-
-Dieses Testskript:
-
-- merged genau diese zwei Blueprints vor der Normalisierung
-- wählt einen gemeinsamen Anchor aus der kleinsten absoluten `x/y`-Koordinate
-- rechnet alle Koordinaten relativ zu diesem Anchor um
-- berechnet die Bounding Box des gemergten Ergebnisses
-- entfernt nur exakte Duplikate
-
-Für den gleichen Testfall gibt es jetzt zusätzlich einen ersten Schritt-4-Converter:
+Für den aktuellen produktiven Fall gibt es jetzt zusätzlich den Ruin-Template-Converter:
 
 - Kommando: `npm run blueprint:ruin-template`
-- Eingabe: `tools/blueprint-normalized/root-modular-train-grid/0-grid-rails/merged-rails-barbone-grid-solar-grid.json`
-- Ausgabe: `tools/ruin-templates/root-modular-train-grid/0-grid-rails/merged-rails-barbone-grid-solar-grid.ruin-template.json`
+- Eingabe: `tools/blueprint-normalized/authored/central-district.json`
+- Ausgabe: `tools/ruin-templates/authored/central-district.ruin-template.json`
 
 Der Converter macht aktuell noch keine finale Platzierungs-Lua daraus, sondern ein Review-/Zwischenformat:
 
@@ -60,11 +56,11 @@ Der Converter macht aktuell noch keine finale Platzierungs-Lua daraus, sondern e
 - `preserve_as_damaged`: für teure Infrastruktur, die vorerst als beschädigte Live-Entity gedacht ist
 - `foundation`: für Untergrund-Tiles wie `landfill`
 
-Für denselben Testfall gibt es jetzt zusätzlich einen deterministischen Abnutzungs-Pass:
+Für denselben produktiven Fall gibt es jetzt zusätzlich einen deterministischen Abnutzungs-Pass:
 
 - Kommando: `npm run blueprint:wear-profile`
-- Eingabe: `tools/ruin-templates/root-modular-train-grid/0-grid-rails/merged-rails-barbone-grid-solar-grid.ruin-template.json`
-- Ausgabe: `tools/ruin-templates-worn/root-modular-train-grid/0-grid-rails/merged-rails-barbone-grid-solar-grid.worn.json`
+- Eingabe: `tools/ruin-templates/authored/central-district.ruin-template.json`
+- Ausgabe: `tools/ruin-templates-worn/authored/central-district.worn.json`
 
 Der Wear-Pass verteilt das Template in reviewbare Endzustände:
 
@@ -77,13 +73,13 @@ Der Wear-Pass verteilt das Template in reviewbare Endzustände:
 
 Der aktuelle Test-Profile-Ansatz ist deterministisch und positionsbasiert, damit derselbe Template-Input immer denselben Abnutzungszustand erzeugt.
 
-Zusätzlich gibt es jetzt einen Export in eine echte Lua-Datendatei für das Mod:
+Zusätzlich gibt es jetzt einen Compile-Schritt in echte Lua-Runtime-Daten für das Mod:
 
-- Kommando: `npm run blueprint:export-lua`
-- Eingabe: `tools/ruin-templates-worn/root-modular-train-grid/0-grid-rails/merged-rails-barbone-grid-solar-grid.worn.json`
-- Ausgabe: `second_engineer/scripts/worldgeneration/generated/merged_rails_solar.lua`
+- Kommando: `npm run blueprint:build:central-district`
+- Eingabe: `tools/ruin-templates-worn/authored/central-district.worn.json`
+- Ausgabe: `second_engineer/scripts/worldgeneration/generated/core_district/`
 
-Der Export bleibt absichtlich datenorientiert:
+Das Compile-Ergebnis bleibt absichtlich datenorientiert:
 
 - `entities.remnant`
 - `entities.damaged_live`
@@ -93,6 +89,21 @@ Der Export bleibt absichtlich datenorientiert:
 - `tiles.foundation_missing`
 
 Damit kann die Runtime später gezielt entscheiden, was wirklich gespawnt, was nur dekorativ genutzt und was ganz verworfen wird.
+
+## Nächste produktive District-Ziele
+
+Die nächsten authored Blueprints für die Megabase-Ruinen sind:
+
+1. Blue Circuits
+2. Oil/Chem District
+3. Science District
+4. Mining Districts
+- Iron
+- Copper
+- Coal
+- Stone
+- weiteres Ore-District nach Bedarf
+5. Rail remnants als Verbindungen zwischen diesen Districts
 
 ### Offline/Build-Time Pipeline
 

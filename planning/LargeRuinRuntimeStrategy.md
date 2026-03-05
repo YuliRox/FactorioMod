@@ -2,13 +2,13 @@
 
 ## Problem
 
-The current offline pipeline can successfully convert a large merged blueprint into:
+The current offline pipeline can successfully convert a large authored blueprint into:
 
 - extracted JSON
-- normalized merged JSON
+- normalized JSON
 - ruin-template intermediate JSON
 - worn ruin JSON
-- Lua export
+- generated runtime package
 
 That proves the conversion pipeline works, but it also shows the runtime problem clearly:
 
@@ -125,7 +125,7 @@ The pipeline should evolve into:
 Example package layout:
 
 ```text
-second_engineer/scripts/worldgeneration/generated/merged_rails_solar/
+second_engineer/scripts/worldgeneration/generated/core_district/
 ├── manifest.lua
 ├── sector_00_00.lua
 ├── sector_00_01.lua
@@ -143,28 +143,16 @@ second_engineer/scripts/worldgeneration/generated/merged_rails_solar/
 
 Each sector file should contain only that sector's compiled placement instructions.
 
-## Specific Direction For The Rail-Solar Base
-
-For the merged rail + solar template, the compiled runtime representation should likely contain:
-
-- rail skeleton sectors
-- solar field rectangle masks
-- infrastructure anchor points
-- damaged-live entity anchors
-- foundation rectangles and cracked-tile masks
-
-That is much more scalable than one enormous flat entity list.
-
 ## Immediate Next Step
 
-Implement a compiler that takes the current worn JSON and emits a sectorized runtime package under:
+Use the same authored-blueprint pipeline for each new scattered district family and emit a sectorized runtime package under:
 
-`second_engineer/scripts/worldgeneration/generated/merged_rails_solar/`
+`second_engineer/scripts/worldgeneration/generated/<district_name>/`
 
-That compiler should:
+The next target packages are:
 
-- choose a sector size
-- split the template into sectors
-- write one manifest
-- write one payload file per sector
-- prefer compact placement primitives where possible
+1. blue-circuits district
+2. oil-chem district
+3. science district
+4. mining districts
+5. rail-remnant connector packages

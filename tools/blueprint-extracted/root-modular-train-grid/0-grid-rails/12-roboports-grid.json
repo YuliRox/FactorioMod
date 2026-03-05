@@ -1,0 +1,38 @@
+{
+  "index": 12,
+  "label": "Roboports Grid",
+  "description": "Only roboports for early planning",
+  "entity_count": 4,
+  "tile_count": 0,
+  "entities": [
+    {
+      "name": "roboport",
+      "position": {
+        "x": 25,
+        "y": 25
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 75,
+        "y": 25
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 25,
+        "y": 75
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 75,
+        "y": 75
+      }
+    }
+  ],
+  "tiles": []
+}

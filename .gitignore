@@ -5,8 +5,8 @@
 
 # node
 node_modules/
+.env.local
+Ruin*.png
 
-# factorio
+# debugadapter
 *.zip
-mod-settings.dat
-factorio-test-data-dir/

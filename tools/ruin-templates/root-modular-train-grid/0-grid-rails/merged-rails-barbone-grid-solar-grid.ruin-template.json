@@ -16,8 +16,413 @@
       "y": 127
     }
   },
+  "connector_metadata": {
+    "policy": {
+      "strip_width": 3,
+      "keep_sides": [
+        "north",
+        "west"
+      ],
+      "drop_sides": [
+        "south",
+        "east"
+      ],
+      "connector_entity_names": [
+        "straight-rail",
+        "curved-rail-a",
+        "curved-rail-b",
+        "rail-signal",
+        "rail-chain-signal",
+        "big-electric-pole",
+        "substation",
+        "roboport"
+      ]
+    },
+    "strip_width": 3,
+    "keep_sides": [
+      "north",
+      "west"
+    ],
+    "drop_sides": [
+      "south",
+      "east"
+    ],
+    "strips": {
+      "north": {
+        "entities": [
+          {
+            "key": "curved-rail-a|12|1|12",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 12,
+              "y": 1
+            },
+            "direction": 12
+          },
+          {
+            "key": "curved-rail-a|16|1|6",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 16,
+              "y": 1
+            },
+            "direction": 6
+          },
+          {
+            "key": "curved-rail-a|112|1|12",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 112,
+              "y": 1
+            },
+            "direction": 12
+          },
+          {
+            "key": "curved-rail-a|116|1|6",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 116,
+              "y": 1
+            },
+            "direction": 6
+          },
+          {
+            "key": "curved-rail-b|7|3|12",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 7,
+              "y": 3
+            },
+            "direction": 12
+          },
+          {
+            "key": "rail-chain-signal|14.5|2.5|12",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 14.5,
+              "y": 2.5
+            },
+            "direction": 12
+          },
+          {
+            "key": "curved-rail-b|21|3|6",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 21,
+              "y": 3
+            },
+            "direction": 6
+          },
+          {
+            "key": "curved-rail-b|107|3|12",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 107,
+              "y": 3
+            },
+            "direction": 12
+          },
+          {
+            "key": "rail-chain-signal|114.5|2.5|12",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 114.5,
+              "y": 2.5
+            },
+            "direction": 12
+          },
+          {
+            "key": "curved-rail-b|121|3|6",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 121,
+              "y": 3
+            },
+            "direction": 6
+          }
+        ]
+      },
+      "east": {
+        "entities": [
+          {
+            "key": "curved-rail-b|125|7|",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 125,
+              "y": 7
+            }
+          },
+          {
+            "key": "curved-rail-a|127|12|",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 127,
+              "y": 12
+            }
+          },
+          {
+            "key": "rail-chain-signal|125.5|14.5|",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 125.5,
+              "y": 14.5
+            }
+          },
+          {
+            "key": "curved-rail-a|127|16|10",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 127,
+              "y": 16
+            },
+            "direction": 10
+          },
+          {
+            "key": "curved-rail-b|125|21|10",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 125,
+              "y": 21
+            },
+            "direction": 10
+          },
+          {
+            "key": "curved-rail-b|125|107|",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 125,
+              "y": 107
+            }
+          },
+          {
+            "key": "curved-rail-a|127|112|",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 127,
+              "y": 112
+            }
+          },
+          {
+            "key": "rail-chain-signal|125.5|114.5|",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 125.5,
+              "y": 114.5
+            }
+          },
+          {
+            "key": "curved-rail-a|127|116|10",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 127,
+              "y": 116
+            },
+            "direction": 10
+          },
+          {
+            "key": "curved-rail-b|125|121|10",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 125,
+              "y": 121
+            },
+            "direction": 10
+          }
+        ]
+      },
+      "south": {
+        "entities": [
+          {
+            "key": "curved-rail-b|7|125|14",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 7,
+              "y": 125
+            },
+            "direction": 14
+          },
+          {
+            "key": "rail-chain-signal|13.5|125.5|4",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 13.5,
+              "y": 125.5
+            },
+            "direction": 4
+          },
+          {
+            "key": "curved-rail-b|21|125|4",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 21,
+              "y": 125
+            },
+            "direction": 4
+          },
+          {
+            "key": "curved-rail-b|107|125|14",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 107,
+              "y": 125
+            },
+            "direction": 14
+          },
+          {
+            "key": "rail-chain-signal|113.5|125.5|4",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 113.5,
+              "y": 125.5
+            },
+            "direction": 4
+          },
+          {
+            "key": "curved-rail-b|121|125|4",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 121,
+              "y": 125
+            },
+            "direction": 4
+          },
+          {
+            "key": "curved-rail-a|12|127|14",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 12,
+              "y": 127
+            },
+            "direction": 14
+          },
+          {
+            "key": "curved-rail-a|16|127|4",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 16,
+              "y": 127
+            },
+            "direction": 4
+          },
+          {
+            "key": "curved-rail-a|112|127|14",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 112,
+              "y": 127
+            },
+            "direction": 14
+          },
+          {
+            "key": "curved-rail-a|116|127|4",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 116,
+              "y": 127
+            },
+            "direction": 4
+          }
+        ]
+      },
+      "west": {
+        "entities": [
+          {
+            "key": "curved-rail-b|3|7|2",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 3,
+              "y": 7
+            },
+            "direction": 2
+          },
+          {
+            "key": "curved-rail-a|1|12|2",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 1,
+              "y": 12
+            },
+            "direction": 2
+          },
+          {
+            "key": "rail-chain-signal|2.5|13.5|8",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 2.5,
+              "y": 13.5
+            },
+            "direction": 8
+          },
+          {
+            "key": "curved-rail-a|1|16|8",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 1,
+              "y": 16
+            },
+            "direction": 8
+          },
+          {
+            "key": "curved-rail-b|3|21|8",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 3,
+              "y": 21
+            },
+            "direction": 8
+          },
+          {
+            "key": "curved-rail-b|3|107|2",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 3,
+              "y": 107
+            },
+            "direction": 2
+          },
+          {
+            "key": "curved-rail-a|1|112|2",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 1,
+              "y": 112
+            },
+            "direction": 2
+          },
+          {
+            "key": "rail-chain-signal|2.5|113.5|8",
+            "name": "rail-chain-signal",
+            "position": {
+              "x": 2.5,
+              "y": 113.5
+            },
+            "direction": 8
+          },
+          {
+            "key": "curved-rail-a|1|116|8",
+            "name": "curved-rail-a",
+            "position": {
+              "x": 1,
+              "y": 116
+            },
+            "direction": 8
+          },
+          {
+            "key": "curved-rail-b|3|121|8",
+            "name": "curved-rail-b",
+            "position": {
+              "x": 3,
+              "y": 121
+            },
+            "direction": 8
+          }
+        ]
+      }
+    }
+  },
   "mapping_notes": [
     "rail pieces are first marked as cluster candidates, then collapsed into a sparse rail remnant skeleton",
+    "connector seam pruning drops ownership-conflicting edge entities before mapping",
     "signal and solar entities are mapped directly to remnant targets",
     "power poles, substations, accumulators, and roboports are kept as damaged live entities for now",
     "landfill is treated as foundation support, not as a literal ruined floor decision yet"
@@ -26,14 +431,14 @@
     "input_entities": 1497,
     "input_tiles": 9904,
     "mapped_entities": {
-      "convert_to_remnant": 604,
-      "cluster_to_remnants": 352,
+      "convert_to_remnant": 600,
+      "cluster_to_remnants": 336,
       "preserve_as_damaged": 541,
-      "skip": 0
+      "skip": 20
     },
     "collapsed_cluster_entities": {
-      "rail_network_raw": 352,
-      "rail_network_collapsed": 168
+      "rail_network_raw": 336,
+      "rail_network_collapsed": 152
     },
     "mapped_tiles": {
       "foundation": 9904,
@@ -133,17 +538,6 @@
         "cluster": null,
         "source_blueprint": "Rails barbone grid",
         "position": {
-          "x": 125.5,
-          "y": 14.5
-        }
-      },
-      {
-        "source_name": "rail-chain-signal",
-        "target_name": "rail-chain-signal-remnants",
-        "category": "rail_signal",
-        "cluster": null,
-        "source_blueprint": "Rails barbone grid",
-        "position": {
           "x": 31.5,
           "y": 17.5
         },
@@ -367,17 +761,6 @@
         "cluster": null,
         "source_blueprint": "Rails barbone grid",
         "position": {
-          "x": 125.5,
-          "y": 114.5
-        }
-      },
-      {
-        "source_name": "rail-chain-signal",
-        "target_name": "rail-chain-signal-remnants",
-        "category": "rail_signal",
-        "cluster": null,
-        "source_blueprint": "Rails barbone grid",
-        "position": {
           "x": 31.5,
           "y": 117.5
         },
@@ -392,30 +775,6 @@
         "position": {
           "x": 96.5,
           "y": 117.5
-        },
-        "direction": 4
-      },
-      {
-        "source_name": "rail-chain-signal",
-        "target_name": "rail-chain-signal-remnants",
-        "category": "rail_signal",
-        "cluster": null,
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 13.5,
-          "y": 125.5
-        },
-        "direction": 4
-      },
-      {
-        "source_name": "rail-chain-signal",
-        "target_name": "rail-chain-signal-remnants",
-        "category": "rail_signal",
-        "cluster": null,
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 113.5,
-          "y": 125.5
         },
         "direction": 4
       },
@@ -6869,17 +7228,6 @@
         "direction": 4
       },
       {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 125,
-          "y": 7
-        }
-      },
-      {
         "source_name": "curved-rail-a",
         "target_name": null,
         "category": "rail_track",
@@ -7329,17 +7677,6 @@
         "cluster": "rail_network",
         "source_blueprint": "Rails barbone grid",
         "position": {
-          "x": 127,
-          "y": 12
-        }
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
           "x": 1,
           "y": 16
         },
@@ -7368,18 +7705,6 @@
           "y": 16
         },
         "direction": 8
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 127,
-          "y": 16
-        },
-        "direction": 10
       },
       {
         "source_name": "curved-rail-a",
@@ -7848,18 +8173,6 @@
           "y": 21
         },
         "direction": 6
-      },
-      {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 125,
-          "y": 21
-        },
-        "direction": 10
       },
       {
         "source_name": "curved-rail-b",
@@ -9709,17 +10022,6 @@
         "direction": 4
       },
       {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 125,
-          "y": 107
-        }
-      },
-      {
         "source_name": "curved-rail-a",
         "target_name": null,
         "category": "rail_track",
@@ -10169,17 +10471,6 @@
         "cluster": "rail_network",
         "source_blueprint": "Rails barbone grid",
         "position": {
-          "x": 127,
-          "y": 112
-        }
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
           "x": 1,
           "y": 116
         },
@@ -10208,18 +10499,6 @@
           "y": 116
         },
         "direction": 8
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 127,
-          "y": 116
-        },
-        "direction": 10
       },
       {
         "source_name": "curved-rail-a",
@@ -10688,114 +10967,6 @@
           "y": 121
         },
         "direction": 8
-      },
-      {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 125,
-          "y": 121
-        },
-        "direction": 10
-      },
-      {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 7,
-          "y": 125
-        },
-        "direction": 14
-      },
-      {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 21,
-          "y": 125
-        },
-        "direction": 4
-      },
-      {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 107,
-          "y": 125
-        },
-        "direction": 14
-      },
-      {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 121,
-          "y": 125
-        },
-        "direction": 4
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 12,
-          "y": 127
-        },
-        "direction": 14
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 16,
-          "y": 127
-        },
-        "direction": 4
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 112,
-          "y": 127
-        },
-        "direction": 14
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 116,
-          "y": 127
-        },
-        "direction": 4
       }
     ],
     "collapsed_to_remnants": [
@@ -10955,17 +11126,6 @@
         "direction": 4
       },
       {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 125,
-          "y": 7
-        }
-      },
-      {
         "source_name": "curved-rail-a",
         "target_name": null,
         "category": "rail_track",
@@ -11031,17 +11191,6 @@
         "cluster": "rail_network",
         "source_blueprint": "Rails barbone grid",
         "position": {
-          "x": 127,
-          "y": 12
-        }
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
           "x": 1,
           "y": 16
         },
@@ -11070,18 +11219,6 @@
           "y": 16
         },
         "direction": 8
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 127,
-          "y": 16
-        },
-        "direction": 10
       },
       {
         "source_name": "curved-rail-a",
@@ -11166,18 +11303,6 @@
           "y": 21
         },
         "direction": 6
-      },
-      {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 125,
-          "y": 21
-        },
-        "direction": 10
       },
       {
         "source_name": "curved-rail-b",
@@ -11619,17 +11744,6 @@
         "direction": 4
       },
       {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 125,
-          "y": 107
-        }
-      },
-      {
         "source_name": "curved-rail-a",
         "target_name": null,
         "category": "rail_track",
@@ -11695,17 +11809,6 @@
         "cluster": "rail_network",
         "source_blueprint": "Rails barbone grid",
         "position": {
-          "x": 127,
-          "y": 112
-        }
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
           "x": 1,
           "y": 116
         },
@@ -11734,18 +11837,6 @@
           "y": 116
         },
         "direction": 8
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 127,
-          "y": 116
-        },
-        "direction": 10
       },
       {
         "source_name": "curved-rail-a",
@@ -11830,114 +11921,6 @@
           "y": 121
         },
         "direction": 8
-      },
-      {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 125,
-          "y": 121
-        },
-        "direction": 10
-      },
-      {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 7,
-          "y": 125
-        },
-        "direction": 14
-      },
-      {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 21,
-          "y": 125
-        },
-        "direction": 4
-      },
-      {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 107,
-          "y": 125
-        },
-        "direction": 14
-      },
-      {
-        "source_name": "curved-rail-b",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 121,
-          "y": 125
-        },
-        "direction": 4
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 12,
-          "y": 127
-        },
-        "direction": 14
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 16,
-          "y": 127
-        },
-        "direction": 4
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 112,
-          "y": 127
-        },
-        "direction": 14
-      },
-      {
-        "source_name": "curved-rail-a",
-        "target_name": null,
-        "category": "rail_track",
-        "cluster": "rail_network",
-        "source_blueprint": "Rails barbone grid",
-        "position": {
-          "x": 116,
-          "y": 127
-        },
-        "direction": 4
       },
       {
         "source_name": "straight-rail",
@@ -18721,7 +18704,242 @@
         }
       }
     ],
-    "skip": []
+    "skip": [
+      {
+        "source_name": "curved-rail-b",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 125,
+          "y": 7
+        }
+      },
+      {
+        "source_name": "curved-rail-a",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 127,
+          "y": 12
+        }
+      },
+      {
+        "source_name": "rail-chain-signal",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 125.5,
+          "y": 14.5
+        }
+      },
+      {
+        "source_name": "curved-rail-a",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 127,
+          "y": 16
+        },
+        "direction": 10
+      },
+      {
+        "source_name": "curved-rail-b",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 125,
+          "y": 21
+        },
+        "direction": 10
+      },
+      {
+        "source_name": "curved-rail-b",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 125,
+          "y": 107
+        }
+      },
+      {
+        "source_name": "curved-rail-a",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 127,
+          "y": 112
+        }
+      },
+      {
+        "source_name": "rail-chain-signal",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 125.5,
+          "y": 114.5
+        }
+      },
+      {
+        "source_name": "curved-rail-a",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 127,
+          "y": 116
+        },
+        "direction": 10
+      },
+      {
+        "source_name": "curved-rail-b",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 125,
+          "y": 121
+        },
+        "direction": 10
+      },
+      {
+        "source_name": "curved-rail-b",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 7,
+          "y": 125
+        },
+        "direction": 14
+      },
+      {
+        "source_name": "rail-chain-signal",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 13.5,
+          "y": 125.5
+        },
+        "direction": 4
+      },
+      {
+        "source_name": "curved-rail-b",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 21,
+          "y": 125
+        },
+        "direction": 4
+      },
+      {
+        "source_name": "curved-rail-b",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 107,
+          "y": 125
+        },
+        "direction": 14
+      },
+      {
+        "source_name": "rail-chain-signal",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 113.5,
+          "y": 125.5
+        },
+        "direction": 4
+      },
+      {
+        "source_name": "curved-rail-b",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 121,
+          "y": 125
+        },
+        "direction": 4
+      },
+      {
+        "source_name": "curved-rail-a",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 12,
+          "y": 127
+        },
+        "direction": 14
+      },
+      {
+        "source_name": "curved-rail-a",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 16,
+          "y": 127
+        },
+        "direction": 4
+      },
+      {
+        "source_name": "curved-rail-a",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 112,
+          "y": 127
+        },
+        "direction": 14
+      },
+      {
+        "source_name": "curved-rail-a",
+        "target_name": null,
+        "category": "seam_pruned",
+        "cluster": null,
+        "source_blueprint": "Rails barbone grid",
+        "position": {
+          "x": 116,
+          "y": 127
+        },
+        "direction": 4
+      }
+    ]
   },
   "tiles": {
     "foundation": [

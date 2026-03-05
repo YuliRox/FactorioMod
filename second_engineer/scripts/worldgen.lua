@@ -1,8 +1,15 @@
 local Worldgen = {}
-local generated_mega_ruin = require("scripts.worldgeneration.generated.merged_rails_solar")
+local generated_core_district_manifest = require("scripts.worldgeneration.generated.core_district.manifest")
+local district_manifest = require("scripts.worldgeneration.district_manifest")
+local generated_core_district_sectors = {}
 
 local CHUNK_SIZE = 32
 local NAUVIS_NAME = "nauvis"
+local SURFACE_TEST_NAME = "surface test"
+local SURFACE_PERIMETER_AUTHORING_NAME = "perimeter authoring"
+local SURFACE_TEST_CHUNK_RADIUS = 20
+local SURFACE_PERIMETER_AUTHORING_CHUNK_RADIUS = 64
+local PERIMETER_EXPORT_PATH = "perimeter_authoring_export.tsv"
 
 -- Design decision: Nauvis should still let the player start normally, but the
 -- local resource cushion must be obviously finite. These stamped patches create
@@ -25,10 +32,29 @@ local STARTER_CLEAR_AREA = {
   right_bottom = {x = 96, y = 96},
 }
 
--- Design decision: the generated mega-ruin is currently a one-off inspection
--- artifact. Place it near spawn so it can be reviewed in-game before we build
--- the proper sectorized runtime format.
-local TEST_MEGA_RUIN_ORIGIN = {x = 96, y = -32}
+-- Design decision: the first district should sit just at the edge of the
+-- player's initial viewport so the player sees enough wall/structure to get
+-- curious without starting inside the ruin footprint.
+local CORE_DISTRICT_VIEW_EDGE_LEFT_TOP = {x = 24, y = 12}
+local CORE_DISTRICT_FALLBACK_ANCHOR = {x = 306.5, y = 194.5}
+local CORE_DISTRICT_DEBUG_TAG = "[DEBUG] BLOCK: central_district"
+local CORE_DISTRICT_WATER_SAMPLE_STEP = 16
+local CORE_DISTRICT_MAX_WATER_RATIO = 0.08
+local CORE_DISTRICT_CANDIDATE_OFFSETS = {
+  {x = 0, y = 0},
+  {x = 32, y = 0},
+  {x = 0, y = 32},
+  {x = 32, y = 32},
+  {x = 64, y = 0},
+  {x = 0, y = 64},
+  {x = 64, y = 32},
+  {x = 32, y = 64},
+  {x = 64, y = 64},
+  {x = 96, y = 0},
+  {x = 0, y = 96},
+  {x = 96, y = 32},
+  {x = 32, y = 96},
+}
 
 -- Design decision: not every remote ore field should be worth the rail, power,
 -- and outpost cost. These bands intentionally create many marginal deposits.
@@ -59,12 +85,96 @@ local RESOURCE_SALTS = {
 
 local place_ruin_cluster
 
+-- Design decision: Factorio only allows require() while parsing control stage
+-- files, not during runtime events. Preload generated sector modules once here
+-- and use table lookups during placement.
+for _, sector_spec in ipairs(generated_core_district_manifest.sectors or {}) do
+  local module_path = "scripts.worldgeneration.generated.core_district.sectors." .. sector_spec.key
+  local ok, sector = pcall(require, module_path)
+  if ok then
+    generated_core_district_sectors[sector_spec.key] = sector
+  end
+end
+
+local function manifest_anchor(manifest)
+  local anchor = manifest and manifest.template and manifest.template.anchor
+  return {
+    x = (anchor and anchor.x) or 0,
+    y = (anchor and anchor.y) or 0,
+  }
+end
+
+local function origin_from_anchor(manifest, anchor_pos)
+  local anchor = manifest_anchor(manifest)
+  return {
+    x = anchor_pos.x - anchor.x,
+    y = anchor_pos.y - anchor.y,
+  }
+end
+
+local function clone_pos(pos)
+  return {x = pos.x, y = pos.y}
+end
+
+local function clone_area(area)
+  return {
+    left_top = clone_pos(area.left_top),
+    right_bottom = clone_pos(area.right_bottom),
+  }
+end
+
+local function area_contains_position(area, position)
+  return position.x >= area.left_top.x and
+    position.x < area.right_bottom.x and
+    position.y >= area.left_top.y and
+    position.y < area.right_bottom.y
+end
+
+local function area_contains_any(areas, position)
+  for _, area in ipairs(areas) do
+    if area_contains_position(area, position) then
+      return true
+    end
+  end
+  return false
+end
+
+local function format_export_number(value)
+  return string.format("%.3f", value)
+end
+
 local function ensure_globals()
   storage.worldgen = storage.worldgen or {
     starter_area_prepared = false,
-    test_mega_ruin_placed = false,
+    core_district_placed = false,
+    core_district_tagged = false,
+    core_district_anchor = nil,
+    core_district_anchor_stats = nil,
     debug_spidertron_placed = false,
+    district_manifest_version = nil,
   }
+end
+
+local function validate_district_manifest(manifest)
+  if type(manifest) ~= "table" then return false end
+  if type(manifest.version) ~= "number" then return false end
+  if type(manifest.id) ~= "string" or manifest.id == "" then return false end
+  if type(manifest.blocks) ~= "table" or #manifest.blocks == 0 then return false end
+
+  for _, block in ipairs(manifest.blocks) do
+    if type(block) ~= "table" then return false end
+    if type(block.id) ~= "string" or block.id == "" then return false end
+    if type(block.category) ~= "string" or block.category == "" then return false end
+    if type(block.footprint) ~= "table" then return false end
+    if type(block.footprint.width) ~= "number" or block.footprint.width <= 0 then return false end
+    if type(block.footprint.height) ~= "number" or block.footprint.height <= 0 then return false end
+    if type(block.wear) ~= "table" then return false end
+    if type(block.wear.alive) ~= "number" then return false end
+    if type(block.wear.remnants) ~= "number" then return false end
+    if type(block.wear.missing) ~= "number" then return false end
+  end
+
+  return true
 end
 
 local function chunk_to_area(chunk_pos)
@@ -299,21 +409,166 @@ local function shift_area(area, origin)
   }
 end
 
+local function area_from_manifest_anchor(manifest, anchor_pos)
+  local origin = origin_from_anchor(manifest, anchor_pos)
+  return shift_area(manifest.template.bounds, origin)
+end
+
+local function default_core_district_anchor()
+  local bounds = generated_core_district_manifest.template.bounds
+  return {
+    x = CORE_DISTRICT_VIEW_EDGE_LEFT_TOP.x - bounds.left_top.x,
+    y = CORE_DISTRICT_VIEW_EDGE_LEFT_TOP.y - bounds.left_top.y,
+  }
+end
+
+local function is_water_tile(tile_name)
+  return tile_name ~= nil and string.find(tile_name, "water", 1, true) ~= nil
+end
+
+local function ensure_area_generated(surface, area)
+  local extent = math.max(
+    math.abs(area.left_top.x),
+    math.abs(area.left_top.y),
+    math.abs(area.right_bottom.x),
+    math.abs(area.right_bottom.y)
+  )
+  local chunk_radius = math.ceil(extent / CHUNK_SIZE) + 1
+  surface.request_to_generate_chunks({0, 0}, chunk_radius)
+  surface.force_generate_chunk_requests()
+end
+
+local function sample_water_ratio(surface, area)
+  local water_tiles = 0
+  local samples = 0
+
+  for x = math.floor(area.left_top.x), math.ceil(area.right_bottom.x), CORE_DISTRICT_WATER_SAMPLE_STEP do
+    for y = math.floor(area.left_top.y), math.ceil(area.right_bottom.y), CORE_DISTRICT_WATER_SAMPLE_STEP do
+      samples = samples + 1
+      if is_water_tile(surface.get_tile(x, y).name) then
+        water_tiles = water_tiles + 1
+      end
+    end
+  end
+
+  if samples == 0 then
+    return 0, 0, 0
+  end
+
+  return water_tiles / samples, water_tiles, samples
+end
+
+local function choose_core_district_anchor(surface)
+  local preferred = default_core_district_anchor()
+  if not (surface and surface.valid) then
+    return clone_pos(preferred), {water_ratio = 0, water_tiles = 0, sample_tiles = 0}
+  end
+
+  local best_anchor = nil
+  local best_stats = nil
+  local best_score = nil
+
+  for _, offset in ipairs(CORE_DISTRICT_CANDIDATE_OFFSETS) do
+    local candidate = {
+      x = preferred.x + offset.x,
+      y = preferred.y + offset.y,
+    }
+    local area = area_from_manifest_anchor(generated_core_district_manifest, candidate)
+    ensure_area_generated(surface, area)
+
+    local water_ratio, water_tiles, sample_tiles = sample_water_ratio(surface, area)
+    local score = water_ratio * 10000 + math.abs(offset.x) + math.abs(offset.y)
+
+    if water_ratio <= CORE_DISTRICT_MAX_WATER_RATIO and (best_score == nil or score < best_score) then
+      best_anchor = candidate
+      best_score = score
+      best_stats = {
+        water_ratio = water_ratio,
+        water_tiles = water_tiles,
+        sample_tiles = sample_tiles,
+      }
+    end
+  end
+
+  if best_anchor then
+    return best_anchor, best_stats
+  end
+
+  local fallback_area = area_from_manifest_anchor(generated_core_district_manifest, preferred)
+  ensure_area_generated(surface, fallback_area)
+  local water_ratio, water_tiles, sample_tiles = sample_water_ratio(surface, fallback_area)
+  return clone_pos(preferred), {
+    water_ratio = water_ratio,
+    water_tiles = water_tiles,
+    sample_tiles = sample_tiles,
+  }
+end
+
+local function get_core_district_anchor(surface)
+  storage.worldgen = storage.worldgen or {}
+  if storage.worldgen and storage.worldgen.core_district_anchor then
+    return clone_pos(storage.worldgen.core_district_anchor)
+  end
+
+  local fallback = default_core_district_anchor()
+  if not (surface and surface.valid) then
+    return fallback
+  end
+
+  local anchor, stats = choose_core_district_anchor(surface)
+  storage.worldgen.core_district_anchor = clone_pos(anchor)
+  storage.worldgen.core_district_anchor_stats = stats
+  return anchor
+end
+
+local function describe_core_layout_spec(surface)
+  local anchor = get_core_district_anchor(surface)
+  return {
+    anchor = clone_pos(anchor),
+    area = area_from_manifest_anchor(generated_core_district_manifest, anchor),
+    blocks = {
+      central_district = {
+        package = "core_district",
+        anchor = clone_pos(anchor),
+        area = area_from_manifest_anchor(generated_core_district_manifest, anchor),
+      },
+    },
+    defense_segments = {},
+  }
+end
+
 local function place_generated_tile_bucket(surface, origin, tiles)
   if not tiles or #tiles == 0 then return end
 
   local placed = {}
   for _, spec in ipairs(tiles) do
+    local tile_name = spec.name or spec.target_name
+    if tile_name then
     placed[#placed + 1] = {
-      name = spec.name,
+      name = tile_name,
       position = {
         x = origin.x + spec.offset.x,
         y = origin.y + spec.offset.y,
       },
     }
+    end
   end
 
-  surface.set_tiles(placed)
+  if #placed > 0 then
+    surface.set_tiles(placed)
+  end
+end
+
+local function load_generated_sector(package_name, key, label)
+  local sector
+  if package_name == "core_district" then
+    sector = generated_core_district_sectors[key]
+  end
+
+  if not sector then
+    log(string.format("second_engineer: missing preloaded %s sector %s", label, key))
+  end
+  return sector
 end
 
 local function clear_generated_ghosts(surface, area)
@@ -331,12 +586,56 @@ local function clear_generated_ghosts(surface, area)
   end
 end
 
+local function ruin_marker_exists(surface, area, marker_name)
+  local entities = surface.find_entities_filtered({
+    area = area,
+    name = marker_name,
+  })
+  return #entities > 0
+end
+
+local function entity_already_exists(surface, params)
+  local pos = params.position
+  local area = {
+    left_top = {x = pos.x - 0.2, y = pos.y - 0.2},
+    right_bottom = {x = pos.x + 0.2, y = pos.y + 0.2},
+  }
+
+  local nearby = surface.find_entities_filtered({
+    area = area,
+    name = params.name,
+  })
+
+  for _, entity in ipairs(nearby) do
+    if entity.valid then
+      local same_direction = (params.direction == nil) or (entity.direction == params.direction)
+      local same_force = true
+
+      if params.force and entity.force then
+        local expected = params.force
+        if type(expected) == "table" and expected.name then
+          expected = expected.name
+        end
+        same_force = entity.force.name == expected
+      end
+
+      if same_direction and same_force then
+        return entity
+      end
+    end
+  end
+
+  return nil
+end
+
 local function place_generated_remnants(surface, origin, entities)
   if not entities or #entities == 0 then return end
 
   for _, spec in ipairs(entities) do
+    local entity_name = spec.name or spec.target_name
+    if entity_name then
     local params = {
-      name = spec.name,
+      name = entity_name,
       position = {
         x = origin.x + spec.offset.x,
         y = origin.y + spec.offset.y,
@@ -348,7 +647,10 @@ local function place_generated_remnants(surface, origin, entities)
       params.direction = spec.direction
     end
 
-    surface.create_entity(params)
+    if not entity_already_exists(surface, params) then
+      surface.create_entity(params)
+    end
+    end
   end
 end
 
@@ -356,8 +658,10 @@ local function place_generated_damaged_entities(surface, origin, entities)
   if not entities or #entities == 0 then return end
 
   for _, spec in ipairs(entities) do
+    local entity_name = spec.name or spec.target_name
+    if entity_name then
     local params = {
-      name = spec.name,
+      name = entity_name,
       position = {
         x = origin.x + spec.offset.x,
         y = origin.y + spec.offset.y,
@@ -370,7 +674,7 @@ local function place_generated_damaged_entities(surface, origin, entities)
       params.direction = spec.direction
     end
 
-    local entity = surface.create_entity(params)
+    local entity = entity_already_exists(surface, params) or surface.create_entity(params)
     if entity and entity.valid and spec.damage then
       -- Design decision: "damaged live" means barely surviving, not immediately
       -- destroyed on spawn. Applying raw damage can kill low-health entities
@@ -380,26 +684,109 @@ local function place_generated_damaged_entities(surface, origin, entities)
         entity.health = math.max(1, max_health - spec.damage)
       end
     end
+    end
   end
 end
 
-local function place_test_generated_mega_ruin(surface)
-  if storage.worldgen.test_mega_ruin_placed then return end
+local function place_generated_package(surface, package_name, manifest, anchor_pos, marker_name)
+  local origin = origin_from_anchor(manifest, anchor_pos)
+  local area = shift_area(manifest.template.bounds, origin)
+  local placed_any_sector = false
 
-  local template = generated_mega_ruin.template
-  local area = shift_area(template.bounds, TEST_MEGA_RUIN_ORIGIN)
-
-  -- Design decision: this is purely for inspection, so we clear the footprint
-  -- aggressively and stamp the generated foundation buckets directly.
   clear_blocking_entities(surface, area)
   clear_generated_ghosts(surface, area)
-  place_generated_tile_bucket(surface, TEST_MEGA_RUIN_ORIGIN, template.tiles.foundation_kept)
-  place_generated_tile_bucket(surface, TEST_MEGA_RUIN_ORIGIN, template.tiles.foundation_cracked)
-  place_generated_remnants(surface, TEST_MEGA_RUIN_ORIGIN, template.entities.remnant)
-  place_generated_damaged_entities(surface, TEST_MEGA_RUIN_ORIGIN, template.entities.damaged_live)
-  clear_generated_ghosts(surface, area)
 
-  storage.worldgen.test_mega_ruin_placed = true
+  for _, sector_spec in ipairs(manifest.sectors or {}) do
+    local sector = load_generated_sector(package_name, sector_spec.key, package_name)
+    if sector then
+      placed_any_sector = true
+      place_generated_tile_bucket(surface, origin, sector.tiles.foundation_kept)
+      place_generated_tile_bucket(surface, origin, sector.tiles.foundation_cracked)
+      place_generated_remnants(surface, origin, sector.entities.remnant)
+      place_generated_damaged_entities(surface, origin, sector.entities.damaged_live)
+    end
+  end
+
+  clear_generated_ghosts(surface, area)
+  if marker_name then
+    return placed_any_sector and ruin_marker_exists(surface, area, marker_name), area
+  end
+  return placed_any_sector, area
+end
+
+local function place_core_district(surface, opts)
+  opts = opts or {}
+  local force_place = opts.force == true
+  local layout = describe_core_layout_spec(surface)
+  local report = {
+    surface_name = surface.name,
+    surface_index = surface.index,
+    anchor = clone_pos(layout.anchor),
+    area = clone_area(layout.area),
+    blocks = {},
+    defense_segments = {},
+  }
+
+  local placed
+  local area
+  if force_place or not storage.worldgen.core_district_placed then
+    placed, area = place_generated_package(
+      surface,
+      "core_district",
+      generated_core_district_manifest,
+      layout.anchor,
+      "straight-rail-remnants"
+    )
+    storage.worldgen.core_district_placed = placed
+    local rail_remnants = #surface.find_entities_filtered({area = area, name = "straight-rail-remnants"})
+    local wall_count = #surface.find_entities_filtered({area = area, name = "stone-wall"})
+    local live_total = #surface.find_entities_filtered({area = area, name = {"assembling-machine-3", "electric-furnace", "laser-turret", "gun-turret", "roboport"}})
+    log(string.format(
+      "second_engineer: core-district spawn counts rails=%d walls=%d live=%d placed=%s",
+      rail_remnants,
+      wall_count,
+      live_total,
+      tostring(storage.worldgen.core_district_placed)
+    ))
+  else
+    placed = storage.worldgen.core_district_placed
+    area = layout.area
+  end
+
+  report.land_suitability = storage.worldgen.core_district_anchor_stats or {
+    water_ratio = 0,
+    water_tiles = 0,
+    sample_tiles = 0,
+  }
+
+  report.blocks.central_district = {
+    package = "core_district",
+    anchor = clone_pos(layout.anchor),
+    area = clone_area(area),
+    placed = placed,
+    skipped = not force_place and storage.worldgen.core_district_placed,
+  }
+
+  storage.worldgen.last_core_layout_report = report
+end
+
+local function place_debug_chart_tag(surface, position, text)
+  local player_force = get_player_force()
+  if not player_force then return false end
+
+  player_force.chart(surface, {
+    left_top = {x = position.x - 16, y = position.y - 16},
+    right_bottom = {x = position.x + 16, y = position.y + 16},
+  })
+  player_force.add_chart_tag(surface, {
+    position = position,
+    text = text,
+  })
+  return true
+end
+
+local function place_core_district_debug_tag(surface, opts)
+  storage.worldgen.core_district_tagged = place_debug_chart_tag(surface, get_core_district_anchor(surface), CORE_DISTRICT_DEBUG_TAG)
 end
 
 local function place_debug_spidertron(surface)
@@ -501,7 +888,7 @@ local function prepare_starter_area(surface)
 
   -- Design decision: we pre-generate several chunks around spawn so the custom
   -- bootstrap patches and ruins are present immediately on a new game.
-  surface.request_to_generate_chunks({0, 0}, 8)
+  surface.request_to_generate_chunks({0, 0}, 12)
   surface.force_generate_chunk_requests()
 
   clear_starter_resources(surface)
@@ -511,7 +898,10 @@ local function prepare_starter_area(surface)
     create_resource_patch(surface, patch)
   end
 
-  place_test_generated_mega_ruin(surface)
+  -- Design decision: spawn the authored core district here. The generated
+  -- solar mega-ruin remains disabled in runtime flow for now.
+  place_core_district(surface)
+  place_core_district_debug_tag(surface)
   place_debug_spidertron(surface)
   verify_starter_area(surface)
   storage.worldgen.starter_area_prepared = true
@@ -584,12 +974,292 @@ function Worldgen.apply_map_gen_settings()
   tune("uranium-ore", 0.40, 0.30, 0.45)
   tune("crude-oil", 0.55, 0.45, 0.60)
 
+  -- DEBUG ONLY: peaceful mode is enabled to simplify worldgen inspection
+  -- while developing the mod and must be revisited prior to publishing.
+  settings.peaceful_mode = true
+
+  -- DEBUG ONLY: force a desert-biased Nauvis during worldgen iteration so
+  -- ruin silhouettes remain readable; remove or relax before release.
+  settings.property_expression_names = settings.property_expression_names or {}
+  settings.property_expression_names["control-setting:moisture:bias"] = "-2"
+  settings.property_expression_names["control-setting:aux:bias"] = "1.8"
+
   settings.autoplace_controls = controls
   surface.map_gen_settings = settings
 end
 
+function Worldgen.get_district_manifest()
+  return district_manifest
+end
+
+function Worldgen.debug_get_core_layout_spec()
+  return describe_core_layout_spec()
+end
+
+function Worldgen.debug_get_last_core_layout_report()
+  return storage.worldgen and storage.worldgen.last_core_layout_report or nil
+end
+
+function Worldgen.debug_spawn_core_district_on_surface(surface, opts)
+  if not (surface and surface.valid) then return false end
+  ensure_globals()
+  opts = opts or {}
+  opts.force = true
+  place_core_district(surface, opts)
+  return storage.worldgen and storage.worldgen.last_core_layout_report ~= nil
+end
+
+local function reset_core_district_flags()
+  storage.worldgen.core_district_placed = false
+  storage.worldgen.core_district_tagged = false
+  storage.worldgen.core_district_anchor = nil
+  storage.worldgen.core_district_anchor_stats = nil
+  storage.worldgen.debug_spidertron_placed = false
+end
+
+function Worldgen.debug_reset_surface_for_core_district(surface, opts)
+  if not (surface and surface.valid) then return nil end
+  ensure_globals()
+  opts = opts or {}
+
+  local min_chunk_x, max_chunk_x, min_chunk_y, max_chunk_y
+  for chunk in surface.get_chunks() do
+    min_chunk_x = min_chunk_x and math.min(min_chunk_x, chunk.x) or chunk.x
+    max_chunk_x = max_chunk_x and math.max(max_chunk_x, chunk.x) or chunk.x
+    min_chunk_y = min_chunk_y and math.min(min_chunk_y, chunk.y) or chunk.y
+    max_chunk_y = max_chunk_y and math.max(max_chunk_y, chunk.y) or chunk.y
+  end
+
+  if not min_chunk_x then
+    min_chunk_x, max_chunk_x = -SURFACE_TEST_CHUNK_RADIUS, SURFACE_TEST_CHUNK_RADIUS
+    min_chunk_y, max_chunk_y = -SURFACE_TEST_CHUNK_RADIUS, SURFACE_TEST_CHUNK_RADIUS
+  end
+
+  local area = {
+    left_top = {x = min_chunk_x * CHUNK_SIZE, y = min_chunk_y * CHUNK_SIZE},
+    right_bottom = {x = (max_chunk_x + 1) * CHUNK_SIZE, y = (max_chunk_y + 1) * CHUNK_SIZE},
+  }
+
+  local destroyed_entities = 0
+  local entities = surface.find_entities()
+  for _, entity in ipairs(entities) do
+    if entity.valid and entity.type ~= "character" then
+      entity.destroy({raise_destroy = true})
+      destroyed_entities = destroyed_entities + 1
+    end
+  end
+
+  if surface.clear_pollution then
+    surface.clear_pollution()
+  end
+  if surface.destroy_decoratives then
+    surface.destroy_decoratives({area = area})
+  end
+  if surface.build_checkerboard then
+    surface.build_checkerboard(area)
+  end
+
+  reset_core_district_flags()
+  place_core_district(surface, {force = true, include_defense = opts.include_defense ~= false})
+  place_core_district_debug_tag(surface, {include_defense = opts.include_defense ~= false})
+
+  return {
+    destroyed_entities = destroyed_entities,
+    area = area,
+  }
+end
+
+local function ensure_lab_surface(surface_name, chunk_radius)
+  chunk_radius = chunk_radius or SURFACE_TEST_CHUNK_RADIUS
+  local surface = game.surfaces[surface_name]
+  if not (surface and surface.valid) then
+    surface = game.create_surface(surface_name, {
+      peaceful_mode = true,
+      autoplace_controls = {
+        ["enemy-base"] = {frequency = 0, size = 0, richness = 0},
+      },
+    })
+  end
+
+  surface.generate_with_lab_tiles = true
+  surface.request_to_generate_chunks({0, 0}, chunk_radius)
+  surface.force_generate_chunk_requests()
+  surface.generate_with_lab_tiles = false
+
+  local r = chunk_radius * CHUNK_SIZE
+  local area = {
+    left_top = {x = -r, y = -r},
+    right_bottom = {x = r, y = r},
+  }
+
+  if surface.destroy_decoratives then
+    surface.destroy_decoratives({area = area})
+  end
+  if surface.build_checkerboard then
+    surface.build_checkerboard(area)
+  end
+
+  return surface
+end
+
+function Worldgen.ensure_surface_test()
+  ensure_globals()
+  local surface = ensure_lab_surface(SURFACE_TEST_NAME)
+
+  place_core_district(surface, {force = true})
+  storage.worldgen.surface_test_prepared = true
+  storage.worldgen.surface_test_index = surface.index
+  return surface
+end
+
+function Worldgen.ensure_perimeter_authoring_surface()
+  ensure_globals()
+
+  local surface = ensure_lab_surface(SURFACE_PERIMETER_AUTHORING_NAME, SURFACE_PERIMETER_AUTHORING_CHUNK_RADIUS)
+  if not storage.worldgen.perimeter_authoring_prepared then
+    local reset_report = Worldgen.debug_reset_surface_for_core_district(surface, {include_defense = false})
+    local area = reset_report and reset_report.area or {
+      left_top = {x = -SURFACE_PERIMETER_AUTHORING_CHUNK_RADIUS * CHUNK_SIZE, y = -SURFACE_PERIMETER_AUTHORING_CHUNK_RADIUS * CHUNK_SIZE},
+      right_bottom = {x = SURFACE_PERIMETER_AUTHORING_CHUNK_RADIUS * CHUNK_SIZE, y = SURFACE_PERIMETER_AUTHORING_CHUNK_RADIUS * CHUNK_SIZE},
+    }
+
+    for _, entity in ipairs(surface.find_entities_filtered({area = area})) do
+      if entity.valid and entity.type ~= "character" then
+        entity.destroy({raise_destroy = true})
+      end
+    end
+    if surface.destroy_decoratives then
+      surface.destroy_decoratives({area = area})
+    end
+    if surface.build_checkerboard then
+      surface.build_checkerboard(area)
+    end
+
+    reset_core_district_flags()
+    storage.worldgen.last_core_layout_report = nil
+    storage.worldgen.perimeter_authoring_prepared = true
+  end
+
+  storage.worldgen.perimeter_authoring_surface_index = surface.index
+  return surface
+end
+
+function Worldgen.export_authored_perimeter(surface)
+  if not (surface and surface.valid) then return nil end
+
+  local export_area
+  local anchor
+  local block_areas = {}
+
+  if surface.name == SURFACE_PERIMETER_AUTHORING_NAME then
+    local r = SURFACE_PERIMETER_AUTHORING_CHUNK_RADIUS * CHUNK_SIZE
+    export_area = {
+      left_top = {x = -r, y = -r},
+      right_bottom = {x = r, y = r},
+    }
+    anchor = {x = 0, y = 0}
+  else
+    local layout = describe_core_layout_spec()
+    anchor = layout.blocks.central_depot.anchor
+    for _, block in pairs(layout.blocks) do
+      block_areas[#block_areas + 1] = block.area
+    end
+    export_area = {
+      left_top = {
+        x = layout.perimeter.left_x - CORE_ROW_DELTA,
+        y = layout.perimeter.top_y - CORE_ROW_DELTA,
+      },
+      right_bottom = {
+        x = layout.perimeter.right_x + CORE_ROW_DELTA,
+        y = layout.perimeter.bottom_y + CORE_ROW_DELTA,
+      },
+    }
+  end
+
+  local entity_rows = {}
+  local entities = surface.find_entities_filtered({area = export_area})
+  for _, entity in ipairs(entities) do
+    if entity.valid and entity.type ~= "character" and not area_contains_any(block_areas, entity.position) then
+      entity_rows[#entity_rows + 1] = {
+        name = entity.name,
+        x = entity.position.x - anchor.x,
+        y = entity.position.y - anchor.y,
+        direction = entity.direction or 0,
+        type = entity.type or "",
+      }
+    end
+  end
+
+  table.sort(entity_rows, function(a, b)
+    if a.y ~= b.y then return a.y < b.y end
+    if a.x ~= b.x then return a.x < b.x end
+    return a.name < b.name
+  end)
+
+  local tile_rows = {}
+  if surface.name ~= SURFACE_PERIMETER_AUTHORING_NAME and surface.find_tiles_filtered then
+    local tiles = surface.find_tiles_filtered({area = export_area})
+    for _, tile in ipairs(tiles) do
+      if tile.valid and not string.find(tile.name, "lab-", 1, true) and not area_contains_any(block_areas, tile.position) then
+        tile_rows[#tile_rows + 1] = {
+          name = tile.name,
+          x = tile.position.x - anchor.x,
+          y = tile.position.y - anchor.y,
+        }
+      end
+    end
+  end
+
+  table.sort(tile_rows, function(a, b)
+    if a.y ~= b.y then return a.y < b.y end
+    if a.x ~= b.x then return a.x < b.x end
+    return a.name < b.name
+  end)
+
+  local lines = {
+    "# second_engineer perimeter authoring export",
+    "surface\t" .. surface.name,
+    "anchor\torigin\t" .. format_export_number(anchor.x) .. "\t" .. format_export_number(anchor.y),
+    "entity_count\t" .. tostring(#entity_rows),
+    "tile_count\t" .. tostring(#tile_rows),
+  }
+
+  for _, row in ipairs(entity_rows) do
+    lines[#lines + 1] = table.concat({
+      "entity",
+      row.name,
+      format_export_number(row.x),
+      format_export_number(row.y),
+      tostring(row.direction),
+      row.type,
+    }, "\t")
+  end
+
+  for _, row in ipairs(tile_rows) do
+    lines[#lines + 1] = table.concat({
+      "tile",
+      row.name,
+      format_export_number(row.x),
+      format_export_number(row.y),
+    }, "\t")
+  end
+
+  helpers.write_file(PERIMETER_EXPORT_PATH, table.concat(lines, "\n") .. "\n", false, 0)
+
+  return {
+    path = PERIMETER_EXPORT_PATH,
+    entity_count = #entity_rows,
+    tile_count = #tile_rows,
+  }
+end
+
 function Worldgen.on_init()
   ensure_globals()
+  if validate_district_manifest(district_manifest) then
+    storage.worldgen.district_manifest_version = district_manifest.version
+  else
+    log("second_engineer: invalid district manifest; keeping existing worldgen behavior")
+  end
   Worldgen.apply_map_gen_settings()
 
   local surface = game.surfaces[NAUVIS_NAME]
@@ -599,6 +1269,11 @@ end
 
 function Worldgen.on_configuration_changed()
   ensure_globals()
+  if validate_district_manifest(district_manifest) then
+    storage.worldgen.district_manifest_version = district_manifest.version
+  else
+    log("second_engineer: invalid district manifest; keeping existing worldgen behavior")
+  end
   Worldgen.apply_map_gen_settings()
 
   local surface = game.surfaces[NAUVIS_NAME]
@@ -606,8 +1281,10 @@ function Worldgen.on_configuration_changed()
 
   if not storage.worldgen.starter_area_prepared then
     prepare_starter_area(surface)
-  elseif not storage.worldgen.test_mega_ruin_placed then
-    place_test_generated_mega_ruin(surface)
+  elseif not storage.worldgen.core_district_placed then
+    place_core_district(surface)
+  elseif not storage.worldgen.core_district_tagged then
+    place_core_district_debug_tag(surface)
   elseif not storage.worldgen.debug_spidertron_placed then
     place_debug_spidertron(surface)
   end
@@ -625,11 +1302,9 @@ function Worldgen.on_chunk_generated(event)
   if area_intersects(area, STARTER_CLEAR_AREA) then
     clear_starter_resources(surface)
     verify_starter_area(surface)
+    place_core_district(surface)
   end
 
-  if area_intersects(area, shift_area(generated_mega_ruin.template.bounds, TEST_MEGA_RUIN_ORIGIN)) then
-    place_test_generated_mega_ruin(surface)
-  end
 end
 
 return Worldgen
