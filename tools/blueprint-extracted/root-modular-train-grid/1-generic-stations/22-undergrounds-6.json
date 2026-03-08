@@ -1,0 +1,82 @@
+{
+  "index": 22,
+  "label": "Undergrounds (6)",
+  "description": null,
+  "entity_count": 8,
+  "tile_count": 0,
+  "entities": [
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": -117.5,
+        "y": -19.5
+      },
+      "direction": 4,
+      "type": "input"
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": -117.5,
+        "y": -18.5
+      },
+      "direction": 4,
+      "type": "input"
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": -110.5,
+        "y": -19.5
+      },
+      "direction": 4,
+      "type": "output"
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": -110.5,
+        "y": -18.5
+      },
+      "direction": 4,
+      "type": "output"
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": -117.5,
+        "y": -17.5
+      },
+      "direction": 4,
+      "type": "input"
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": -117.5,
+        "y": -16.5
+      },
+      "direction": 4,
+      "type": "input"
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": -110.5,
+        "y": -17.5
+      },
+      "direction": 4,
+      "type": "output"
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": -110.5,
+        "y": -16.5
+      },
+      "direction": 4,
+      "type": "output"
+    }
+  ],
+  "tiles": []
+}

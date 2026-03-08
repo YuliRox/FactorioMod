@@ -1,0 +1,3441 @@
+{
+  "index": 6,
+  "label": "Paved power with lights",
+  "description": "Places power poles and roboports for further expansion with lights and concrete supports",
+  "entity_count": 81,
+  "tile_count": 409,
+  "entities": [
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": -1.5,
+        "y": -1.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 1.5,
+        "y": -1.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 23.5,
+        "y": -1.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 48.5,
+        "y": -1.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 51.5,
+        "y": -1.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 76.5,
+        "y": -1.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 98.5,
+        "y": -1.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 101.5,
+        "y": -1.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": -1.5,
+        "y": 1.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 23.5,
+        "y": 1.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 22,
+        "y": 0
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 48.5,
+        "y": 1.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 51.5,
+        "y": 1.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 50,
+        "y": 0
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 76.5,
+        "y": 1.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 78,
+        "y": 0
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 98.5,
+        "y": 1.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 101.5,
+        "y": 1.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 0
+      }
+    },
+    {
+      "name": "radar",
+      "position": {
+        "x": 80.5,
+        "y": 19.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 23.5,
+        "y": 21.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 76.5,
+        "y": 21.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": -1.5,
+        "y": 23.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 1.5,
+        "y": 23.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 22
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 21.5,
+        "y": 23.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 22,
+        "y": 22
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 78.5,
+        "y": 23.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 78,
+        "y": 22
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 98.5,
+        "y": 23.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 101.5,
+        "y": 23.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 22
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 25,
+        "y": 25
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 75,
+        "y": 25
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": -1.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 1.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 98.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 101.5,
+        "y": 48.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": -1.5,
+        "y": 51.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 1.5,
+        "y": 51.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 50
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 98.5,
+        "y": 51.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 101.5,
+        "y": 51.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 50
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 25,
+        "y": 75
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 75,
+        "y": 75
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": -1.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 1.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 21.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 78.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 98.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 101.5,
+        "y": 76.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 78
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 23.5,
+        "y": 78.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 22,
+        "y": 78
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 76.5,
+        "y": 78.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 78,
+        "y": 78
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 78
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": -1.5,
+        "y": 98.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 1.5,
+        "y": 98.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 23.5,
+        "y": 98.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 48.5,
+        "y": 98.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 51.5,
+        "y": 98.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 76.5,
+        "y": 98.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 98.5,
+        "y": 98.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 101.5,
+        "y": 98.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": -1.5,
+        "y": 101.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 1.5,
+        "y": 101.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 100
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 23.5,
+        "y": 101.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 22,
+        "y": 100
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 48.5,
+        "y": 101.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 51.5,
+        "y": 101.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 50,
+        "y": 100
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 76.5,
+        "y": 101.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 78,
+        "y": 100
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 98.5,
+        "y": 101.5
+      }
+    },
+    {
+      "name": "small-lamp",
+      "position": {
+        "x": 101.5,
+        "y": 101.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 100
+      }
+    }
+  ],
+  "tiles": [
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 20,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 48,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": -2
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 20,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 48,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": -1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 20,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 48,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 0
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 20,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 48,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 1
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 1
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 79,
+        "y": 18
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 80,
+        "y": 18
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 81,
+        "y": 18
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 79,
+        "y": 19
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 80,
+        "y": 19
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 81,
+        "y": 19
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 20
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 20
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 20
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 20
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 79,
+        "y": 20
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 80,
+        "y": 20
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 81,
+        "y": 20
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 20
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 20
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 20
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 20
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 24,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 25,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 26,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 21
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 24,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 25,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 26,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 22
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 24,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 25,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 26,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 23
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 24
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 24
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 24
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 25,
+        "y": 24
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 26,
+        "y": 24
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 24
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 24
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 24
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 24
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 24
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 24
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 25
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 25
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 25
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 24,
+        "y": 25
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 25,
+        "y": 25
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 26,
+        "y": 25
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 25
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 25
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 25
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 25
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 25
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 25
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 26
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 26
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 26
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 24,
+        "y": 26
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 25,
+        "y": 26
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 26,
+        "y": 26
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 26
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 26
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 26
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 26
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 26
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 26
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 48
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 48
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 48
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 48
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 48
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 48
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 48
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 48
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 49
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 50
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 51
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 24,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 25,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 26,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 73
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 24,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 25,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 26,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 74
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 24,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 25,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 26,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 75
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 24,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 25,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 26,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 76
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 24,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 25,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 26,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 77
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 24,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 25,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 26,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 73,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 74,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 75,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 78
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 79
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 20,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 48,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 98
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 20,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 48,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 99
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 20,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 48,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 100
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -2,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": -1,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 0,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 1,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 20,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 21,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 22,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 23,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 48,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 49,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 50,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 51,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 76,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 77,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 78,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 79,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 98,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 99,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 100,
+        "y": 101
+      }
+    },
+    {
+      "name": "concrete",
+      "position": {
+        "x": 101,
+        "y": 101
+      }
+    }
+  ]
+}

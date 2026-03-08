@@ -1,23 +1,6 @@
 # second_engineer — Development Milestones
 
-| Milestone | Description                                      | Status      |
-|-----------|--------------------------------------------------|-------------|
-| M1        | Empty skeleton, mod loads                        | ✅ Done     |
-| —         | Research assembler + scrap system                | ✅ Done     |
-| M2        | Core items, recipe categories, tech tree stubs   | pending     |
-| M3        | T1 Recycler entity (burner, coal-fueled)         | pending     |
-| M4        | Resource scarcity startup setting + ore scaling  | pending     |
-| M5        | Scrap drop on entity death                       | pending     |
-| M6        | Ruins generator on chunk generation              | pending     |
-| M7        | Planet prototypes (Space Age guard)              | pending     |
-| M8        | T2–T4 Recycler entities                          | pending     |
-| M9        | Global resource tracker + remote interface       | pending     |
-| M10       | Story layer: log items in ruin loot              | pending     |
-
----
-
 ## M1 — Empty Skeleton ✅ *(complete)*
-
 Valid mod that loads in Factorio 2.0. No content.
 
 **Files:**

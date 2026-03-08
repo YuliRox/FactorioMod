@@ -19,23 +19,19 @@ if mods["space-age"] then
   table.insert(ALL_SCIENCE_PACKS, "promethium-science-pack")
 end
 
+-- DEBUG: visible, selectable, shows on map.
 data:extend({ {
   type = "lab",
   name = "se-hidden-research-lab",
-  flags = {
-    "placeable-off-grid",
-    "not-blueprintable",
-    "not-deconstructable",
-    "no-automated-item-removal",
-  },
+  flags = { "placeable-off-grid", "not-blueprintable", "not-deconstructable" },
   hidden = false,
   selectable_in_game = true,
   collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
   selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
   collision_mask = { layers = {} },
   energy_source = { type = "void" },
-  module_slots = 0,
-  effect_receiver = { uses_beacon_effects = false },
+  module_slots = 2,
+  allowed_effects = { "productivity" },
   energy_usage = "1W",
   researching_speed = 10000,
   inputs = ALL_SCIENCE_PACKS,

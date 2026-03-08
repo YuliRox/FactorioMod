@@ -1,0 +1,1257 @@
+{
+  "index": 0,
+  "label": "Power barebone grid",
+  "description": "Places power poles and roboports for further expansion",
+  "entity_count": 25,
+  "tile_count": 153,
+  "entities": [
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 22,
+        "y": 0
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 50,
+        "y": 0
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 78,
+        "y": 0
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 0
+      }
+    },
+    {
+      "name": "radar",
+      "position": {
+        "x": 80.5,
+        "y": 19.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 22
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 22,
+        "y": 22
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 78,
+        "y": 22
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 22
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 25,
+        "y": 25
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 75,
+        "y": 25
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 50
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 50
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 25,
+        "y": 75
+      }
+    },
+    {
+      "name": "roboport",
+      "position": {
+        "x": 75,
+        "y": 75
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 78
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 22,
+        "y": 78
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 78,
+        "y": 78
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 78
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 0,
+        "y": 100
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 22,
+        "y": 100
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 50,
+        "y": 100
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 78,
+        "y": 100
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 100
+      }
+    }
+  ],
+  "tiles": [
+    {
+      "name": "landfill",
+      "position": {
+        "x": -1,
+        "y": -1
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 0,
+        "y": -1
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 21,
+        "y": -1
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 22,
+        "y": -1
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 49,
+        "y": -1
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 50,
+        "y": -1
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 77,
+        "y": -1
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 78,
+        "y": -1
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 99,
+        "y": -1
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 100,
+        "y": -1
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": -1,
+        "y": 0
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 21,
+        "y": 0
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 22,
+        "y": 0
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 49,
+        "y": 0
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 50,
+        "y": 0
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 77,
+        "y": 0
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 78,
+        "y": 0
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 99,
+        "y": 0
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 100,
+        "y": 0
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 79,
+        "y": 18
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 80,
+        "y": 18
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 81,
+        "y": 18
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 79,
+        "y": 19
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 80,
+        "y": 19
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 81,
+        "y": 19
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 79,
+        "y": 20
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 80,
+        "y": 20
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 81,
+        "y": 20
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": -1,
+        "y": 21
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 0,
+        "y": 21
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 21,
+        "y": 21
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 22,
+        "y": 21
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 77,
+        "y": 21
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 78,
+        "y": 21
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 99,
+        "y": 21
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 100,
+        "y": 21
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": -1,
+        "y": 22
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 0,
+        "y": 22
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 21,
+        "y": 22
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 22,
+        "y": 22
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 77,
+        "y": 22
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 78,
+        "y": 22
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 99,
+        "y": 22
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 100,
+        "y": 22
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 23,
+        "y": 23
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 24,
+        "y": 23
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 25,
+        "y": 23
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 26,
+        "y": 23
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 73,
+        "y": 23
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 74,
+        "y": 23
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 75,
+        "y": 23
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 76,
+        "y": 23
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 23,
+        "y": 24
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 25,
+        "y": 24
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 26,
+        "y": 24
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 73,
+        "y": 24
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 74,
+        "y": 24
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 75,
+        "y": 24
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 76,
+        "y": 24
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 23,
+        "y": 25
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 24,
+        "y": 25
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 25,
+        "y": 25
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 26,
+        "y": 25
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 73,
+        "y": 25
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 74,
+        "y": 25
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 75,
+        "y": 25
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 76,
+        "y": 25
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 23,
+        "y": 26
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 24,
+        "y": 26
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 25,
+        "y": 26
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 26,
+        "y": 26
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 73,
+        "y": 26
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 74,
+        "y": 26
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 75,
+        "y": 26
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 76,
+        "y": 26
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": -1,
+        "y": 49
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 0,
+        "y": 49
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 99,
+        "y": 49
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 100,
+        "y": 49
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": -1,
+        "y": 50
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 0,
+        "y": 50
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 99,
+        "y": 50
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 100,
+        "y": 50
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 23,
+        "y": 73
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 24,
+        "y": 73
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 25,
+        "y": 73
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 26,
+        "y": 73
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 73,
+        "y": 73
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 74,
+        "y": 73
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 75,
+        "y": 73
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 76,
+        "y": 73
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 23,
+        "y": 74
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 24,
+        "y": 74
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 25,
+        "y": 74
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 26,
+        "y": 74
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 73,
+        "y": 74
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 74,
+        "y": 74
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 75,
+        "y": 74
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 76,
+        "y": 74
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 23,
+        "y": 75
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 24,
+        "y": 75
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 25,
+        "y": 75
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 26,
+        "y": 75
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 73,
+        "y": 75
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 74,
+        "y": 75
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 75,
+        "y": 75
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 76,
+        "y": 75
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 23,
+        "y": 76
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 24,
+        "y": 76
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 25,
+        "y": 76
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 26,
+        "y": 76
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 73,
+        "y": 76
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 74,
+        "y": 76
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 75,
+        "y": 76
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 76,
+        "y": 76
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": -1,
+        "y": 77
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 0,
+        "y": 77
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 21,
+        "y": 77
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 22,
+        "y": 77
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 77,
+        "y": 77
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 78,
+        "y": 77
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 99,
+        "y": 77
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 100,
+        "y": 77
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": -1,
+        "y": 78
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 0,
+        "y": 78
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 21,
+        "y": 78
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 22,
+        "y": 78
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 77,
+        "y": 78
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 78,
+        "y": 78
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 99,
+        "y": 78
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 100,
+        "y": 78
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": -1,
+        "y": 99
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 0,
+        "y": 99
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 21,
+        "y": 99
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 22,
+        "y": 99
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 49,
+        "y": 99
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 50,
+        "y": 99
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 77,
+        "y": 99
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 78,
+        "y": 99
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 99,
+        "y": 99
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 100,
+        "y": 99
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": -1,
+        "y": 100
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 0,
+        "y": 100
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 21,
+        "y": 100
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 22,
+        "y": 100
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 49,
+        "y": 100
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 50,
+        "y": 100
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 77,
+        "y": 100
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 78,
+        "y": 100
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 99,
+        "y": 100
+      }
+    },
+    {
+      "name": "landfill",
+      "position": {
+        "x": 100,
+        "y": 100
+      }
+    }
+  ]
+}

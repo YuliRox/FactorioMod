@@ -1,0 +1,209 @@
+{
+  "index": 5,
+  "label": "Pipeline",
+  "description": "Can be used to pass fluids trough the rail lines",
+  "entity_count": 27,
+  "tile_count": 0,
+  "entities": [
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 0.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 0
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 10.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 11.5
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 20.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "pipe",
+      "position": {
+        "x": 98.5,
+        "y": 21.5
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 22.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 22
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 31.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 32.5
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 40.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 41.5
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 49.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 50.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 50
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 59.5
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 58.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 67.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 68.5
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 77.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "pipe",
+      "position": {
+        "x": 98.5,
+        "y": 78.5
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 79.5
+      }
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 78
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 89.5
+      }
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 88.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "pipe-to-ground",
+      "position": {
+        "x": 98.5,
+        "y": 99.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "big-electric-pole",
+      "position": {
+        "x": 100,
+        "y": 100
+      }
+    }
+  ],
+  "tiles": []
+}

@@ -1,0 +1,106 @@
+{
+  "index": 18,
+  "label": "2 lanes balancer",
+  "description": null,
+  "entity_count": 12,
+  "tile_count": 0,
+  "entities": [
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": -126.5,
+        "y": -50
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": -124.5,
+        "y": -50.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": -125.5,
+        "y": -50.5
+      },
+      "direction": 4,
+      "type": "input"
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": -123.5,
+        "y": -50.5
+      },
+      "direction": 8
+    },
+    {
+      "name": "express-underground-belt",
+      "position": {
+        "x": -122.5,
+        "y": -50.5
+      },
+      "direction": 4,
+      "type": "output"
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": -121.5,
+        "y": -50
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": -124.5,
+        "y": -48.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": -124.5,
+        "y": -49.5
+      }
+    },
+    {
+      "name": "express-splitter",
+      "position": {
+        "x": -125.5,
+        "y": -49
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": -122.5,
+        "y": -49.5
+      },
+      "direction": 4
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": -123.5,
+        "y": -48.5
+      }
+    },
+    {
+      "name": "express-transport-belt",
+      "position": {
+        "x": -123.5,
+        "y": -49.5
+      },
+      "direction": 4
+    }
+  ],
+  "tiles": []
+}
