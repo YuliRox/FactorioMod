@@ -1,151 +1,69 @@
-# second_engineer — Factorio Mod
+# second_engineer — Shared Agent Instructions
 
-## Project Overview
+`AGENTS.md` in this directory is a symlink to this file so Codex and Claude Code stay in sync. Edit this `CLAUDE.md` target, not the symlink.
 
-Hardcore survival mod for Factorio 2.0. The player arrives as the *second* engineer on a planet already stripped by the first. Progression relies on recycling destroyed entities, salvaging ruins, and circular economics rather than infinite ore extraction.
+## Repo Purpose
 
-## Repository Layout
+This repository contains the `second_engineer` Factorio 2.0 mod plus supporting tooling for worldgen authoring, blueprint conversion, and automated testing.
 
-```
-C:/Code/FactorioMod/
-├── CLAUDE.md                    -- this file
-├── docs/
-│   └── milestones.md            -- full development roadmap (M1–M10)
-│   └── WorldGeneration.md       -- world generation notes and design direction
-└── second_engineer/             -- the mod root (this is what Factorio loads)
-    ├── info.json
-    ├── changelog.txt
-    ├── data.lua                 -- data stage entry point
-    ├── control.lua              -- runtime script entry point
-    └── locale/
-        └── en/
-            └── second_engineer.cfg
-```
+The mod theme is scarcity, salvage, and ruined infrastructure. Prefer changes that reinforce circular-economy gameplay and ruined-world presentation over vanilla-style infinite extraction.
 
-## Mod Identity
+## Repo Layout
 
-| Field             | Value                  |
-|-------------------|------------------------|
-| `name`            | `second_engineer`      |
-| `version`         | `0.1.0`                |
-| `factorio_version`| `2.0`                  |
-| `author`          | Xemrox                 |
-| Hard dependency   | `base >= 2.0.0`        |
-| Soft dependency   | `space-age >= 2.0.0`   |
+- `second_engineer/` is the actual mod root loaded by Factorio.
+- `docs/` contains stable design and behavior references.
+- `docs/features/` documents implemented systems.
+- `docs/hooks.md` is the runtime event map.
+- `tools/` contains blueprint extraction, normalization, ruin-template, wear-profile, and sector-compilation tooling.
+- `scripts/` contains shell wrappers for Factorio tests and world inspection.
+- `planning/` and brainstorming docs are design input, not the operational source of truth.
 
-Space Age content is always guarded with `if mods["space-age"] then`.
+## Working Rules
 
----
+- Keep Codex and Claude instructions aligned by editing only `CLAUDE.md` targets.
+- Treat `second_engineer/` as the source of gameplay code. Most implementation work belongs there.
+- Prefer repo evidence over stale prose. When behavior docs and code disagree, update the docs or note the mismatch.
+- Keep Space Age content behind `if mods["space-age"] then`.
+- Favor small, targeted edits over broad rewrites unless the task explicitly calls for restructuring.
 
-## What Is Currently Implemented
+## Canonical References
 
-### data.lua — Science Pack Scrap Items
+- Mod identity: [docs/identity.md](docs/identity.md)
+- Runtime hooks: [docs/hooks.md](docs/hooks.md)
+- Feature behavior: `docs/features/*.md`
+- Roadmap: [docs/planned.md](docs/planned.md)
+- Worldgen pipeline and authored assets: `tools/`, `tools/BlueprintToLuaPipeline.md`
+- Git workflow rules: [.claude/rules/git.md](.claude/rules/git.md)
 
-Seven coloured scrap items, one per science pack tier. Each reuses the corresponding pack's icon.
+## Additional Rule Files
 
-| Item name      | Source pack                  | Stack size |
-|----------------|------------------------------|------------|
-| `scrap-red`    | automation-science-pack      | 200        |
-| `scrap-green`  | logistic-science-pack        | 200        |
-| `scrap-black`  | military-science-pack        | 200        |
-| `scrap-blue`   | chemical-science-pack        | 200        |
-| `scrap-purple` | production-science-pack      | 200        |
-| `scrap-yellow` | utility-science-pack         | 200        |
-| `scrap-white`  | space-science-pack           | 200        |
+Codex does not automatically discover arbitrary files under `.claude/rules/`. Surface them from this shared instruction chain instead. Claude-native rule loading remains the primary mechanism for Claude Code.
 
-All items use subgroup `intermediate-product`, order `z[scrap]-<name>`.
+- Before doing git work, read and follow [.claude/rules/git.md](.claude/rules/git.md).
+- When working in `second_engineer/**/*.lua`, also read and follow [.claude/rules/second_engineer/lua-guidelines.md](.claude/rules/second_engineer/lua-guidelines.md).
 
-**`lab-scrap-output` container entity** — an invisible, indestructible, collision-free container (48 slots) spawned at each lab's position. Used as the output buffer for scrap produced by that lab. Flags: `placeable-off-grid`, `not-on-map`, `not-blueprintable`, `not-deconstructable`, `hidden`. `selectable_in_game = true` for debug purposes.
+## Verification
 
-### control.lua — Lab Scrap System
+Run the smallest relevant verification for the change:
 
-Labs consume science packs. This system detects how many packs were consumed each scan cycle and produces coloured scrap into the lab's output container.
+- Lua/mod integration: `npm test`
+- Node tooling only: `npm run test:node`
+- Surface inspection: `npm run inspect:surface`
+- Perimeter/worldgen inspection: `npm run inspect:perimeter`
+- Central district regeneration: `npm run blueprint:build:central-district`
 
-**Constants:**
+If a change affects prototype loading, runtime hooks, worldgen, or generated blueprint outputs, do more than a pure static review.
 
-| Name            | Value | Purpose                              |
-|-----------------|-------|--------------------------------------|
-| `SCAN_INTERVAL` | 10    | Ticks between scan cycles            |
-| `SCAN_BUDGET`   | 25    | Max labs processed per scan cycle    |
+## Test Environment Notes
 
-**Scrap yield per pack consumed (`SCRAP_PER_PACK`):**
+- Factorio integration tests run through [scripts/test-factorio.sh](scripts/test-factorio.sh).
+- The repo supports WSL workflows that call a Windows `factorio.exe` when `FACTORIO_PATH` points to an `.exe`.
+- `FACTORIO_PLAYER_DATA` may be linked into `~/.factorio/player-data.json` by the test wrapper.
+- When the WSL + Windows path is active, keep Windows path semantics in mind for test execution and failures.
 
-| Pack                     | Scrap per consumed pack |
-|--------------------------|-------------------------|
-| automation / logistic    | 1                       |
-| military / chemical      | 2                       |
-| production / utility     | 3                       |
-| space                    | 4                       |
+## Stable Factorio Rules
 
-**Global state (`global.*`):**
-
-| Key          | Type                      | Description                                      |
-|--------------|---------------------------|--------------------------------------------------|
-| `labs`       | `{[unit_number] = entry}` | Map from lab unit_number to tracking entry       |
-| `lab_index`  | `number[]`                | Ordered array of unit_numbers for round-robin    |
-| `rr_pos`     | `number`                  | Current position in `lab_index`                  |
-
-Each entry: `{ lab = LuaEntity, out = LuaEntity, last = {pack_name -> count} }`
-
-**Key functions:**
-
-- `ensure_globals()` — initialises global tables if missing (called at every entry point)
-- `register_lab(lab)` — adds a lab to tracking; spawns its `lab-scrap-output` entity
-- `remove_lab_by_unit(unit_number)` — removes lab from tracking; spills output buffer contents; destroys output entity
-- `snapshot_lab_input(lab)` — returns `{pack_name -> current_count}` for all tracked pack types
-- `process_lab(entry)` — diffs current vs last inventory, computes scrap, inserts into output buffer (spills on overflow); returns `false` if lab is gone
-- `safe_insert_or_spill(surface, pos, force, out_entity, name, count)` — inserts into output entity, spills remainder on ground
-
-**Event hooks:**
-
-| Event                       | Handler       | Purpose                        |
-|-----------------------------|---------------|--------------------------------|
-| `on_init`                   | —             | Scan all surfaces for labs     |
-| `on_configuration_changed`  | —             | Full rescan after mod update   |
-| `on_built_entity`           | `on_built`    | Register newly placed labs     |
-| `on_robot_built_entity`     | `on_built`    | Register robot-placed labs     |
-| `script_raised_built`       | `on_built`    | Register script-placed labs    |
-| `script_raised_revive`      | `on_built`    | Register revived labs          |
-| `on_player_mined_entity`    | `on_removed`  | Deregister mined labs          |
-| `on_robot_mined_entity`     | `on_removed`  | Deregister robot-mined labs    |
-| `on_entity_died`            | `on_removed`  | Deregister destroyed labs      |
-| `script_raised_destroy`     | `on_removed`  | Deregister script-destroyed    |
-| `on_tick`                   | round-robin   | Scan up to 25 labs every 10t   |
-
----
-
-## Planned Milestones
-
-Full detail in `docs/milestones.md`. Summary:
-
-| Milestone | Description                                      | Status      |
-|-----------|--------------------------------------------------|-------------|
-| M1        | Empty skeleton, mod loads                        | ✅ Done     |
-| M2        | Core items, recipe categories, tech tree stubs   | pending     |
-| M3        | T1 Recycler entity (burner, coal-fueled)         | pending     |
-| M4        | Resource scarcity startup setting + ore scaling  | pending     |
-| M5        | Scrap drop on entity death                       | pending     |
-| M6        | Ruins generator on chunk generation              | pending     |
-| M7        | Planet prototypes (Space Age guard)              | pending     |
-| M8        | T2–T4 Recycler entities                          | pending     |
-| M9        | Global resource tracker + remote interface       | pending     |
-| M10       | Story layer: log items in ruin loot              | pending     |
-
----
-
-## Design Notes
-
-- `docs/WorldGeneration.md` captures the current direction for scarcity-driven map generation, ruins, salvage placement, and anti-softlock rules.
-
----
-
-## Factorio 2.0 API Notes
-
-- Use `storage.*` for persistent runtime state (serialised with the save). `storage` was renamed to `storage` in Factorio 2.0.
-- `data:extend({...})` in data stage; never in control stage.
-- `surface.spill_item_stack(pos, stack, enable_looted, force, allow_belts)` — fifth arg `false` prevents items landing on belts.
-- `entity.get_inventory(defines.inventory.lab_input)` — lab input slot.
-- `entity.get_inventory(defines.inventory.chest)` — generic container slot.
-- `collision_mask = {}` makes an entity non-collidable with everything.
-- Entity flags `"not-on-map"`, `"not-blueprintable"`, `"not-deconstructable"` keep internal entities invisible to the player. `hidden` is a standalone boolean field on the prototype in 2.0, not a flag.
-- `out.destructible = false` prevents damage but entity can still be `.destroy()`ed by script.
+- Use `data:extend(...)` only in data stage files.
+- Use `storage.*` for persistent runtime state.
+- Internal helper entities should stay hidden from normal player interaction unless a task explicitly calls for debug visibility.
+- Keep generated assets and generated Lua outputs reproducible from source tooling rather than hand-maintained.
