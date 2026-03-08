@@ -1160,20 +1160,11 @@ function Worldgen.export_authored_perimeter(surface)
     anchor = {x = 0, y = 0}
   else
     local layout = describe_core_layout_spec()
-    anchor = layout.blocks.central_depot.anchor
+    anchor = layout.blocks.central_district.anchor
     for _, block in pairs(layout.blocks) do
       block_areas[#block_areas + 1] = block.area
     end
-    export_area = {
-      left_top = {
-        x = layout.perimeter.left_x - CORE_ROW_DELTA,
-        y = layout.perimeter.top_y - CORE_ROW_DELTA,
-      },
-      right_bottom = {
-        x = layout.perimeter.right_x + CORE_ROW_DELTA,
-        y = layout.perimeter.bottom_y + CORE_ROW_DELTA,
-      },
-    }
+    export_area = clone_area(layout.area)
   end
 
   local entity_rows = {}

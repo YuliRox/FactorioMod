@@ -28,7 +28,6 @@ end
 local function ensure_globals()
   storage.pending_cutscene_skip = storage.pending_cutscene_skip or {}
   storage.pending_surface_test_relocate = storage.pending_surface_test_relocate or {}
-  storage.pending_debug_surface_reset = storage.pending_debug_surface_reset or nil
 end
 
 local function detect_launcher_surface_mode()
