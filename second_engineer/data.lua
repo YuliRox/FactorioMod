@@ -1,6 +1,7 @@
 -- second_engineer: data stage entry point
 
 require("prototypes.item.scraps")
+require("prototypes.recipe.scrap-smelting")
 
 -- Recipe category: only se-research-assembler can craft these recipes
 data:extend({{
@@ -10,6 +11,7 @@ data:extend({{
 
 require("prototypes.entity.research-assembler")
 require("prototypes.entity.hidden-research-lab")
+require("prototypes.entity.hidden-research-beacon")
 
 -- Debug hotkey: clear the active inspect surface and respawn the core district.
 data:extend({{
