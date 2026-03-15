@@ -305,15 +305,6 @@ script.on_event(defines.events.on_tick, function(event)
   ResearchAssembler.tick_scan()
 end)
 
--- ── Tests (dev only) ──────────────────────────────────────────────────────────
-
-if script.active_mods["factorio-test"] then
-  require("__factorio-test__/init")(
-    { "scripts.tests" },
-    { load_luassert = true, game_speed = 1000 }
-  )
-end
-
 commands.add_command("se-export-authored-perimeter", "Export the authored perimeter from the perimeter authoring surface.", function(command)
   ensure_globals()
 
@@ -337,3 +328,12 @@ commands.add_command("se-export-authored-perimeter", "Export the authored perime
     export_report.tile_count
   ))
 end)
+
+-- Tests (dev only NEEDS to be last in file) --
+
+if script.active_mods["factorio-test"] then
+  require("__factorio-test__/init")(
+    { "scripts.tests" },
+    { load_luassert = true, game_speed = 1000 }
+  )
+end
