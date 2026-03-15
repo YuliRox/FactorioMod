@@ -12,6 +12,12 @@
         {
             "type": "factoriomod",
             "request": "launch",
+            "name": "Factorio Mod Debug Xemrox",
+            "factorioArgs": ["--load-game", "second_engineer_debugbench"]
+        },
+        {
+            "type": "factoriomod",
+            "request": "launch",
             "name": "Factorio Mod Debug (Settings & Data)",
             "hookSettings": true,
             "hookData": true

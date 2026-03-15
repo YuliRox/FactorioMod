@@ -1,5 +1,8 @@
 {
   "modPath": "./second_engineer",
   "dataDirectory": "../.factorio-test",
-  "mods": ["space-age", "quality", "elevated-rails"]
+  "mods": ["space-age", "quality", "elevated-rails"],
+  "test": {
+    "bail": 5
+  }
 }

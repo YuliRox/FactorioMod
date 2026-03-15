@@ -26,7 +26,19 @@
     },
     {
       "name": "debugadapter",
-      "enabled": false
+      "enabled": true
+    },
+    {
+      "name": "factorio-test",
+      "enabled": true
+    },
+    {
+      "name": "flib",
+      "enabled": true
+    },
+    {
+      "name": "RecipeBook",
+      "enabled": true
     },
     {
       "name": "ruin-maker_updated_fork",

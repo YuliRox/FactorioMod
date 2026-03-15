@@ -61,6 +61,20 @@ If a change affects prototype loading, runtime hooks, worldgen, or generated blu
 - `FACTORIO_PLAYER_DATA` may be linked into `~/.factorio/player-data.json` by the test wrapper.
 - When the WSL + Windows path is active, keep Windows path semantics in mind for test execution and failures.
 
+## Running Tests
+
+FactorioTest is installed locally as a dev dependency (not in `info.json`). Enable it in the Factorio mod list, then:
+
+```bash
+# one-shot run
+factorio-test run -p ./second_engineer
+
+# watch mode — reruns on file changes
+factorio-test run -p ./second_engineer -w
+```
+
+To add new test files: create `second_engineer/tests/<name>.lua` and add `require("tests.<name>")` to `scripts/tests.lua`.
+
 ## Stable Factorio Rules
 
 - Use `data:extend(...)` only in data stage files.
